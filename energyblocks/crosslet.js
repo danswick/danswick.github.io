@@ -1395,19 +1395,12 @@ crosslet.MapView = (function(_super) {
     this.el = el;
     this.hoverFunc = this.default_hover;
     $(this.el).attr("class", "crosslet");
-    this.map = L.map(el[0]).setView(this.config.map.view.center, this.config.map.view.zoom);
+    this.map = L.map(el[0]).setView(this.config.map.view.center, this.config.map.view.zoom, { zoomControl: false });
     L.tileLayer(this.config.map.leaflet.url, this.config.map.leaflet).addTo(this.map);
     this.control = $("<div class='crosslet_panel'></div>");
-    this.info = L.Control.extend({
-      options: {
-        position: 'topright'
-      },
-      onAdd: function(map) {
-        return _this.control[0];
-      }
-    });
-    this.map.addControl(new this.info());
-    this.panel = new crosslet.PanelView(this.control, this.config, this);
+	this.zoomcontrol = L.control.zoom({ position: 'bottomleft' });
+    this.addControl(zoomcontrol);
+    this.panel = new crosslet.PanelView(this.control, this.control.zoom, this.config, this);
     this.renderMap = this._renderMap;
     return this.ds.loadGeo(this.geoURL, this.config.map.geo.id_field, function(ds) {
       _this.bounds = _this.ds.bounds;
