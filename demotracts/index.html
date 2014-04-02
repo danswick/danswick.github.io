@@ -10,7 +10,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width">
-    
     <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.1/less.min.js" type="text/javascript"></script>
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
@@ -20,7 +19,27 @@
 <body>
     <div id="content" class="container">
         <div id="map"></div>
-</div>
+		<div id="help" style="background-color:#EEEEEE;height:100%; margin-left: 670px;padding: 10px; overflow: scroll">
+			<h2>Map Help</h2>
+			<p>This map displays census tracts in Cook County, Illinois. The default map shows population by tract (green is lower population, red is higher), but you can do a couple of things to manipulate the data being visualized.</p>
+			<p>There are several dimensions you can visualize:</p>
+			<ol>
+			<li>Total Population</li>
+			<li>Population of one race: Black or African American</li>
+			<li>Population of one race: White</li>
+			<li>Population: Hispanic or Latino</li>
+			<li>Workers 16 years or older working from home</li>
+			<li>Total Households</li>
+			</ol>
+			<p>You can activate each of the above dimensions by clicking its tab to the left. Once the tab is clicked, two things will happen: the map will change to reflect the new dimension and a bar chart within the tab will become active. </p>
+			<p>Within an active tab, you can click and drag across the bar chart to select a range of values. You'll notice that the census tracts displayed on the map will change to reflect your selection. For greater precision, you can also type a range of values into the dimension's tab.  
+			</p>
+			<p>To filter by multiple dimensions, just click into another tab and select an additional range of values. Now the map only shows census tracts that fall within the ranges you've selected.  
+			</p>
+			<p>To zoom in or out, scroll with your mouse or touch pad. </p>
+			<p><em>This visualization was created using <a href="http://sztanko.github.io/crosslet/">Crosslet</a> and <a href="https://www.census.gov/geo/maps-data/data/tiger.html">US Census Data</a>.</em></p>
+		</div>
+	</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
