@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Dan Swick</title>
+ <link href="danswick.com/atom.xml" rel="self"/>
+ <link href="danswick.com/"/>
+ <updated>2014-05-16T19:14:37-05:00</updated>
+ <id>danswick.com</id>
+ <author>
+   <name>Dan Swick</name>
+   <email>dan.swick@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Test Post</title>
+   <link href="danswick.com//2014/05/16/test_post/"/>
+   <updated>2014-05-16T00:00:00-05:00</updated>
+   <id>danswick.com/2014/05/16/test_post</id>
+   <content type="html">&lt;p&gt;The first one!&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
