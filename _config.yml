@@ -18,6 +18,7 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'
+  Projects: '/projects'
 
 # Custom vars
 version:          1.0.0
