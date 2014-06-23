@@ -710,13 +710,13 @@ crosslet.changeSelect = function(select, val) {
 crosslet.defaultConfig = {
   map: {
     leaflet: {
-      //commenting out old cloudmade URL and variables to retain record of syntax
       //url: "http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png",
+	  url: "http://{s}.tiles.mapbox.com/v3/examples.map-i86knfo3/{z}/{x}/{y}.png",
       //key: "--your key--",
       //styleId: 64657,
-      //add mapbox tile URL and new attribution 
-      url: "http://{s}.tiles.mapbox.com/v3/examples.map-i86knfo3/{z}/{x}/{y}.png",
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>'
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>'
     },
     view: {
       center: [51.505, -0.09],
