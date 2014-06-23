@@ -715,10 +715,8 @@ crosslet.defaultConfig = {
       //key: "--your key--",
       //styleId: 64657,
       //add mapbox tile URL and new attribution 
-	    url: "http://{s}.tiles.mapbox.com/v3/examples.map-i86knfo3/{z}/{x}/{y}.png",
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>'
+      url: "http://{s}.tiles.mapbox.com/v3/examples.map-i86knfo3/{z}/{x}/{y}.png",
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>'
     },
     view: {
       center: [51.505, -0.09],
