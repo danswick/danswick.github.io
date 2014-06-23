@@ -20,3 +20,5 @@ To filter by multiple dimensions, just click into another tab and select an addi
 To zoom in or out, scroll with your mouse or touch pad. 
 
 *This visualization was created using [Crosslet](http://sztanko.github.io/crosslet/) and [US Census Data](https://www.census.gov/geo/maps-data/data/tiger.html).*
+
+>**Note:** as of May 1st, free map tile provider <a href="http://cloudmade.com/">Cloudmade</a> discontinued its free map tile service. Unfortunately, crosslet is currently (as of 6/20/2014) only compatible with cloudmade tile layers. This project will slowly be transitioned to use play <a href="http://square.github.io/crossfilter/">Crossfilter</a>, <a href="http://d3js.org/">D3</a>, and <a href="http://leafletjs.com/">leaflet</a>, but in the meantime, no basemap will be available.
