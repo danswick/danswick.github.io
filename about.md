@@ -9,7 +9,7 @@ title: About
 
 ##danswick
 
-I'm Dan. I live in Chicago, ride bikes, make things from fabric and put things on maps. I work for the []Delta Institute](http://www.delta-institute.org) with a great team of environmental entrepreneurs, looking for those rare opportunities to turn a good idea, solid partnerships and a willingness to go out on a limb into environmental, economic and social impact. I work with data (especially of the geographic variety), occasionally contributing a good idea and tracking down means to try it out. 
+I'm Dan. I live in Chicago, ride bikes, make things from fabric and put things on maps. I work for the [Delta Institute](http://www.delta-institute.org) with a great team of environmental entrepreneurs, looking for those rare opportunities to turn a good idea, solid partnerships and a willingness to go out on a limb into environmental, economic and social impact. I work with data (especially of the geographic variety), occasionally contributing a good idea and tracking down means to try it out. 
 
 This space is part experiment, documentation, memory aid, and sounding board. 
 
