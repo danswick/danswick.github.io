@@ -1,23 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>Dan Swick</title>
- <link href="http://danswick.com/atom.xml" rel="self"/>
- <link href="http://danswick.com/"/>
- <updated>2014-06-27T15:08:05-05:00</updated>
- <id>http://danswick.com</id>
- <author>
-   <name>Dan Swick</name>
-   <email>dan.swick@gmail.com</email>
- </author>
-
- 
- <entry>
-   <title>Posting from github</title>
-   <link href="http://danswick.com//2014/06/27/setup/"/>
-   <updated>2014-06-27T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/06/27/setup</id>
-   <content type="html">&lt;p&gt;About a year ago, a sweet hosting deal I&amp;#39;d managed to finagle fell through and my modest personal website needed a place to live. I&amp;#39;d been using Wordpress for years and had become fairly familiar with its workflows and quirks. Between my personal writing and work-related writing, I&amp;#39;ve probably set up a dozen Wordpress sites over the years, but never really got past the official installer scripts, WYSIWYG editors and, occasionally, small php edits here and there. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>danswick.com</title>
+		<description>a personal weblog odyssey</description>		
+		<link>http://danswick.com</link>
+		<atom:link href="http://danswick.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Posting from github</title>
+				<description>&lt;p&gt;About a year ago, a sweet hosting deal I&amp;#39;d managed to finagle fell through and my modest personal website needed a place to live. I&amp;#39;d been using Wordpress for years and had become fairly familiar with its workflows and quirks. Between my personal writing and work-related writing, I&amp;#39;ve probably set up a dozen Wordpress sites over the years, but never really got past the official installer scripts, WYSIWYG editors and, occasionally, small php edits here and there. &lt;/p&gt;
 
 &lt;p&gt;I think Wordpress is great. My employer just switched over and our communications folk love it. There&amp;#39;s a lot of easy-to-access documentation and no matter where you&amp;#39;re working, there&amp;#39;s probably someone familiar enough to help you out of a jam. That being said, I never really had fun working with it. I like to tinker, take things apart and understand what&amp;#39;s going on when they break. Wordpress is just too complicated for my newbie skills and I didn&amp;#39;t feel I was able to get a firm enough grasp to really understand what was going on under the hood. Enter Jekyll. &lt;/p&gt;
 
@@ -95,45 +86,48 @@ some liquid stuff
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/&quot;&gt;OS X Configuration&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages#keeping-jekyll-up-to-date&quot;&gt;Keeping Jekyll Up to Date&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Posting from github</title>
-   <link href="http://danswick.com//2014/05/17/posting_from_github/"/>
-   <updated>2014-05-17T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/05/17/posting_from_github</id>
-   <content type="html">&lt;p&gt;I guess you don&amp;#39;t even need to use a local version of Jekyll to post if you&amp;#39;re hosting on github pages. &lt;/p&gt;
+</description>
+				<pubDate>Fri, 27 Jun 2014 00:00:00 -0500</pubDate>
+				<link>http://danswick.com/2014/06/27/setup/</link>
+				<guid isPermaLink="true">http://danswick.com/2014/06/27/setup/</guid>
+			</item>
+		
+			<item>
+				<title>Posting from github</title>
+				<description>&lt;p&gt;I guess you don&amp;#39;t even need to use a local version of Jekyll to post if you&amp;#39;re hosting on github pages. &lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;That&amp;#39;s pretty great.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I changed this thing! &lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Hello to Erin!</title>
-   <link href="http://danswick.com//2014/05/17/hi_erin/"/>
-   <updated>2014-05-17T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/05/17/hi_erin</id>
-   <content type="html">&lt;p&gt;This is to demonstrate to Erin how Jekyll works. &lt;/p&gt;
+</description>
+				<pubDate>Sat, 17 May 2014 00:00:00 -0500</pubDate>
+				<link>http://danswick.com/2014/05/17/posting_from_github/</link>
+				<guid isPermaLink="true">http://danswick.com/2014/05/17/posting_from_github/</guid>
+			</item>
+		
+			<item>
+				<title>Hello to Erin!</title>
+				<description>&lt;p&gt;This is to demonstrate to Erin how Jekyll works. &lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;hint: it&amp;#39;s real cool. &lt;/p&gt;
 &lt;/blockquote&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Test Post</title>
-   <link href="http://danswick.com//2014/05/16/test_post/"/>
-   <updated>2014-05-16T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/05/16/test_post</id>
-   <content type="html">&lt;p&gt;The first one!&lt;/p&gt;
-</content>
- </entry>
- 
-
-</feed>
+</description>
+				<pubDate>Sat, 17 May 2014 00:00:00 -0500</pubDate>
+				<link>http://danswick.com/2014/05/17/hi_erin/</link>
+				<guid isPermaLink="true">http://danswick.com/2014/05/17/hi_erin/</guid>
+			</item>
+		
+			<item>
+				<title>Test Post</title>
+				<description>&lt;p&gt;The first one!&lt;/p&gt;
+</description>
+				<pubDate>Fri, 16 May 2014 00:00:00 -0500</pubDate>
+				<link>http://danswick.com/2014/05/16/test_post/</link>
+				<guid isPermaLink="true">http://danswick.com/2014/05/16/test_post/</guid>
+			</item>
+		
+	</channel>
+</rss>

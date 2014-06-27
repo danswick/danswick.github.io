@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http://danswick.com/2014/06/27/setup/</loc>
+    <lastmod>2014-06-27T00:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/2014/05/17/posting_from_github/</loc>
+    <lastmod>2014-05-17T00:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/2014/05/17/hi_erin/</loc>
+    <lastmod>2014-05-17T00:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/2014/05/16/test_post/</loc>
+    <lastmod>2014-05-16T00:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://danswick.com/404.html</loc>
+    <lastmod>2014-06-27T15:08:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/about/</loc>
+    <lastmod>2014-06-27T15:08:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/archive/</loc>
+    <lastmod>2014-06-27T15:08:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/</loc>
+    <lastmod>2014-06-27T15:08:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://danswick.com/demotracts/index - energyarchive.html</loc>
+    <lastmod>2014-03-29T13:01:52-05:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/demotracts/index.html</loc>
+    <lastmod>2014-04-14T15:14:19-05:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

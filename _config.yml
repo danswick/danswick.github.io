@@ -24,3 +24,9 @@ pages_list:
 version:          1.0.0
 github:
   repo:           https://github.com/danswick/danswick.github.io
+name: danswick.com
+description: a personal weblog odyssey
+url: http://danswick.com
+
+# Plugins
+gems:             ['jekyll-sitemap']
