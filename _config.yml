@@ -1,6 +1,10 @@
 # Dependencies
 markdown:         redcarpet
+redcarpet:
+  extensions:     ["fenced code blocks", "autolink", "tables", "with_toc_data"]
 pygments:         true
+kramdown:
+  input:          ["GFM"]
 
 # Permalinks
 permalink:        pretty

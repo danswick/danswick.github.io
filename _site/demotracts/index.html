@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Crosslet test</title>
+    <title>Census Tracts Demographics Browser</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width">
@@ -38,6 +38,8 @@
 			</p>
 			<p>To zoom in or out, scroll with your mouse or touch pad. </p>
 			<p><em>This visualization was created using <a href="http://sztanko.github.io/crosslet/">Crosslet</a> and <a href="https://www.census.gov/geo/maps-data/data/tiger.html">US Census Data</a>.</em></p>
+			<p>Note: as of May 1st, free map tile provider <a href="http://cloudmade.com/">Cloudmade</a> discontinued its free map tile service. Unfortunately, crosslet is currently (as of 6/20/2014) only compatible with cloudmade tile layers. This project will slowly be transitioned to use play <a href="http://square.github.io/crossfilter/">Crossfilter</a>, <a href="http://d3js.org/">D3</a>, and <a href="http://leafletjs.com/">leaflet</a>, but in the meantime, the map will use MapBox' example tileset in place of cloudmade.</p>
+			<p>Dig into this example on <a href="https://github.com/danswick/danswick.github.io/tree/master/demotracts">GitHub</a>.</p>
 		</div>
 	</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -55,9 +57,9 @@ var inp = function() {  return d3.format(",.2f") };
 var config = {
   map: {
     leaflet: {
-      key: "c6025c28b5184b5e95e75121252ab018",
-      styleId: 116196,
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+      //key: "c6025c28b5184b5e95e75121252ab018",
+      //styleId: 116196,
+      //attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
     },
     view: {
       center: [41.89, -87.92],

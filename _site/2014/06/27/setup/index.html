@@ -10,7 +10,7 @@
 
   <title>
     
-      Posting from github &middot; Dan Swick
+      Jekyll for WYSIWYG'ers &middot; Dan Swick
     
   </title>
 
@@ -52,7 +52,7 @@
 
       <div class="post">
   <h1 class="post-title"></h1>
-<!--  <span class="post-date"></span> -->
+<span class="post-date"></span>
   <p>About a year ago, a sweet hosting deal I&#39;d managed to finagle fell through and my modest personal website needed a place to live. I&#39;d been using Wordpress for years and had become fairly familiar with its workflows and quirks. Between my personal writing and work-related writing, I&#39;ve probably set up a dozen Wordpress sites over the years, but never really got past the official installer scripts, WYSIWYG editors and, occasionally, small php edits here and there. </p>
 
 <p>I think Wordpress is great. My employer just switched over and our communications folk love it. There&#39;s a lot of easy-to-access documentation and no matter where you&#39;re working, there&#39;s probably someone familiar enough to help you out of a jam. That being said, I never really had fun working with it. I like to tinker, take things apart and understand what&#39;s going on when they break. Wordpress is just too complicated for my newbie skills and I didn&#39;t feel I was able to get a firm enough grasp to really understand what was going on under the hood. Enter Jekyll. </p>
@@ -65,7 +65,7 @@
 
 <p>There are many thousands of words all over the web explaining how to set up Jekyll, so I&#39;ll refrain from spelling out the whole process (see the resources section at the end for some helpful links) and instead just outline some of the barriers I encountered and how I overcame them. </p>
 
-<h2>Getting Jekyll running locally on OS X</h2>
+<h2 id="toc_0">Getting Jekyll running locally on OS X</h2>
 
 <p>Before you dive into the Jekyll hot tub, be sure you understand that you&#39;ll need to do some work in the terminal and if you&#39;re new to this type of thing, it&#39;s probably going to get messy. But <em>that&#39;s okay</em>! You (probably) won&#39;t break anything beyond repair and you&#39;ll learn a lot in the process. The <a href="http://jekyllrb.com/docs/installation/">official Jekyll docs</a> are essential, but there are some other great guides out there as well.</p>
 
@@ -86,15 +86,15 @@
 <li>Jekyll!</li>
 </ul>
 
-<h3>Mavericks is a pain</h3>
+<h3 id="toc_1">Mavericks is a pain</h3>
 
 <p>I foolishly updated OS X right in the middle of trying to wrap my head around Jekyll and encountered all kinds of issues that are addressed in <a href="http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/">this article</a> about configuring Mavericks. It covers some basic stuff like un-hiding your library folder, fixing your <code>PATH</code> (read the comments to get a broader view on PATH issues) and setting up <a href="http://brew.sh/">Homebrew</a>.  </p>
 
-<h3>System Ruby</h3>
+<h3 id="toc_2">System Ruby</h3>
 
 <p>I had a lot of problems with Ruby, which all seemed to trace back to the pre-installed version of Ruby that comes with Mavericks. I&#39;m no Ruby expert, but it&#39;s much easier to work through Ruby Version Manager rather than deal with the <a href="http://robots.thoughtbot.com/psa-do-not-use-system-ruby">many issues</a> that come from working with pre-installed Ruby. Do yourself a favor and set up <a href="http://bundler.io/">Bundler</a> and <a href="http://rvm.io/">RVM</a> before diving into Jekyll. </p>
 
-<h2>Configuring a custom domain registered through GoDaddy</h2>
+<h2 id="toc_3">Configuring a custom domain registered through GoDaddy</h2>
 
 <p>This step has actually gotten a bit more transparent in the months since I set my site up. <a href="https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider">This official GitHub help doc</a> should actually provide all of the information you&#39;ll need, but if you&#39;re unfamiliar with GoDaddy&#39;s DNS settings panel, <a href="https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a">this guide</a> has a lot of helpful screenshots, though the author only sets up one <code>A</code> record. You&#39;ll need the two listed in the previously mentioned official help doc. </p>
 
@@ -102,13 +102,13 @@
 <p><strong>TIP:</strong> You might run into some documentation that mentions setting up a <code>gh-pages</code> repo. This refers specifically to Project Pages. If you&#39;re setting up a User Page, you should ignore references to <code>gh-pages</code>. </p>
 </blockquote>
 
-<h2>Understanding templates and theming</h2>
+<h2 id="toc_4">Understanding templates and theming</h2>
 
 <p>Reading through the Jekyll documentation, I felt like I had a fairly strong understanding of the mechanics behind Jekyll&#39;s template system, but had a hard time making it work in practice. I really wanted to hand-code everything, but ended up settling on a simple pre-built template. One of my goals is to build my chops a bit and so far I think tweaking a simple existing template is the right choice. Jekyll is transparent enough that I can get a good sense for how everything works, save myself a lot of headache and easily make some deeper changes to the templates. </p>
 
 <p>I am currently using <a href="https://github.com/poole/poole">Poole</a>, which includes everything you need to get started poking around Jekyll. The author, <a href="https://github.com/mdo">Mark Otto</a>, has done a great job laying out documentation and building clear examples. <a href="http://joshualande.com/jekyll-github-pages-poole/">Joshua Lande</a> has posted a really nice guide to working with Poole as well. </p>
 
-<h2>Resources</h2>
+<h2 id="toc_5">Resources</h2>
 
 <ul>
 <li><p><a href="https://help.github.com/articles/sitemaps-for-github-pages">&quot;SEO&quot; with site maps</a></p>
@@ -140,6 +140,15 @@ some liquid stuff
     
       <li>
         <h3>
+          <a href="//2014/07/01/motorik/">
+            Headphone Music - Motorik
+            <small>01 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="//2014/05/17/posting_from_github/">
             Posting from github
             <small>17 May 2014</small>
@@ -152,15 +161,6 @@ some liquid stuff
           <a href="//2014/05/17/hi_erin/">
             Hello to Erin!
             <small>17 May 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="//2014/05/16/test_post/">
-            Test Post
-            <small>16 May 2014</small>
           </a>
         </h3>
       </li>
