@@ -8,11 +8,11 @@ I work in an open office, so headphones and a few great playlists are absolutely
 These days, my strategy is primarily to stalk people on Spotify, but there's one pursuit I've found particularly rewarding - building a collaborative Spotify playlist of songs featuring the [Motorik](http://en.wikipedia.org/wiki/Motorik) beat, a 4/4 drumbeat popularized by Krautrock bands like Can, Neu! and Kraftwerk. The basic beat: 
 
 
-| Beat             | 1 | + | 2 | + | 3 | + | 4 |
-| ---------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Hi-Hat           | x | x | x | x | x | x | x |
-| Snare            |   |   | x |   |   | x |   |
-| Kick             | x | x |   | x | x |   | x |
+| Beat             | 1 | + | 2 | + | 3 | + | 4 | + |
+| ---------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Hi-Hat           | x | x | x | x | x | x | x | x |
+| Snare            |   |   | x |   |   |   | x |   |
+| Kick             | x | x |   | x | x | x |   | x |
 
 <br>
 <iframe width="420" height="315" src="//www.youtube.com/embed/ufH87nA9klU" frameborder="0" allowfullscreen></iframe>
