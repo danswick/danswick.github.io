@@ -12,7 +12,7 @@ These days, my strategy is primarily to stalk people on Spotify, but there's one
 | ---------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Hi-Hat           | x | x | x | x | x | x | x |
 | Snare            |   |   | x |   |   | x |   |
-| Kick             | x |   |   | x | x |   | x |
+| Kick             | x | x |   | x | x |   | x |
 
 <br>
 <iframe width="420" height="315" src="//www.youtube.com/embed/ufH87nA9klU" frameborder="0" allowfullscreen></iframe>
