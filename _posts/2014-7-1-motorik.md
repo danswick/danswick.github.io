@@ -33,4 +33,4 @@ Once I started pulling together a list of Krautrock-era Motorik songs, the beat 
 
 Without further ado, here's the Spotify playlist. If you would like to contribute, please feel free. I just ask that you do your best to match the vibe of the songs and keep the original intent (focusing while using headphones) in mind. 
 
-<iframe src="https://embed.spotify.com/?uri=spotify:user:rascaltwitch:playlist:4C378qNo7ug7V2WvaC7XyH" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://embed.spotify.com/?uri=spotify:user:rascaltwitch:playlist:4C378qNo7ug7V2WvaC7XyH" width="300" height="380" frameborder="0" allowtransparency="true">&nbsp;</iframe>
