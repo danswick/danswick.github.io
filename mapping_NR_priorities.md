@@ -22,8 +22,6 @@ In Year 1, Delta worked with local GIS agencies to collect natural resource data
 1. While the maps captured large-scale resources, there were still some gaps in local knowledge
 2. They were fairly difficult to put into context, especially for people outside of the project
 
-![prioritized map](/assets/some_MC_map.png)
-
 To address problem 1, we distributed paper maps to our natural resource experts and asked them to fill in any missing information, along with notation on how we might acquire the correct data. The results were surprisingly detailed and demonstrated that the data we rely on every day isn't always as complete as we'd like to believe.
 
 ![annotated Gary map](/assets/gary_mod.jpg) 
@@ -39,6 +37,8 @@ One early lesson from the project was that environmentalists often bring up thei
 ##Climate Adaptation and Land Conservation Policy in Michigan City
 
 Delta built on its success in the previous project by branching out to Michigan City, Indiana. The aim of the Michigan City work is once again to identify, prioritize and plan around natural resources, but adds a couple of unique twists. First, the primary project partner is the Michigan City Sanitary District (MCSAN), a regulated waste water and storm water treatment facility. Second, the project team was able to secured additional funding to develop a long-term land use policy to ensure natural resources are prioritized in the long-term. And finally, the process is explicitly focused on planning for the effects of climate change. 
+
+![prioritized map](/assets/GI_MC.jpg)
 
 ###Tweaking the process 
 
