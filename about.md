@@ -18,7 +18,7 @@ Because whether it's computers, bicycles, craft beer or home appliances, everybo
 - Built with [Jekyll](http://jekyllrb.com), because static pages are great
 - Theme is [Poole](http://github.com/poole/poole) with a few minor style modifications 
 - Hosting is by Github Pages
-- See my post [here](http://danswick.com/2014/06/27/setup/) for more details 
+- See my post [here](http://danswick.com/2014/setup/) for more details 
 
 
 ##Want to talk?
