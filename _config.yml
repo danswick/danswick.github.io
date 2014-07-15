@@ -8,12 +8,13 @@ kramdown:
 
 # Permalinks
 permalink:        pretty
+relative_permalinks: false
 
 # Setup
 title:            Dan Swick
 tagline:          danswick.com
 url:              danswick.com
-paginate:         1
+paginate:         2
 author:
   name:           Dan Swick
   url:            https://twitter.com/danswick
