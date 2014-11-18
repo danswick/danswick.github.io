@@ -86,7 +86,19 @@
         3. I'm about to propose a process for planning the geospatial aspects of your projects and, if necessary, bringing your fellow Deltoids in to help. 
     + Run through Google form - https://docs.google.com/a/delta-institute.org/forms/d/1eE6ALfdrYctKi8bJbFbNbAm0-ZVCgiEjME1aeQkOaLY/viewform 
 
+#Full list of Demos
 
+1. Detroit Demo permits - webmap: C:\GIS\Detroit\web_map\export_2014_10_30_04_58_52\index.html
+2. Little Village brownfields: QGIS
+3. FFLM image: C:\GIS\GLPF\FDL_LiDAR\Images\fflmLiDAR.pdf
+4. K6 Binder Cover: M:\dswick\Brownfields In Weak Markets\K6_map_color_nolabels.pdf
+5. Vector example from Anatomy of a web map - http://maptime.io/anatomy-of-a-web-map/#72
+6. Geoids - http://lyzidiamond.com/geodesy/#5
+7. Datums - http://lyzidiamond.com/geodesy/#29
+8. Projection - http://lyzidiamond.com/geodesy/#63
+9. LV data - Y:\Crown Family Little Village\Databases\Data Sets to Work With\Consolidated Databases- Full Info.xlsx
+10. Walking maps - C:\GIS\little village\Field Maps\List_X_central.pdf
+11. Map planning form - https://docs.google.com/a/delta-institute.org/forms/d/1eE6ALfdrYctKi8bJbFbNbAm0-ZVCgiEjME1aeQkOaLY/viewform
 
 
 
