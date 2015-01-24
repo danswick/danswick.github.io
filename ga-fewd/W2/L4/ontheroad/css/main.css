@@ -108,7 +108,7 @@ header > nav > a {
     padding: 10px;
 }
 
-header a:hover {
+header nav a:hover {
     background-color: #92989D;
 } 
 
