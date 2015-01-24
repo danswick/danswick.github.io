@@ -30,14 +30,14 @@ aside p {
     color: #aaa;
 }
 
-#popular .bullet { /*to keep the bullet characters black, use spans INSIDE the <li> tags and styel separately. Text decoration and anchor color set using the following selector*/
+#popular .bullet { /*to make the bullet characters gray, use spans INSIDE the <li> tags and styel separately. Text decoration and anchor color set using the following selector*/
     color: #F7CD7E;
     font-size: 18px;
 }
 
 #popular a {
     text-decoration: none;
-    color: #000;
+    color: #999;
 }
 
 h1 > a {
