@@ -21,12 +21,12 @@
 	<script src="js/label.js"></script>
 	<script src="js/leaflet.markercluster.js"></script>
 	
+				<script src='data/exp_jimlroute.js' ></script> <!-- Grabbed from here - http://www.bikepacking.net/forum/index.php/topic,954.0.html -->
+				
 				<script src='data/exp_nctbikeNotClosed.js' ></script>
 				
-				<script src='data/exp_nct.js' ></script>
-				
 	<script>
-		var map = L.map('map', { zoomControl:true }).fitBounds([[36.7382086459,-102.141598557],[51.1692254171,-72.7187575021]]);
+		var map = L.map('map', { zoomControl:true }).fitBounds([[40.7614138926,-93.2082199144],[47.9678955547,-78.4967993867]]);
 		var hash = new L.Hash(map); //add hashes to html address to easy share locations
 		var additional_attrib = 'created w. <a href="https://github.com/geolicious/qgis2leaf" target ="_blank">qgis2leaf</a> by <a href="http://www.geolicious.de" target ="_blank">Geolicious</a> & contributors<br>';
 	var feature_group = new L.featureGroup([]);
@@ -39,31 +39,6 @@
 		var basemap_1 = L.tileLayer('http://a.tile.stamen.com/terrain/{z}/{x}/{y}.png', { 
 			attribution: additional_attrib + 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'});	
 	var layerOrder=new Array();
-							function pop_nct(feature, layer) {
-										
-	var popupContent = '<table><tr><th scope="row">OBJECTID</th><td>' + Autolinker.link(String(feature.properties['OBJECTID'])) + '</td></tr><tr><th scope="row">seg_name</th><td>' + Autolinker.link(String(feature.properties['seg_name'])) + '</td></tr><tr><th scope="row">trail_stat</th><td>' + Autolinker.link(String(feature.properties['trail_stat'])) + '</td></tr><tr><th scope="row">trail_type</th><td>' + Autolinker.link(String(feature.properties['trail_type'])) + '</td></tr><tr><th scope="row">trail_surf</th><td>' + Autolinker.link(String(feature.properties['trail_surf'])) + '</td></tr><tr><th scope="row">len_miles</th><td>' + Autolinker.link(String(feature.properties['len_miles'])) + '</td></tr><tr><th scope="row">built_on</th><td>' + Autolinker.link(String(feature.properties['built_on'])) + '</td></tr><tr><th scope="row">bike</th><td>' + Autolinker.link(String(feature.properties['bike'])) + '</td></tr><tr><th scope="row">horse</th><td>' + Autolinker.link(String(feature.properties['horse'])) + '</td></tr><tr><th scope="row">camping</th><td>' + Autolinker.link(String(feature.properties['camping'])) + '</td></tr><tr><th scope="row">opn_camp</th><td>' + Autolinker.link(String(feature.properties['opn_camp'])) + '</td></tr><tr><th scope="row">closure</th><td>' + Autolinker.link(String(feature.properties['closure'])) + '</td></tr><tr><th scope="row">cls_date</th><td>' + Autolinker.link(String(feature.properties['cls_date'])) + '</td></tr><tr><th scope="row">prop_name</th><td>' + Autolinker.link(String(feature.properties['prop_name'])) + '</td></tr><tr><th scope="row">ownership</th><td>' + Autolinker.link(String(feature.properties['ownership'])) + '</td></tr><tr><th scope="row">mng_auth</th><td>' + Autolinker.link(String(feature.properties['mng_auth'])) + '</td></tr><tr><th scope="row">state</th><td>' + Autolinker.link(String(feature.properties['state'])) + '</td></tr><tr><th scope="row">chapter</th><td>' + Autolinker.link(String(feature.properties['chapter'])) + '</td></tr><tr><th scope="row">data_type</th><td>' + Autolinker.link(String(feature.properties['data_type'])) + '</td></tr><tr><th scope="row">cert_stat</th><td>' + Autolinker.link(String(feature.properties['cert_stat'])) + '</td></tr><tr><th scope="row">updated</th><td>' + Autolinker.link(String(feature.properties['updated'])) + '</td></tr><tr><th scope="row">temp</th><td>' + Autolinker.link(String(feature.properties['temp'])) + '</td></tr><tr><th scope="row">notes</th><td>' + Autolinker.link(String(feature.properties['notes'])) + '</td></tr><tr><th scope="row">trail_use</th><td>' + Autolinker.link(String(feature.properties['trail_use'])) + '</td></tr><tr><th scope="row">cmp_status</th><td>' + Autolinker.link(String(feature.properties['cmp_status'])) + '</td></tr><tr><th scope="row">cmp_owner</th><td>' + Autolinker.link(String(feature.properties['cmp_owner'])) + '</td></tr><tr><th scope="row">link</th><td>' + Autolinker.link(String(feature.properties['link'])) + '</td></tr><tr><th scope="row">Shape_Leng</th><td>' + Autolinker.link(String(feature.properties['Shape_Leng'])) + '</td></tr></table>';
-	layer.bindPopup(popupContent);
-
-
-				}
-						
-				var exp_nctJSON = new L.geoJson(exp_nct,{
-					onEachFeature: pop_nct,
-					style: function (feature) {
-						return {weight: feature.properties.radius_qgis2leaf,
-								color: feature.properties.color_qgis2leaf,
-								opacity: feature.properties.transp_qgis2leaf,
-								fillOpacity: feature.properties.transp_qgis2leaf};
-						}
-					});
-				feature_group.addLayer(exp_nctJSON);
-				layerOrder[layerOrder.length] = exp_nctJSON;
-				for (index = 0; index < layerOrder.length; index++) {
-					feature_group.removeLayer(layerOrder[index]);feature_group.addLayer(layerOrder[index]);
-				}
-				
-						//add comment sign to hide this layer on the map in the initial view.
-						exp_nctJSON.addTo(map);
 							function pop_nctbikeNotClosed(feature, layer) {
 										
 	var popupContent = '<table><tr><th scope="row">OBJECTID</th><td>' + Autolinker.link(String(feature.properties['OBJECTID'])) + '</td></tr><tr><th scope="row">seg_name</th><td>' + Autolinker.link(String(feature.properties['seg_name'])) + '</td></tr><tr><th scope="row">trail_stat</th><td>' + Autolinker.link(String(feature.properties['trail_stat'])) + '</td></tr><tr><th scope="row">trail_type</th><td>' + Autolinker.link(String(feature.properties['trail_type'])) + '</td></tr><tr><th scope="row">trail_surf</th><td>' + Autolinker.link(String(feature.properties['trail_surf'])) + '</td></tr><tr><th scope="row">len_miles</th><td>' + Autolinker.link(String(feature.properties['len_miles'])) + '</td></tr><tr><th scope="row">built_on</th><td>' + Autolinker.link(String(feature.properties['built_on'])) + '</td></tr><tr><th scope="row">bike</th><td>' + Autolinker.link(String(feature.properties['bike'])) + '</td></tr><tr><th scope="row">horse</th><td>' + Autolinker.link(String(feature.properties['horse'])) + '</td></tr><tr><th scope="row">camping</th><td>' + Autolinker.link(String(feature.properties['camping'])) + '</td></tr><tr><th scope="row">opn_camp</th><td>' + Autolinker.link(String(feature.properties['opn_camp'])) + '</td></tr><tr><th scope="row">closure</th><td>' + Autolinker.link(String(feature.properties['closure'])) + '</td></tr><tr><th scope="row">cls_date</th><td>' + Autolinker.link(String(feature.properties['cls_date'])) + '</td></tr><tr><th scope="row">prop_name</th><td>' + Autolinker.link(String(feature.properties['prop_name'])) + '</td></tr><tr><th scope="row">ownership</th><td>' + Autolinker.link(String(feature.properties['ownership'])) + '</td></tr><tr><th scope="row">mng_auth</th><td>' + Autolinker.link(String(feature.properties['mng_auth'])) + '</td></tr><tr><th scope="row">state</th><td>' + Autolinker.link(String(feature.properties['state'])) + '</td></tr><tr><th scope="row">chapter</th><td>' + Autolinker.link(String(feature.properties['chapter'])) + '</td></tr><tr><th scope="row">data_type</th><td>' + Autolinker.link(String(feature.properties['data_type'])) + '</td></tr><tr><th scope="row">cert_stat</th><td>' + Autolinker.link(String(feature.properties['cert_stat'])) + '</td></tr><tr><th scope="row">updated</th><td>' + Autolinker.link(String(feature.properties['updated'])) + '</td></tr><tr><th scope="row">temp</th><td>' + Autolinker.link(String(feature.properties['temp'])) + '</td></tr><tr><th scope="row">notes</th><td>' + Autolinker.link(String(feature.properties['notes'])) + '</td></tr><tr><th scope="row">trail_use</th><td>' + Autolinker.link(String(feature.properties['trail_use'])) + '</td></tr><tr><th scope="row">cmp_status</th><td>' + Autolinker.link(String(feature.properties['cmp_status'])) + '</td></tr><tr><th scope="row">cmp_owner</th><td>' + Autolinker.link(String(feature.properties['cmp_owner'])) + '</td></tr><tr><th scope="row">link</th><td>' + Autolinker.link(String(feature.properties['link'])) + '</td></tr><tr><th scope="row">Shape_Leng</th><td>' + Autolinker.link(String(feature.properties['Shape_Leng'])) + '</td></tr></table>';
@@ -89,6 +64,31 @@
 				
 						//add comment sign to hide this layer on the map in the initial view.
 						exp_nctbikeNotClosedJSON.addTo(map);
+							function pop_jimlroute(feature, layer) {
+										
+	var popupContent = '<table><tr><th scope="row">name</th><td>' + Autolinker.link(String(feature.properties['name'])) + '</td></tr><tr><th scope="row">cmt</th><td>' + Autolinker.link(String(feature.properties['cmt'])) + '</td></tr><tr><th scope="row">desc</th><td>' + Autolinker.link(String(feature.properties['desc'])) + '</td></tr><tr><th scope="row">src</th><td>' + Autolinker.link(String(feature.properties['src'])) + '</td></tr><tr><th scope="row">link1_href</th><td>' + Autolinker.link(String(feature.properties['link1_href'])) + '</td></tr><tr><th scope="row">link1_text</th><td>' + Autolinker.link(String(feature.properties['link1_text'])) + '</td></tr><tr><th scope="row">link1_type</th><td>' + Autolinker.link(String(feature.properties['link1_type'])) + '</td></tr><tr><th scope="row">link2_href</th><td>' + Autolinker.link(String(feature.properties['link2_href'])) + '</td></tr><tr><th scope="row">link2_text</th><td>' + Autolinker.link(String(feature.properties['link2_text'])) + '</td></tr><tr><th scope="row">link2_type</th><td>' + Autolinker.link(String(feature.properties['link2_type'])) + '</td></tr><tr><th scope="row">number</th><td>' + Autolinker.link(String(feature.properties['number'])) + '</td></tr><tr><th scope="row">type</th><td>' + Autolinker.link(String(feature.properties['type'])) + '</td></tr><tr><th scope="row">line</th><td>' + Autolinker.link(String(feature.properties['line'])) + '</td></tr></table>';
+	layer.bindPopup(popupContent);
+
+
+				}
+						
+				var exp_jimlrouteJSON = new L.geoJson(exp_jimlroute,{
+					onEachFeature: pop_jimlroute,
+					style: function (feature) {
+						return {weight: feature.properties.radius_qgis2leaf,
+								color: feature.properties.color_qgis2leaf,
+								opacity: feature.properties.transp_qgis2leaf,
+								fillOpacity: feature.properties.transp_qgis2leaf};
+						}
+					});
+				feature_group.addLayer(exp_jimlrouteJSON);
+				layerOrder[layerOrder.length] = exp_jimlrouteJSON;
+				for (index = 0; index < layerOrder.length; index++) {
+					feature_group.removeLayer(layerOrder[index]);feature_group.addLayer(layerOrder[index]);
+				}
+				
+						//add comment sign to hide this layer on the map in the initial view.
+						exp_jimlrouteJSON.addTo(map);
 		var title = new L.Control();
 		title.onAdd = function (map) {
 			this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
@@ -102,7 +102,7 @@
 	var baseMaps = {
 		'MapQuestOpen Aerial': basemap_0,
 		'Stamen Terrain': basemap_1};
-	L.control.layers(baseMaps,{"nctbikeNotClosed": exp_nctbikeNotClosedJSON,"nct": exp_nctJSON},{collapsed:false}).addTo(map);
+	L.control.layers(baseMaps,{"jimlroute": exp_jimlrouteJSON,"nctbikeNotClosed": exp_nctbikeNotClosedJSON},{collapsed:false}).addTo(map);
 	L.control.scale({options: {position: 'bottomleft',maxWidth: 100,metric: true,imperial: false,updateWhenIdle: false}}).addTo(map);
 	</script>
 </body>
