@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Supply &amp; Demand</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		
+		<header>
+			<h1><a href="index.html">Supply &amp; Demand</a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="#"><span>Workshop</span></a>
+					</li>
+					<li>
+						<a href="#"><span>Store</span></a>
+					</li>
+					<li>
+						<a href="#"><span>Blog</span></a>
+					</li>
+					<li>
+						<a href="#"><span>About</span></a>
+					</li>
+					<li>
+						<a href="#"><span>Contact</span></a>
+					</li>
+				</ul>
+			</nav>
+		</header>	
+			<div id="container">
+				<img id="image-to-vote-on" src="images/image_1.jpg">
+				<div id="rating-widget">
+					<div><span>Rate this image: </span></div>
+					<ul>
+						<li class="star" value="1"><a href="">&starf;</a></li>
+						<li class="star" value="2"><a href="">&starf;</a></li>
+						<li class="star" value="3"><a href="">&starf;</a></li>
+						<li class="star" value="4"><a href="">&starf;</a></li>
+						<li class="star" value="5"><a href="">&starf;</a></li>
+					</ul>
+				</div>
+				<div id="score"></div>
+				<div id="buttons-wrapper">
+					<form>
+						<div id="instructions">Use your <span class="keys">left</span> and <span class="keys">right</span> arrow keys ( &larr; &rarr; ) or the buttons below to browse the images.</div>
+						<div>This image's score is <span id="current-score">0</span>.</div>
+						<button type="button" id="prev" class="btn clicked">Previous</button>
+						<button type="button" id="next" class="btn">Next</button>
+						<br>
+						<!-- <p class="instructions">Vote on this image:</p>
+						<select id="your-vote">
+							<option value=""></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select> -->
+					</form>
+				</div>
+				<div id="scoreTable">
+					<table>
+						<tr>
+							<th>Image</th>
+							<th>Score</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<footer>
+				
+			</footer>
+		<!-- #container --> 
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
