@@ -195,17 +195,17 @@ tr:hover {
 
 #image-label {
   position: absolute;
-  top: 400px;
-  left: -64px;
+  top: 410px;
+  left: -50px;
   font-size: 35px;
   color: #999;
   font-family: sans-serif;
-  border: solid 2px #999;
+  /*border: solid 2px #999;
   border-radius: 30px;
   width: 42px;
   height: 42px;
   text-align: center;
-  line-height: 48px;
+  line-height: 48px;*/
 }
 
 #rating-widget {
