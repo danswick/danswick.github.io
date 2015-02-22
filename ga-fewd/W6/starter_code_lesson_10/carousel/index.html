@@ -40,7 +40,10 @@
 			</nav>
 		</header>	
 			<div id="container">
-				<img id="image-to-vote-on" src="images/image_1.jpg">
+				<div id="image-area">
+					<span id="image-label">1</span>
+					<img id="image-to-vote-on" src="images/image_1.jpg">
+				</div>
 				<div id="rating-widget">
 					<div><span>Rate this image: </span></div>
 					<ul>
@@ -54,7 +57,7 @@
 				<div id="score"></div>
 				<div id="buttons-wrapper">
 					<form>
-						<div id="instructions">Use your <span class="keys">left</span> and <span class="keys">right</span> arrow keys ( &larr; &rarr; ) or the buttons below to browse the images.</div>
+						<div id="instructions">Use your <span class="keys">left</span> and <span class="keys">right</span> arrow keys ( &larr; &rarr; ) or the buttons below to browse the images. Click on a &starf; to rank your favorite images.</div>
 						<div>This image's score is <span id="current-score">0</span>.</div>
 						<button type="button" id="prev" class="btn clicked">Previous</button>
 						<button type="button" id="next" class="btn">Next</button>

@@ -21,7 +21,7 @@ $("body").keydown(function(e) {
 });
 
 // set up button advance listeners
-$("#prev").on("click", function(e) {
+$("#prev").on("click", function() {
 	if(arrayPosish > 0) { // left
 		arrayPosish -= 1;
 		advanceImage();
@@ -30,7 +30,7 @@ $("#prev").on("click", function(e) {
 	}
 });
 
-$("#next").on("click", function(e) {
+$("#next").on("click", function() {
 	if(arrayPosish < (imageBank.length - 1)) { 
 		arrayPosish += 1;
 		advanceImage();
@@ -44,7 +44,10 @@ $("#next").on("click", function(e) {
 
 // method to advance the image 
 function advanceImage() {
-	$('#image-to-vote-on').attr('src', imageBank[arrayPosish]); 
+	$('#image-to-vote-on').fadeTo(100, 0.5, function() {
+		$('#image-to-vote-on').attr('src', imageBank[arrayPosish]);
+		$('#image-to-vote-on').fadeTo(200, 1); 
+	});
 	if( arrayPosish === 0 ) { 			// if it's the first image, gray out "prev" button
 		$("#prev").addClass("clicked");
 	} else if(arrayPosish === (imageBank.length - 1)) {
@@ -55,6 +58,9 @@ function advanceImage() {
 	}
 
 	$('#current-score').html(imageScore[arrayPosish]); // display the image's pre-vote score
+	$('#image-label').text(arrayPosish + 1); // display image number next to image
+	$('#scoreTable').find('tr').removeClass('tableFocus'); // clear focus highlight on score table
+	$('#scoreTable').find('.' + arrayPosish).addClass('tableFocus'); // add highlight to current row
 };
 
 
@@ -73,9 +79,5 @@ $('.star').on("click", function(e) {
 // pre-build score table
 imageBank.forEach(function(element, index) {
 		$('#scoreTable table').append('<tr class="' + String(index) + '"><td>' + element + '</td><td>' + imageScore[index] + '</td></tr>');
+		$('.0').addClass('tableFocus'); // start focus on 1st row
 });
-
-
-
-
-
