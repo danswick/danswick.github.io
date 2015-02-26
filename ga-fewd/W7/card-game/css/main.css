@@ -102,7 +102,7 @@ body {
 }
 
 #game-container {
-    width: 400px;
+    width: 800px;
     margin: 0 auto;
     border: solid 1px #000;
     border-radius: 15px;
@@ -127,9 +127,9 @@ input {
 }
 
 .card {
-    background-image: url("../img/back-of-card.png");
-    width: 71px;
-    height: 96px; 
+    background: url("../img/back-of-card.png");
+    width: 73px;
+    height: 97px; 
 }
 
 .matched {
@@ -140,7 +140,9 @@ input {
     width: 80px;
 }
 
-
+#userInput {
+    margin: 20px;
+}
 
 
 

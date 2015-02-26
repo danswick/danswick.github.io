@@ -1,0 +1,127 @@
+/*---------------------------------------------------------
+  G L O B A L
+----------------------------------------------------------- */
+body {
+  font-family: 'PT Serif', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*---------------------------------------------------------
+  C O N T A I N E R
+----------------------------------------------------------- */
+#container {
+  max-width: 1000px;
+  min-width: 800px;
+  margin: 20px auto;
+}
+
+#content {
+  border: 3px solid #dfdfdf;
+  padding: 20px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 400px;
+}
+
+/*---------------------------------------------------------
+  H E A D E R
+----------------------------------------------------------- */
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1;
+  margin: .5em 0;
+  word-spacing: .2em;
+  text-align: center;
+}
+
+/*---------------------------------------------------------
+  C O N T E N T
+----------------------------------------------------------- */
+img {
+  max-width: 100%;
+  margin-top: 60px;
+}
+
+
+/*---------------------------------------------------------
+  N A V
+----------------------------------------------------------- */
+nav {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  color: #706F6A;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 24px;
+  margin-bottom: -1px;
+  padding: 15px 24px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav .active {
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+
+
+/*---------------------------------------------------------
+  S L I D E   D O W N   P A N E L
+----------------------------------------------------------- */
+#slide-down {
+  height: 64px;
+  background-color: #e5e5e5;
+  display: none;
+}
+
+.nav-panel {
+  display: none;
+}
+
+.nav-panel ul {
+  margin: 0;
+  text-align: center
+}
+
+.nav-panel li {
+  list-style: none;
+  display: inline-block;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.nav-panel a {
+  display: inline-block;
+  padding: 15px 20px 0;
+}
