@@ -102,7 +102,7 @@ body {
 }
 
 #game-container {
-    width: 800px;
+    width: 90%;
     margin: 0 auto;
     border: solid 1px #000;
     border-radius: 15px;

@@ -11,7 +11,7 @@
 var numCards = prompt("How many cards?", "Even numbers only, please!");
 	
 // store list of cards 
-var allCards = ['kingC', 'queenC', 'jackC', 'tenC', 'nineC', 'eightC', 'sevenC', 'sixC', 'fiveC', 'fourC', 'threeC', 'twoC', 'aceC', 'kingH', 'queenH', 'jackH', 'tenH', 'nineH', 'eightH', 'sevenH', 'sixH', 'fiveH', 'fourH', 'threeH', 'twoH', 'aceH']
+var allCards = ['kingC', 'queenC', 'jackC', 'tenC', 'nineC', 'eightC', 'sevenC', 'sixC', 'fiveC', 'fourC', 'threeC', 'twoC', 'aceC', 'kingH', 'queenH', 'jackH', 'tenH', 'nineH', 'eightH', 'sevenH', 'sixH', 'fiveH', 'fourH', 'threeH', 'twoH', 'aceH', 'kingS', 'queenS', 'jackS', 'tenS', 'nineS', 'eightS', 'sevenS', 'sixS', 'fiveS', 'fourS', 'threeS', 'twoS', 'aceS', 'kingD', 'queenD', 'jackD', 'tenD', 'nineD', 'eightD', 'sevenD', 'sixD', 'fiveD', 'fourD', 'threeD', 'twoD', 'aceD'];
 
 var cardsProto = allCards.slice(0, (numCards/2));
 
@@ -110,17 +110,45 @@ var cardMap = {
 	twoC: "url('img/classic-playing-cards.png') -73px 0",
 	aceC: "url('img/classic-playing-cards.png') 0 0",
 	
-	kingH: "url('img/classic-playing-cards.png') -876px -98px",
-	queenH: "url('img/classic-playing-cards.png') -803px -98px",
-	jackH: "url('img/classic-playing-cards.png') -730px -98px",
-	tenH: "url('img/classic-playing-cards.png') -657px -98px",
-	nineH: "url('img/classic-playing-cards.png') -584px -98px",
-	eightH: "url('img/classic-playing-cards.png') -511px -98px",
-	sevenH: "url('img/classic-playing-cards.png') -438px -98px",
-	sixH: "url('img/classic-playing-cards.png') -365px -98px",
-	fiveH: "url('img/classic-playing-cards.png') -292px -98px",
-	fourH: "url('img/classic-playing-cards.png') -219px -98px",
-	threeH: "url('img/classic-playing-cards.png') -146px -98px",
-	twoH: "url('img/classic-playing-cards.png') -73px -98px",
-	aceH: "url('img/classic-playing-cards.png') 0 -98px"
+	kingH: "url('img/classic-playing-cards.png') -876px -196px",
+	queenH: "url('img/classic-playing-cards.png') -803px -196px",
+	jackH: "url('img/classic-playing-cards.png') -730px -196px",
+	tenH: "url('img/classic-playing-cards.png') -657px -196px",
+	nineH: "url('img/classic-playing-cards.png') -584px -196px",
+	eightH: "url('img/classic-playing-cards.png') -511px -196px",
+	sevenH: "url('img/classic-playing-cards.png') -438px -196px",
+	sixH: "url('img/classic-playing-cards.png') -365px -196px",
+	fiveH: "url('img/classic-playing-cards.png') -292px -196px",
+	fourH: "url('img/classic-playing-cards.png') -219px -196px",
+	threeH: "url('img/classic-playing-cards.png') -146px -196px",
+	twoH: "url('img/classic-playing-cards.png') -73px -196px",
+	aceH: "url('img/classic-playing-cards.png') 0 -196px",
+
+	kingS: "url('img/classic-playing-cards.png') -876px -98px",
+	queenS: "url('img/classic-playing-cards.png') -803px -98px",
+	jackS: "url('img/classic-playing-cards.png') -730px -98px",
+	tenS: "url('img/classic-playing-cards.png') -657px -98px",
+	nineS: "url('img/classic-playing-cards.png') -584px -98px",
+	eightS: "url('img/classic-playing-cards.png') -511px -98px",
+	sevenS: "url('img/classic-playing-cards.png') -438px -98px",
+	sixS: "url('img/classic-playing-cards.png') -365px -98px",
+	fiveS: "url('img/classic-playing-cards.png') -292px -98px",
+	fourS: "url('img/classic-playing-cards.png') -219px -98px",
+	threeS: "url('img/classic-playing-cards.png') -146px -98px",
+	twoS: "url('img/classic-playing-cards.png') -73px -98px",
+	aceS: "url('img/classic-playing-cards.png') 0 -98px",
+
+	kingD: "url('img/classic-playing-cards.png') -876px -294px",
+	queenD: "url('img/classic-playing-cards.png') -803px -294px",
+	jackD: "url('img/classic-playing-cards.png') -730px -294px",
+	tenD: "url('img/classic-playing-cards.png') -657px -294px",
+	nineD: "url('img/classic-playing-cards.png') -584px -294px",
+	eightD: "url('img/classic-playing-cards.png') -511px -294px",
+	sevenD: "url('img/classic-playing-cards.png') -438px -294px",
+	sixD: "url('img/classic-playing-cards.png') -365px -294px",
+	fiveD: "url('img/classic-playing-cards.png') -292px -294px",
+	fourD: "url('img/classic-playing-cards.png') -219px -294px",
+	threeD: "url('img/classic-playing-cards.png') -146px -294px",
+	twoD: "url('img/classic-playing-cards.png') -73px -294px",
+	aceD: "url('img/classic-playing-cards.png') 0 -294px"
 };
