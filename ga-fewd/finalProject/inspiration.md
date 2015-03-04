@@ -8,6 +8,7 @@
 
 ## Tools and Data Resources 
 
+<<<<<<< HEAD
 - [Tilestream on Heroku](http://jsantisi.com/2014/04/24/tilestream-on-heroku/)
 - [Self-hosing vector tiles](http://gis.stackexchange.com/questions/125037/self-hosting-mapbox-vector-tiles)
 - [Tessera Tile Server](https://github.com/mojodna/tessera)
@@ -32,3 +33,8 @@
 
 - Selection of landscape types 
 - Terrestrial movement analysis
+=======
+- [WBEZ swipe b/w layers](http://interactive.wbez.org/elections/2015/mayoral-dot-map/)
+- [How the above was made](http://wbezdata.tumblr.com/post/86343915004/mapping-rahm-emanuels-2011-victory-and-how-that) (sort of)
+- Mapbox [swipe b/w layers](https://www.mapbox.com/mapbox.js/example/v1.0.0/swipe-layers/)
+>>>>>>> origin/master
