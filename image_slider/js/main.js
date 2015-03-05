@@ -4,6 +4,15 @@ function moveDivisor() {
 	divisor.style.width = slider.value+"%";
 }
 
+
+/*==================================================================
+SWAP IN YOUR IMAGE LOCATIONS BELOW
+==================================================================*/
+// Note that the key (left value, before the ':') should have a 1
+// or a 2 in order for the function below to work. These should 
+// corresepond to the base and comparrison images you would like to 
+// visualize.
+
 var iamgePaths = {
 	HP1: "img/HP-1946.jpg",
 	HP2: "img/HP-2012.jpg",
