@@ -13,3 +13,17 @@ Through this project, I seek to address these concerns by:
 3. Users visiting my site will first be greeted by a concise description of what the GIV is and what it is not, leading them to explore the underlying data on their own to gain a better understanding. 
 
 My project will emphasize transparency by utilizing open and well-documented tools ([Leaflet](http://leafletjs.com/), [TileMill](https://github.com/mapbox/tilemill), [geoJSON](http://geojson.org/), etc.) and will be stored and maintained on GitHub. 
+
+
+## Outline ## 
+
+- Introduction
+- How to use the site / sample map
+
+
+
+
+
+
+
+

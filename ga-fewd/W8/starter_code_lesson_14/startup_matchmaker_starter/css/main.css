@@ -1,33 +1,37 @@
+html {
+	font-size: 1.25em;
+}
+
 body {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 20px;
 	line-height: 1.5;
 	cursor: default;
+	box-sizing: border-box;
 }
 
 .wrapper {
-	max-width: 1280px;
+	max-width: 100%;
 	margin: auto;
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 1.75em;
 	line-height: 1;
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 
 h3 {
 	font-family: 'Merriweather', serif;
-	font-size: 25px;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 
 p {
-	margin: 0 0 30px 0;
+	margin: 0 0 5% 0;
 }
 
 .button {
@@ -40,7 +44,7 @@ p {
 	color: black;
 	display: block;
 	text-align: center;
-	padding: 12px;
+	padding: 4%;
 	box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
 	border-radius: 5px;
 }
@@ -62,7 +66,7 @@ p {
 	float: left;
 	color: yellow;
 	font-family: 'Merriweather', serif;
-	margin: 20px 0 0 0;
+	margin: 2% 0;
 }
 
 #page-header nav {
@@ -96,7 +100,7 @@ p {
 	text-align: center;
 	margin: 0;
 	padding: 25px 3%;
-	font-size: 25px;
+	font-size: 1.6em;
 	line-height: 1;
 	font-style: italic;
 	background: #C6C6C6;
@@ -155,3 +159,172 @@ footer {
 	color: white;
 	padding: 2% 3%;
 }
+
+/* 
+--------------------------------------------
+ C A R D S
+-------------------------------------------- */
+.cards {
+	background-color: lightgray;
+	margin: 0 auto;
+}
+
+.card {
+	background-color: #fff;
+	display: inline-block;
+	float: left;
+	width: 300px;
+	margin: 1%;
+}
+
+article.profile {
+	padding: 3%;
+}
+
+.tags li {
+	display: inline-block;
+	background-color: #aaa;
+	border: solid 1px #aaa;
+	border-radius: 30px;
+	padding: 0 5%;
+	margin: 0 0 2% 0;
+}
+
+.tags a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+/* 
+--------------------------------------------
+ M O B I L E 
+-------------------------------------------- */
+
+
+/* I P A D */
+
+@media screen and (max-width: 800px) {
+	.wrapper * {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.tagline {
+		display: none;
+	}
+
+	nav {
+		height: 0;
+		transition:height 1s;
+		overflow: hidden;
+	}
+
+
+	#hamburger-button {
+		width: 10%;
+		margin: 2% 0;
+		float: right;
+		background-color: #000;
+	}
+
+	.line {
+		height: 4px;
+		width: 60%;
+		margin: 8% auto;
+		border-radius: 5px;
+		background-color: yellow;
+	}
+
+	.blurb {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.tout {
+		float: none;
+		width: 75%;
+		box-shadow: none;
+	}
+
+	.button {
+		padding: 2%;
+		width: 50%;
+		margin: 4% auto;
+	}
+
+	#page-header nav {
+		text-align: left;
+		clear: both;
+		float: none;
+	}
+
+	#page-header li {
+		text-align: left;
+		float: none;
+	}
+
+	#page-header nav a {
+		text-align: left;
+		padding: 1%;
+	}
+
+	#page-header a:last-child {
+		margin-bottom: 1%;
+	}
+}
+
+/* I P H O N E */
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 1.2em;
+	}
+
+	.tout {
+		width: 94%;
+	}
+}
+
+/* W E I R D SMALLISH S C R E E N */
+@media screen and (max-width: 1005px) {
+	#page-header nav {
+		float: none;
+		clear: both;
+	}
+
+	#page-header nav ul:first-child a {
+		padding: 0px 15px 5px 0px
+	}
+}
+
+
+
+/*
+-----------------------------------------------------
+H E L P E R    C L A S S E S 
+-----------------------------------------------------
+*/
+
+
+/*For jquery menu open transitions*/
+.slidedown {
+	height: 11em;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+
+
+
