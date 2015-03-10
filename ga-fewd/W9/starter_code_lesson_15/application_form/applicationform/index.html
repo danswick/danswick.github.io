@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="content">
+            <header>
+                <h1>Course Application</h1>
+            </header>
+
+            <form>
+                <div id="contact-info">
+                    <h3 class="form-label">Your Contact Info</h3>
+                    <div id="form-names-container">
+                         <label for="firstName" class="form-label">Your Name</label>
+                         <input type="text" name="first-name" placeholder="First" class="nameForm" id="firstName">
+                         <input type="text" name="last-name" placeholder="Last" class="nameForm">
+                    </div>
+
+                    <div id="form-phone-container">
+                        <label for="phoneNum1" class="form-label">Phone Number</label>
+                        <input type="text" name="phoneNum1" class="phoneNum" id="phoneNum1">
+                        <span>&mdash;</span>
+                        <input type="text" name="phoneNum2" class="phoneNum">
+                        <span>&mdash;</span>
+                        <input type="text" name="phoneNum3" class="phoneNum">
+                    </div>
+
+                    <div id="form-address-container">
+                        <label for"addressBox" class="form-label">Address</label>
+                        <input type="text" name="address-street" placeholder="Street Address" class="address" id="addressBox">
+                        <input type="text" name="address-street2" placeholder="Address Line 2" class="address">
+                        <input type="text" name="address-city" placeholder="City" class="cityStateZip">
+                        <input type="address-state" placeholder="State" class="cityStateZip">
+                        <input type="address-zip" placeholder="Postal Code" class="cityStateZip">
+                    </div>
+                </div>
+
+                <div id="skills-interests">
+                    <h3 class="form-label">Skills & Interests</h3>
+                    <div id="course-div">
+                        <label for="courses" class="form-label">Course</label>
+                        <select name="select-course" id="courses">
+                            <optgroup label="Web Development">
+                                <option value="front-end">Front-End</option>
+                                <option value="back-end">Back-End</option>
+                            </optgroup>
+                            <optgroup label="Design">
+                                <option value="visual-design">Visual Design</option>
+                                <option value="User Experience">User Experience</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div id="experienceDiv">
+                        <label for="pastExperience" class="form-label">Past Experience</label>
+                        <textarea name="past-experience" rows="8" cols="50" class="" id="pastExperience"></textarea>
+                    </div>
+                </div>
+
+                <div id="anything-else">
+                    <h3 class="form-label">Anything Else?</h3>
+                    <div id="referralDiv">
+                        <label for="referral" class="form-label">Referral</label>
+                        <select name="referral" class="" id="referral">
+                            <option value="none">None</option>
+                            <option value="friend">Friend</option>
+                            <option value="instructor">Instructor</option>
+                            <option value="online">Online</option>
+                        </select>
+                    </div>
+
+                    <div id="commentsDiv">
+                        <label for="commentsFormBox" class="form-label">Comments</label>
+                        <textarea name="comments" rows="8" cols="50" class="" id="commentsFormBox"></textarea>
+                    </div>
+                </div>
+
+                <input type="submit" value="Save Draft" class="form-submit">
+                <input type="submit" value="Submit" class="form-submit">
+
+            </form>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
