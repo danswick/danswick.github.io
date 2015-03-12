@@ -1,0 +1,143 @@
+/* ------------------------------------------------
+  G L O B A L  S T Y L E S
+---------------------------------------------------*/
+/* basic reset */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* Clearfix for list items */
+li:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+li { display: inline-block; }
+/* start commented backslash hack \*/
+* html li { height: 1%; }
+li { display: block; }
+/* close commented backslash hack */
+
+html {
+  font-size: 1em; /* 16 px */
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #666;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+/* ------------------------------------------------
+  C O N T A I N E R   S T Y L E S
+---------------------------------------------------*/
+.container {
+  width: 60%;
+  max-width: 600px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-family: 'Rokkitt', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+#addNewTask {
+  margin: 5% 0;
+}
+
+.item-text-box {
+  width: 75%;
+  margin-right: 2%;
+  height: 3em;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+.btn {
+  color: #fff;
+  background-color: #555;
+  border: 0;
+  padding: 1em;
+  font-size: 0.8em;
+  height: 3em;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+}
+
+#deleteTasks {
+  background-color: red;
+}
+
+#taskList {
+  margin: 0;
+  padding: 0;
+}
+
+.done-check, .item {
+  float: left;
+  padding: none;
+  margin: none;
+}
+
+ul input[type="checkbox"] {
+  float: left;
+}
+
+.item {
+  display: inline-block;
+  margin: 0 0 1em 0.5em;
+}
+
+.edit, .remove {
+  color: #999;
+  float: right;
+  margin-left: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+.count-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  color: #999;
+}
+
+.count-wrapper span {
+  color: #555;
+}
+
+.completed span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.congrats {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+
