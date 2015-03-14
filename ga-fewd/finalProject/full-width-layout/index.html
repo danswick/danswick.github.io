@@ -8,55 +8,104 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/full-width.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body class="">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <h1>Green Infrastructure Vision</h1>
+            <h1><a href="index.html" alt="home">Green Infrastructure Vision</a></h1>
+            <a id="nav-toggle" class="hidden" href="#"><span></span></a>
             <nav class="primary-nav">
                 <ul>
-                    <li><a href="">Explore</a></li>
+                    <li><a href="/explore/index.html" alt="explore">Explore</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Data</a></li>
                     <li><a href="">Publications</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
             </nav>
-            <nav class="secondary-nav clearfix">
-                <div class="woodland">Woodland</div>
-                <div class="prairie">Prairie</div>
-                <div class="wetland">Wetland</div>
-                <div class="stream">Water</div>
-                <div class="econet">Ecological Network</div>
-            </nav>
         </header>
         
-        <div class="container clearfix introduction">
-            <section class="content introduction clearfix">
-                <h2>Introduction to GIV</h2>
+        <div id="content-container" class="clearfix">
+            <div class="full-width">
+                
+                <div class="introduction content">
+                    <h2>Introduction to GIV</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
 
-                <h3>How to Use this Tool</h3>
+                    <h3>How to Use this Tool</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
 
-            </section> <!-- END INTROCUCTION SECTION -->
-            <div class="advance-content"><span>NEXT SECTION</span></div>
-        </div>
-        <aside class="fixed-map clearfix">
-            <div class="map-howto">
+                </div> <!-- END INTROCUCTION SECTION -->
+
+                <div class="woodland content">
+                    <h2>Introduction to GIV</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+
+                    <h3>How to Use this Tool</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+
+                </div> <!-- END WOODLAND SECTION -->
+
+                <div class="prairie content">
+                    <h2>Introduction to GIV</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+
+                    <h3>How to Use this Tool</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+
+                </div> <!-- END PRAIRIE SECTION -->
+
+                <div class="wetland content">
+                    <h2>Introduction to GIV</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+
+                    <h3>How to Use this Tool</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+
+                </div> <!-- END WETLAND SECTION -->
+
+                <div class="stream content">
+                    <h2>Introduction to GIV</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+
+                    <h3>How to Use this Tool</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+
+                </div> <!-- END STREAM SECTION -->
+
+                <div class="econet content">
+                    <h2>Introduction to GIV</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quas, amet doloremque odit ullam facilis saepe tenetur laborum impedit. Magni, velit, vero? Quaerat dignissimos aut ipsum? Expedita corrupti, atque minima?</p>
+
+                    <h3>How to Use this Tool</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio laboriosam quod consequatur saepe cumque eaque nostrum, odit debitis, explicabo nobis illum temporibus voluptatem repellat labore. Voluptates facere, incidunt corporis.</p>
+
+                </div> <!-- END ECONET SECTION -->
 
             </div>
-        </aside>
-        
-        <footer></footer>
+        </div>
+
+        <footer class=""><span>This is the footer</span></footer>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>

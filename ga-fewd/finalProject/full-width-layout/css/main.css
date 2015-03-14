@@ -10,6 +10,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+
 html {
     color: #222;
     font-size: 1em;
@@ -18,6 +20,15 @@ html {
 
 html * {
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -121,17 +132,23 @@ body {
 
 header {
     padding: 0;
-    color: #eee;
-    background-color: #333;
-    height: 125px;
-    padding-top: 1%;
+    background-color: #1F3F4E;
+    height: 6em;
+    padding-top: 1em;
 }
 
 header h1 {
     float: left;
-    margin: 1% 0 2% 2%;
-    width: 35%;
+    margin: 0.5em 0 0 0.7em;
+    width: 15em;
     font-size: 1.7em;
+    font-family: "Arvo";
+    font-weight: 700;
+}
+
+header a, .secondary-nav a {
+    text-decoration: none;
+    color: #eee;
 }
 
 nav li {
@@ -141,8 +158,9 @@ nav li {
 
 .primary-nav {
     float: right;
-    width: 60%;
+    width: 35em;
     padding-right: 2%;
+    margin-top: 0.3em;
 }
 
 .primary-nav li {
@@ -152,22 +170,23 @@ nav li {
     height: 24px;
     line-height: 26px;
     text-align: center;
+    font-family: "Arvo";
 }
 
 .primary-nav a {
-    text-decoration: none;
-    color: #ddd;
-    border: solid 1px #444;
-    background-color: #222;
-    border-radius: 20px;
     padding: 0.5em 1em;
+}
+
+.primary-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.3em;
+
 }
 
 .secondary-nav {
     clear: both;
     width: 100%;
-    height: 44%;
-    border-bottom: solid 2px #333;
+    height: 10;
     box-shadow: 0px 10px 10px -8px rgba(10, 10, 10, 0.5);
 }
 
@@ -177,7 +196,7 @@ nav li {
     text-align: center;
     height: 100%;
     line-height: 2.4em;
-    font-size: 1.5em;
+    font-size: 1.1em;
     position: relative;
     z-index: 100;
 }
@@ -193,6 +212,8 @@ nav li {
     text-align: center;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    width: 100%;
 }
 
 
@@ -201,12 +222,15 @@ nav li {
     M A P     A S I D E  
    ------------------------------------------- */
 .fixed-map {
-    width: 55%;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     background-color: slategray;
-    float: right;
-    position: relative;
     z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -220,13 +244,34 @@ nav li {
 /* -------------------------------------------
     C O N T E N T   
    ------------------------------------------- */
+#content-container {
+    min-height: 100%;
+}
+
+#content-container-explore {
+    position: relative;
+    height: -o-calc(100% - 6em); /* opera */
+    height: -webkit-calc(100% - 6em); /* google, safari */
+    height: -moz-calc(100% - 6em); /* firefox */
+}
+
 .container {
     float: left;
     width: 45%;
-    height: 500px;
-    box-shadow: 10px 0px 11px -9px rgba(10, 10, 10, 0.5);
-    position: relative;
+    height: 100%;
+    box-shadow: 10px 0px 15px -7px rgba(10, 10, 10, 0.8);
     z-index: 50;
+    position: absolute;
+}
+
+.info-drawer {
+    
+    overflow: scroll;
+}
+
+.full-width {
+    width: 100%;
+    min-height: 100%;
 }
 
 .content {
@@ -234,8 +279,26 @@ nav li {
 }
 
 .introduction {
-    background-color: #333;
+    background-color: #fff;
+    color: #333;
+}
+
+#drawer-button {
+    position: absolute;
+    top: 50%;
+    left: 97%;
+    font-size: 50px;
+    height: 3em;
+}
+
+#drawer-button a {
+    text-decoration: none;
     color: #fff;
+    display: inline-block;
+    background-color: #555;
+    border: 1px solid rgba(100, 100, 100, 0.7);
+    border-radius: 5px;
+    width: 30px;
 }
 
 
@@ -245,35 +308,40 @@ nav li {
 /* -------------------------------------------
     E C O S Y S T E M     C L A S S E S 
    ------------------------------------------- */
-.woodland {
+.woodland, .woodland a {
     color: #FFF0E4;
     background-color: #a6611a;
 }
 
-.prairie {
+.prairie, .prairie a {
     color: #333;
     background-color: #dfc27d;
 }
 
-.wetland {
+.wetland, .wetland a {
     color: #333;
     background-color: #80cdc1;
 }
 
-.stream {
+.stream, .stream a {
     color: #FFF0E4;
     background-color: #018571;
 }
 
-.econet {
+.econet, .econet a {
     color: #FFF0E4;
     background-color: darkgreen;
 }
 
 
+/* -------------------------------------------
+    F O O T E R    
+   ------------------------------------------- */
 
-
-
+footer {
+    height: 5%;
+    display: block;
+}
 
 
 
@@ -289,7 +357,7 @@ nav li {
  */
 
 .hidden {
-    display: none !important;
+    display: none;
     visibility: hidden;
 }
 
@@ -448,3 +516,159 @@ nav li {
         page-break-after: avoid;
     }
 }
+
+/* ==========================================================================
+   C U S T O M    M E D I A   Q U E R I E S
+   ========================================================================== */
+
+/* ---------------- 
+   M A X   1 0 0 0 
+   ---------------- */
+
+@media screen and (max-width: 1000px){
+    header h1 {
+        font-size: 1.5em;
+        margin-top: 0em;
+        width: 12em;
+    }
+    
+    header ul {
+        margin: 0;
+    }
+
+    .primary-nav {
+        width: 20em;
+        font-size: 0.9em;
+        margin-top: 0;
+    }
+
+    .primary-nav li {
+        margin-top: 0.5em;
+    }
+
+    .info-drawer {
+        width: 70%;
+    }
+
+    .info-drawer section {
+        padding-right: 10%;
+    }
+
+    #drawer-button {
+        left: 96%;
+    }
+
+}
+
+/* ---------------- 
+   M A X   6 0 0 
+   ---------------- */
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1em;
+        margin-top: 0em;
+        width: 10em;
+    }
+
+    .primary-nav {
+        width: 19em;
+        font-size: 0.8em;
+        margin-top: 0;
+    }
+
+    header ul {
+        width: inherit;
+    }
+
+    .info-drawer {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
+
+/* ---------------- 
+   M A X   4 5 0 
+   ---------------- */
+
+@media screen and (max-width: 450px) {
+    #nav-toggle {
+        display: inline-block;
+        visibility: visible;
+    }
+    
+    header ul {
+        padding: 0;
+    }
+
+    #nav-toggle { 
+        cursor: pointer; 
+        padding: 10px 35px 16px 0px; 
+        position: absolute;
+        left: 90%;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 20px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    #nav-toggle span:before {
+      top: -6px; 
+    }
+
+    #nav-toggle span:after {
+      bottom: -6px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      transition: all 500ms ease-in-out;
+    }
+
+    #nav-toggle.nav-active span {
+      background-color: transparent;
+    }
+
+    #nav-toggle.nav-active span:before, #nav-toggle.nav-active span:after {
+      top: 0;
+    }
+
+    #nav-toggle.nav-active span:before {
+      transform: rotate(45deg);
+    }
+
+    #nav-toggle.nav-active span:after {
+      transform: rotate(-45deg);
+    }
+
+    .primary-nav {
+        display: none;
+        background-color: RGBA(21, 50, 62, 0.9);
+        position: fixed;
+        right: 11%;
+        top: 2em;
+        width: 16em;
+        border: solid 2px RGBA(21, 50, 62, 1);
+        padding: 0;
+    }
+
+    .primary-nav li {
+        margin: 0.1em auto;
+    }
+}
+
+
+
