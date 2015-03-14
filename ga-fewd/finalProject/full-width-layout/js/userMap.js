@@ -8,7 +8,7 @@ var regionStyle = {
 	"opacity": 0.5
 };
 
-$.getJSON("../../data/CW_region.geojson", function(regionData){
+$.getJSON("../../data/data.js", function(regionData){
 	var geojson = L.geoJson(regionData, {
 		onEachFeature: function (feature, layer) {
 			layer.bindPopup(feature.properties.Name);
