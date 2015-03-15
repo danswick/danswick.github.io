@@ -631,6 +631,12 @@ footer {
    ---------------- */
 
 @media screen and (max-width: 450px) {
+    #content-container-explore {
+        height: -o-calc(100% - 4em);
+        height: -webkit-calc(100% - 4em);
+        height: -moz-calc(100% - 4em);
+    }
+
     #nav-toggle {
         display: inline-block;
         visibility: visible;
