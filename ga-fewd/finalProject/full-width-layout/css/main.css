@@ -133,11 +133,21 @@ body {
     width: 100%;
 }
 
-header {
+header, footer {
     padding: 0;
     background-color: #1F3F4E;
-    height: 6em;
     padding-top: 1em;
+}
+
+header {
+    height: 6em;
+    border-bottom: 2px solid rgba(10, 10, 10, 0.2);
+}
+
+footer {
+    border-top: 2px solid rgba(10, 10, 10, 0.2);
+    color: #eee;
+    padding: 1em;
 }
 
 header h1 {
@@ -666,7 +676,7 @@ footer {
     }
 
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-      transition: all 500ms ease-in-out;
+      transition: all 350ms ease-in-out;
     }
 
     #nav-toggle.nav-active span {
@@ -694,10 +704,12 @@ footer {
         width: 16em;
         border: solid 2px RGBA(21, 50, 62, 1);
         padding: 0;
+        z-index: 200;
     }
 
     .primary-nav li {
         margin: 0.1em auto;
+        float: none;
     }
 
     #drawer-button {
