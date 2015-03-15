@@ -324,15 +324,14 @@ nav li {
     top: 50%;
     left: 97%;
     font-size: 50px;
-    height: 3em;
 }
 
 #drawer-button a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
-    background-color: #555;
-    border: 1px solid rgba(100, 100, 100, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 30px;
 }
