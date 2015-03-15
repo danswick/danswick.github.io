@@ -658,6 +658,9 @@ footer {
         padding: 0;
     }
 
+    /*  ----- hamburger animation -----
+        ----- from here - http://codepen.io/elijahmanor/pen/Igpoe */
+
     #nav-toggle { 
         cursor: pointer; 
         padding: 10px 35px 16px 0px; 
@@ -706,19 +709,26 @@ footer {
 
     .primary-nav {
         display: none;
-        background-color: RGBA(21, 50, 62, 0.9);
+        background-color: RGBA(255, 255, 255, 0.9);
         position: fixed;
         right: 11%;
-        top: 2em;
-        width: 16em;
-        border: solid 2px RGBA(21, 50, 62, 1);
+        top: 2.5em;
+        width: 8em;
+        border: solid 1px RGBA(21, 50, 62, 1);
         padding: 0;
         z-index: 200;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
     }
 
     .primary-nav li {
         margin: 0.1em auto;
         float: none;
+        display: block;
+        text-align: right;
+    }
+
+    .primary-nav a {
+        color: #222;
     }
 
     #drawer-button {
