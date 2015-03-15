@@ -222,6 +222,10 @@ nav li {
     border-bottom: 2px solid rgba(20, 20, 20, 0.3);
 }
 
+.secondary-nav .active {
+    border-bottom: 2px solid rgba(20, 20, 20, 0);
+}
+
 .secondary-nav a {
     position: relative;
     width: 100%;

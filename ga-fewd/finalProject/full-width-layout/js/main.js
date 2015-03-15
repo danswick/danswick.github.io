@@ -5,11 +5,13 @@ switch content when content nav buttons are clicked
 // change content in info window
 	$('.secondary-nav a').on('click', function(){
 		$('.info-drawer section').addClass('hidden');
+		$('.secondary-nav div').removeClass('active');
 		
 		var relatedPanel = $(this).data('tab');
 		console.log("clicked on " + relatedPanel + " link");
 
 		$('.' + relatedPanel).removeClass('hidden');
+		$(this).parent().addClass('active');
 	});	
 
 // change data displayed on the map
