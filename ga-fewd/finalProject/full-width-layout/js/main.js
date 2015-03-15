@@ -24,9 +24,7 @@ switch content when content nav buttons are clicked
 hide info drawer when hide button is clicked
 ----------------------------------------------- */
 
-$('#drawer-button').on('click', function(e){
-	e.preventDefault();
-
+function drawerMove(){
 	var viewportWidth = $(window).width();
 
 	if($('.info-drawer').hasClass('closed')){ // if it is 'closed' when clicked
@@ -53,13 +51,27 @@ $('#drawer-button').on('click', function(e){
 			});
 		} else {
 			$('.info-drawer').animate({ // shut it down!
-				left: '-80%'
+				left: '-77%'
 				}, 200, function() {	
 					$('.info-drawer').toggleClass('closed'); // then switch on the 'closed' class
 			});
 		}
-
 	}
+}
+
+$('#drawer-button').on('click', function(e){
+	e.preventDefault();
+	drawerMove();
+});
+
+$('#leaflet-map').focus(function(e){
+	e.preventDefault();
+	drawerMove();
+});
+
+$('#leaflet-map').blur(function(e){
+	e.preventDefault();
+	drawerMove();
 });
 
 /* --------------------------------------------
