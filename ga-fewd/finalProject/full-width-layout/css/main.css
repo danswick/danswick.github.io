@@ -301,8 +301,8 @@ nav li {
 }
 
 .info-drawer {
-    
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .full-width {
@@ -336,7 +336,24 @@ nav li {
     width: 30px;
 }
 
+.top-banner {
+    margin: 0 auto;
+    position: relative;
+    height: 12em;
+    overflow: hidden;
+}
 
+.top-banner img {
+    width: 100%;
+}
+
+.top-banner h2 {
+    position: absolute;
+    top: 5%;
+    left: 1em;
+    color: #fff;
+    font-size: 2em;
+}
 
 
 

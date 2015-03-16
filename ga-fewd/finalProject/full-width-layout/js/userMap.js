@@ -1,5 +1,5 @@
-var mapTiles = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL,</a> and <a href="https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Rodent-Baiting/97t6-zrhs?">City of Chicago</a>',
+var mapTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/danswick.lff6ij2d/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA', {
+      attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>",
       maxZoom: 17,
     });
 
@@ -16,7 +16,10 @@ $.getJSON("CW_region.geojson", function(regionData){
 		}
 	});
 	
-	var map = L.map('leaflet-map').fitBounds(geojson.getBounds());
+	var map = L.map('leaflet-map', {
+		center: [41.902, -89.453],
+		zoom: 8
+	});
 
 	mapTiles.addTo(map);
 	geojson.addTo(map);
