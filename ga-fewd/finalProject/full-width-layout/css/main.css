@@ -670,6 +670,12 @@ footer {
     header h1 {
         width: 14em;
     }
+
+    .top-banner h2 {
+        top: 1%;
+        font-size: 1.3em;
+        
+    }
     
     header ul {
         padding: 0;
@@ -730,7 +736,7 @@ footer {
         position: fixed;
         right: 5%;
         top: 2.7em;
-        width: 8em;
+        width: 10em;
         border: solid 1px RGBA(0, 0, 0, 0.3);
         padding: 0;
         z-index: 200;
@@ -738,7 +744,7 @@ footer {
     }
 
     .primary-nav li {
-        margin: 0.1em auto;
+        margin: 0.5em auto;
         float: none;
         display: block;
         text-align: right;
@@ -750,6 +756,7 @@ footer {
         display: block;
         padding: 0 0.75em;
         font-weight: 700;
+        font-size: 1.2em;
     }
 
     #drawer-button {
