@@ -14,6 +14,7 @@
 - [WBEZ swipe b/w layers](http://interactive.wbez.org/elections/2015/mayoral-dot-map/)
 - [How the above was made](http://wbezdata.tumblr.com/post/86343915004/mapping-rahm-emanuels-2011-victory-and-how-that) (sort of)
 - Mapbox [swipe b/w layers](https://www.mapbox.com/mapbox.js/example/v1.0.0/swipe-layers/)
+- [StackOverflow thread](http://gis.stackexchange.com/questions/28973/best-method-to-aggregate-1m-dem-mosaic-to-10m-dem) on resampling rasters in ArcMap. 
 
 
 
