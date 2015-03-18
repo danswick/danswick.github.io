@@ -6,6 +6,10 @@ var mapTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/danswick.lff6ij2d/{z
 var regionStyle = {
 	"color": "green",
 	"opacity": 0.5
+var givTiles = L.tileLayer('http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+});
+
 };
 
 $.getJSON("CW_region.geojson", function(regionData){

@@ -1,0 +1,49 @@
+body {
+  background-color: #008866;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.hamburger-icon {
+  margin: 3em auto;
+  width: 2.5rem;
+  display: block;
+}
+
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: #E7E6DD;
+  transition: 0.5s;
+  border-radius: 2.5rem;
+  margin-bottom: .52em;
+  opacity: 1;
+  /* 1. Set the transition property on the .line class */
+
+}
+
+/* Second line */
+.active .line:nth-child(2) {
+  opacity: 0;
+  /* 2. When the active class is added to the .hamburger-icon, fade the middle line out (hint: you can use the 'opacity' property). */
+  
+}
+
+/* Top line */
+.active .line:first-child {
+  /* 3. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line 45 deg*/
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  /* 4. Use the CSS 'transform-origin' property to set the center of rotation.*/
+  transform-origin: right top;
+}
+
+/* Bottom line */
+.active .line:last-child {
+  /* 5. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line -45 deg*/
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  /* 6. Use the CSS 'transform-origin' property to set the center of rotation.*/
+  transform-origin: right bottom;
+}
