@@ -18,6 +18,7 @@
 - [TileHut](https://github.com/b-g/tilehut) for putting custom tiles up on OpenShift for free! Up to 1gig. 
 - TileMill [raster colorizer](https://www.mapbox.com/blog/tilemill-raster-colorizer/) for setting discrete style values on rasters. Necessary for styling GIV layers.
     + [More](https://www.mapbox.com/tilemill/docs/guides/discrete-raster-data/#importing-and-styling-in-tilemill), but not as instructive. 
+- How to add [opacity contro](https://www.mapbox.com/mapbox.js/example/v1.0.0/opacity/) to a map. 
 
 
 
