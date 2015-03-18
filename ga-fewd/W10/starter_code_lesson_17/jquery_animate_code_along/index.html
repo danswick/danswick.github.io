@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+
+	<title>jQuery Animate</title>
+	
+	<!-- external CSS link -->
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<header>
+	  <h1>jQuery Animate</h1>
+	  <nav>
+	  	<ul>
+	  		<li><a href="#sectionOne">One</a></li>
+	  		<li><a href="#sectionTwo">Two</a></li>
+	  		<li><a href="#sectionThree">Three</a></li>
+	  		<li><a href="#sectionFour">Four</a></li>
+	  	</ul>
+	  </nav>
+	</header>
+
+	<article id="sectionOne">
+		<h1>Article One</h1>
+	</article>
+	<article id="sectionTwo">
+		<h1>Article Two</h1>
+	</article>
+	<article id="sectionThree">
+		<h1>Article Three</h1>
+	</article>
+	<article id="sectionFour">
+		<h1>Article Four</h1>
+	</article>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		$('nav a').on('click', function(e){
+			e.preventDefault();
+
+			var target = this.hash;
+			var headerHeight = $('header').outerHeight();
+			console.log(headerHeight);
+
+			$('html, body').animate({
+				'scrollTop': $(target).offset().top - headerHeight - 10
+			}, 350, 'swing', function(){
+					window.location.hash = target;
+			});
+		});
+	</script>
+</body>
+</html>

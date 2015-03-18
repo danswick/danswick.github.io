@@ -360,6 +360,10 @@ nav li {
 /* -------------------------------------------
     E C O S Y S T E M     C L A S S E S 
    ------------------------------------------- */
+.introduction {
+    /*background-image: url("../img/Prairie_grass_crop.jpg");*/
+}
+
 .woodland, .woodland a {
     color: #FFF0E4;
     background-color: #a6611a;

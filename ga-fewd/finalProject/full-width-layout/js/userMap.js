@@ -3,6 +3,10 @@ var mapTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/danswick.lff6ij2d/{z
       maxZoom: 17,
     });
 
+var givTiles = L.tileLayer('http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+});
+
 var ecosystemStyles = {
 	woodland: { "color": "#a6611a",	"opacity": 0.5 },
 	prairie: { "color": "#dfc27d", "opacity": 0.5 },
@@ -17,6 +21,9 @@ var map = L.map('leaflet-map', {
 });
 
 mapTiles.addTo(map);
+
+givTiles.addTo(map);
+
 
 $('.secondary-nav a').on('click', function(){
 	$('.leaflet-zoom-animated g').remove(); // ugh, this is terrible, but i can't think of a better way to remove the existing layer before adding the new one
