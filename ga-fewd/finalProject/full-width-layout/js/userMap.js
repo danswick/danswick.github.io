@@ -5,6 +5,8 @@ var mapTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/danswick.lff6ij2d/{z
 
 var givTiles = L.tileLayer('http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png', {
 	maxZoom: 17,
+	opacity: 0.75,
+
 });
 
 var ecosystemStyles = {
