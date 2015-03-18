@@ -21,7 +21,9 @@ var map = L.map('leaflet-map', {
 });
 
 mapTiles.addTo(map);
+
 givTiles.addTo(map);
+
 
 $('.secondary-nav a').on('click', function(){
 	$('.leaflet-zoom-animated g').remove(); // ugh, this is terrible, but i can't think of a better way to remove the existing layer before adding the new one
