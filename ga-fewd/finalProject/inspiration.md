@@ -15,6 +15,9 @@
 - [How the above was made](http://wbezdata.tumblr.com/post/86343915004/mapping-rahm-emanuels-2011-victory-and-how-that) (sort of)
 - Mapbox [swipe b/w layers](https://www.mapbox.com/mapbox.js/example/v1.0.0/swipe-layers/)
 - [StackOverflow thread](http://gis.stackexchange.com/questions/28973/best-method-to-aggregate-1m-dem-mosaic-to-10m-dem) on resampling rasters in ArcMap. 
+- [TileHut](https://github.com/b-g/tilehut) for putting custom tiles up on OpenShift for free! Up to 1gig. 
+- TileMill [raster colorizer](https://www.mapbox.com/blog/tilemill-raster-colorizer/) for setting discrete style values on rasters. Necessary for styling GIV layers.
+    + [More](https://www.mapbox.com/tilemill/docs/guides/discrete-raster-data/#importing-and-styling-in-tilemill), but not as instructive. 
 
 
 
