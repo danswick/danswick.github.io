@@ -22,11 +22,13 @@ switch content when content nav buttons are clicked
 		var secondaryNavHeight = $('.secondary-nav').outerHeight();
 		$('.info-drawer').scrollTop(sectionHeight - headerHeight - secondaryNavHeight);
 		console.log(sectionHeight - headerHeight - secondaryNavHeight);*/
-		map.setZoom(ecosystemZooms[relatedPanel]);
 		var splitCoords = ecosystemCenters[relatedPanel].split(',');
 		var lat = parseFloat(splitCoords[0]);
 		var lng = parseFloat(splitCoords[1]);
-		map.panTo(new L.LatLng(lat, lng));
+		var zoom = ecosystemZooms[relatedPanel];
+		var tileAdd = ecosystemTiles[relatedPanel];
+
+		moveToLandscape(lat, lng, zoom, tileAdd);
 	});	
 
 // change data displayed on the map
