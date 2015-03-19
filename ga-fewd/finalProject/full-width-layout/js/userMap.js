@@ -17,6 +17,22 @@ var ecosystemStyles = {
 	econet: { "color": "darkgreen",	"opacity": 0.5 }
 };
 
+var ecosystemCenters = {
+	"woodland": "41.902, -87.453",
+	"prairie": "41.380, -88.100",
+	"wetland": "41.902, -87.453",
+	"stream": "41.902, -87.453",
+	"econet": "41.902, -87.453"
+};
+
+var ecosystemZooms = {
+	"woodland": 8,
+	"prairie": 14,
+	"wetland": 8,
+	"stream": 8,
+	"econet": 8
+};
+
 var map = L.map('leaflet-map', {
 	center: [41.902, -89.453],
 	zoom: 8
