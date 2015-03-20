@@ -280,7 +280,7 @@ nav li {
 /* -------------------------------------------
     C O N T E N T   
    ------------------------------------------- */
-#content-container {
+#page-container {
     min-height: 100%;
 }
 
@@ -300,6 +300,21 @@ nav li {
     position: absolute;
 }
 
+.content-container {
+    padding: 0 1em;
+    margin: 0 2em;
+}
+
+.section-a, .section-b {
+    padding: 2em 0;
+}
+
+.section-b {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
 .info-drawer {
     overflow: scroll;
     overflow-x: hidden;
@@ -310,8 +325,12 @@ nav li {
     min-height: 100%;
 }
 
+.chunk-content {
+    padding: 0 5%;
+}
+
 .content {
-    padding: 5%;
+    padding: 0 0 2em 0;
 }
 
 .introduction {
@@ -339,7 +358,7 @@ nav li {
 .top-banner {
     margin: 0 auto;
     position: relative;
-    height: 12em;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -349,13 +368,25 @@ nav li {
 
 .top-banner h2 {
     position: absolute;
-    top: 5%;
-    left: 1em;
+    top: 30%;
     color: #fff;
-    font-size: 2em;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(10,10,10,0.5);
+    width: 100%;
+    text-align: center;
 }
 
+.content-container a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid #ccc;
+    box-shadow: inset 0 -5px 0 #ccc;
+    transition: all 0.1s linear;
+}
 
+.content-container a:hover {
+    box-shadow: inset 0 -1.3em 0 #ccc;
+}
 
 /* -------------------------------------------
     E C O S Y S T E M     C L A S S E S 
@@ -582,6 +613,10 @@ footer {
    ---------------- */
 
 @media screen and (max-width: 1000px){
+    .top-banner h2 {
+        top: 20%;
+    }
+
     header h1 {
         font-size: 1.5em;
         margin-top: 0em;
@@ -617,10 +652,20 @@ footer {
 }
 
 /* ---------------- 
-   M A X   6 0 0 
+   M A X   6 2 0 
    ---------------- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
+    .top-banner h2 {
+        top: 10%;
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    .top-banner {
+        height: 300px
+    }
+
     header h1 {
         font-size: 1em;
         margin-top: 0em;
@@ -659,6 +704,10 @@ footer {
         height: -o-calc(100% - 4em);
         height: -webkit-calc(100% - 4em);
         height: -moz-calc(100% - 4em);
+    }
+
+    .top-banner {
+        height: 200px;
     }
 
     #nav-toggle {
