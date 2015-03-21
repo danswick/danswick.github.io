@@ -36,6 +36,7 @@
 
 - Core for each
 - GIV ecological network
+    + Hub layer 1 is the stand-in for the "ecological network." It is an aggregate of all the landscape types' core and corridor layers. 
 
 ### Methodology
 
