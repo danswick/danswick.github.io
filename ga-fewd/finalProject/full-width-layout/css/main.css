@@ -886,10 +886,14 @@ footer a {
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
-    p {
+    h3 { 
+        font-size: 1.1em
+    }
+
+    p, ul, li {
         font-size: 0.8em;
     }
 
@@ -1025,7 +1029,7 @@ footer a {
         display: block;
         padding: 0 0.75em;
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .drawer-button {
