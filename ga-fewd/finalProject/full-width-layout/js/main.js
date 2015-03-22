@@ -112,6 +112,7 @@ $('#leaflet-map').focus(function(e){
 	
 	if(!$('.info-drawer').hasClass('closed')){
 		$('.info-drawer').addClass('closed');
+		$('.drawer-button').addClass('button-closed');
 		$('.drawer-button a').html('&rsaquo;');
 	}
 });
@@ -120,6 +121,7 @@ $('.info-drawer').focus(function(e){
 	e.preventDefault();
 	if($('.info-drawer').hasClass('closed')){
 		$('.info-drawer').removeClass('closed');
+		$('.drawer-button').removeClass('button-closed');
 		$('.drawer-button a').html('&lsaquo;');
 	}
 });

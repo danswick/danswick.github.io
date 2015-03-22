@@ -45,16 +45,6 @@ var map = L.map('leaflet-map', {
 mapTiles.addTo(map);
 
 
-$('.secondary-nav a').on('click', function(){
-	$('.leaflet-zoom-animated g').remove(); // ugh, this is terrible, but i can't think of a better way to remove the existing layer before adding the new one
-	var regionStyle = ecosystemStyles[$(this).data('tab')];
-	$.getJSON("CW_region.geojson", function(regionData){
-		var geojson = L.geoJson(regionData);
-		geojson.setStyle(regionStyle);
-		geojson.addTo(map);
-	});
-});
-
 function moveToLandscape(lat, lng, zoom, tiles) {
 	map.panTo(new L.LatLng(lat, lng), {animate: true, duration: 1});
 	map.once('moveend', function() { // set a one-time event listener (omg so cool)
@@ -86,4 +76,16 @@ function moveToLandscape(lat, lng, zoom, tiles) {
 	mapTiles.addTo(map);
 	geojson.setStyle(regionStyle);
 	geojson.addTo(map);
+});*/
+
+
+// add geojson and style it
+/*$('.secondary-nav a').on('click', function(){
+	$('.leaflet-zoom-animated g').remove(); // ugh, this is terrible, but i can't think of a better way to remove the existing layer before adding the new one
+	var regionStyle = ecosystemStyles[$(this).data('tab')];
+	$.getJSON("CW_region.geojson", function(regionData){
+		var geojson = L.geoJson(regionData);
+		geojson.setStyle(regionStyle);
+		geojson.addTo(map);
+	});
 });*/
