@@ -276,6 +276,10 @@ nav li {
     bottom: 0;
 }
 
+.fixed-map:focus {
+    outline: none;
+}
+
 
 
 
