@@ -364,6 +364,11 @@ nav li {
     font-style: italic;
 }
 
+.list-of-landscapes {
+    padding: 0;
+    margin: 2.5em auto;
+}
+
 .list-of-landscapes li {
     list-style-type: none;
     display: block;
@@ -379,20 +384,26 @@ nav li {
     color: #333;
 }
 
-#drawer-button {
-    position: absolute;
+.drawer-button {
+    position: fixed;
     top: 50%;
-    left: 97%;
+    left: 44.9%;
     font-size: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
-#drawer-button a {
+.button-closed {
+    left: 5%;
+}
+
+.drawer-button a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     width: 30px;
 }
 
@@ -821,8 +832,12 @@ footer a {
         padding-right: 10%;
     }
 
-    #drawer-button {
-        left: 96%;
+    .drawer-button {
+        left: 70%;
+    }
+
+    .button-closed {
+        left: 5%;
     }
 
 }
@@ -872,6 +887,14 @@ footer a {
 
     p {
         font-size: 0.8em;
+    }
+
+    .drawer-button {
+        left: 85%;
+    }
+
+    .button-closed {
+        left: 7%;
     }
 }
 
@@ -930,6 +953,7 @@ footer a {
         padding: 10px 35px 16px 0px; 
         position: absolute;
         left: 90%;
+        top: 3%;
     }
 
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
@@ -985,7 +1009,7 @@ footer a {
     }
 
     .primary-nav li {
-        margin: 0.5em auto;
+        margin: 1em auto;
         float: none;
         display: block;
         text-align: right;
@@ -997,11 +1021,15 @@ footer a {
         display: block;
         padding: 0 0.75em;
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
-    #drawer-button {
-        left: 93%;
+    .drawer-button {
+        left: 85%;
+    }
+
+    .button-closed {
+        left: 8%;
     }
 }
 

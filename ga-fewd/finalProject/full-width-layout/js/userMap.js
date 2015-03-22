@@ -38,7 +38,8 @@ var ecosystemTiles = {
 var map = L.map('leaflet-map', {
 	center: [42.2, -88.5],
 	zoom: 8,
-	zoomAnimationThreshold: 5
+	zoomAnimationThreshold: 5,
+	zoomControl: false
 });
 
 mapTiles.addTo(map);

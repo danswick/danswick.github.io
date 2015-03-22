@@ -60,11 +60,12 @@ hide info drawer when hide button is clicked
 function drawerMove(){
 
 	$('.info-drawer').toggleClass('closed');
+	$('.drawer-button').toggleClass('button-closed');
 
 	if($('.info-drawer').hasClass('closed')) {
-		$('#drawer-button a').html('&rsaquo;');
+		$('.drawer-button a').html('&rsaquo;');
 	} else {
-		$('#drawer-button a').html('&lsaquo;');
+		$('.drawer-button a').html('&lsaquo;');
 	}
 
 	/*
@@ -101,7 +102,7 @@ function drawerMove(){
 	}*/
 }
 
-$('#drawer-button').on('click', function(e){
+$('.drawer-button').on('click', function(e){
 	e.preventDefault();
 	drawerMove();
 });
@@ -111,7 +112,7 @@ $('#leaflet-map').focus(function(e){
 	
 	if(!$('.info-drawer').hasClass('closed')){
 		$('.info-drawer').addClass('closed');
-		$('#drawer-button a').html('&rsaquo;');
+		$('.drawer-button a').html('&rsaquo;');
 	}
 });
 
@@ -119,7 +120,7 @@ $('.info-drawer').focus(function(e){
 	e.preventDefault();
 	if($('.info-drawer').hasClass('closed')){
 		$('.info-drawer').removeClass('closed');
-		$('#drawer-button a').html('&lsaquo;');
+		$('.drawer-button a').html('&lsaquo;');
 	}
 });
 
