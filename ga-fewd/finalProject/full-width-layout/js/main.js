@@ -1,4 +1,20 @@
 /* --------------------------------------------
+check for URL hash and activate correct content
+----------------------------------------------- */
+
+var hash = window.location.hash;
+
+var hashClass = hash.replace('#', '');
+
+if(hash != ''){
+	var selectionString = '.secondary-nav .' + hashClass;
+	setTimeout(function(){
+		$(selectionString).find('a').trigger('click');
+	}, 10);
+};
+
+
+/* --------------------------------------------
 switch content when content nav buttons are clicked
 ----------------------------------------------- */
 
@@ -42,7 +58,6 @@ hide info drawer when hide button is clicked
 ----------------------------------------------- */
 
 function drawerMove(){
-	var viewportWidth = $(window).width();
 
 	$('.info-drawer').toggleClass('closed');
 
@@ -52,7 +67,9 @@ function drawerMove(){
 		$('#drawer-button a').html('&lsaquo;');
 	}
 
-	/*if($('.info-drawer').hasClass('closed')){ // if it is 'closed' when clicked
+	/*
+	var viewportWidth = $(window).width();
+	if($('.info-drawer').hasClass('closed')){ // if it is 'closed' when clicked
 		$('#drawer-button a').html('&lsaquo;'); // switch to the 'open' char
 		$('.info-drawer').animate({ // open it on up!
 			left: '0%'
@@ -91,13 +108,25 @@ $('#drawer-button').on('click', function(e){
 
 $('#leaflet-map').focus(function(e){
 	e.preventDefault();
-	drawerMove();
+	
+	if(!$('.info-drawer').hasClass('closed')){
+		$('.info-drawer').addClass('closed');
+		$('#drawer-button a').html('&rsaquo;');
+	}
 });
 
-$('#leaflet-map').blur(function(e){
+$('.info-drawer').focus(function(e){
+	e.preventDefault();
+	if($('.info-drawer').hasClass('closed')){
+		$('.info-drawer').removeClass('closed');
+		$('#drawer-button a').html('&lsaquo;');
+	}
+});
+
+/*$('#leaflet-map').blur(function(e){
 	e.preventDefault();
 	drawerMove();
-});
+});*/
 
 /* --------------------------------------------
 hamburger nav nonsense

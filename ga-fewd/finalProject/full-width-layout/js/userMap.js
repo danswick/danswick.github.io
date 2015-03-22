@@ -12,31 +12,31 @@ var ecosystemStyles = {
 };
 
 var ecosystemCenters = {
-	"woodland": "41.902, -85.453",
+	"woodland": "41.709, -87.892",
 	"prairie": "41.380, -88.100",
 	"wetland": "41.661, -87.032",
-	"stream": "41.902, -87.453",
-	"econet": "41.902, -87.453"
+	"stream": "42.420, -88.164",
+	"econet": "42.202, -88.453"
 };
 
 var ecosystemZooms = {
-	"woodland": 10,
-	"prairie": 13,
+	"woodland": 12,
+	"prairie": 12,
 	"wetland": 13,
-	"stream": 8,
+	"stream": 14,
 	"econet": 8
 };
 
 var ecosystemTiles = {
-	"woodland": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png',
-	"prairie": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png',
-	"wetland": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png',
-	"stream": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png',
+	"woodland": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
+	"prairie": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
+	"wetland": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
+	"stream": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
 	"econet": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png'
 };
 
 var map = L.map('leaflet-map', {
-	center: [41.902, -89.453],
+	center: [42.2, -88.5],
 	zoom: 8,
 	zoomAnimationThreshold: 5
 });
