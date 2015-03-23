@@ -18,39 +18,29 @@ if(hash != ''){
 switch content when content nav buttons are clicked
 ----------------------------------------------- */
 
-// change content in info window
-	$('.secondary-nav a').on('click', function(){
-		$('.info-drawer section').addClass('hidden');
-		$('.secondary-nav div').removeClass('active');
+$('.secondary-nav a').on('click', function(){
+	$('.info-drawer section').addClass('hidden');
+	$('.secondary-nav div').removeClass('active');
 
-		
-		var relatedPanel = $(this).data('tab');
-		console.log("clicked on " + relatedPanel + " link");
+	// Grab appropriate HTML data parameter 
+	var relatedPanel = $(this).data('tab');
 
-		$('.' + relatedPanel).removeClass('hidden');
-		$(this).parent().addClass('active');
-		
-/*
-		// scrolltop insanity
-		var sectionHeight = $('section' + '.' + relatedPanel).offset().top;
-		console.log('sectionHeight= ' + sectionHeight);
-		var headerHeight = $('header').outerHeight();
-		var secondaryNavHeight = $('.secondary-nav').outerHeight();
-		$('.info-drawer').scrollTop(sectionHeight - headerHeight - secondaryNavHeight);
-		console.log(sectionHeight - headerHeight - secondaryNavHeight);*/
-		var splitCoords = ecosystemCenters[relatedPanel].split(',');
-		var lat = parseFloat(splitCoords[0]);
-		var lng = parseFloat(splitCoords[1]);
-		var zoom = ecosystemZooms[relatedPanel];
-		var tileAdd = ecosystemTiles[relatedPanel];
+	// Unhide the panel corresponding to clicked tab
+	$('.' + relatedPanel).removeClass('hidden');
+	$(this).parent().addClass('active');
+	
+	// Split coord. string into lat and lng, assign to var
+	var splitCoords = ecosystemCenters[relatedPanel].split(',');
+	var lat = parseFloat(splitCoords[0]);
+	var lng = parseFloat(splitCoords[1]);
+	// Get zoom level from object 
+	var zoom = ecosystemZooms[relatedPanel];
+	//Get tiles to add from object
+	var tileAdd = ecosystemTiles[relatedPanel];
 
-		moveToLandscape(lat, lng, zoom, tileAdd);
-	});	
-
-// change data displayed on the map
-
-
-
+	// Call the pan/zoom/tile method for the clicked tab!
+	moveToLandscape(lat, lng, zoom, tileAdd);
+});	
 
 
 /* --------------------------------------------
@@ -67,39 +57,6 @@ function drawerMove(){
 	} else {
 		$('.drawer-button a').html('&lsaquo;');
 	}
-
-	/*
-	var viewportWidth = $(window).width();
-	if($('.info-drawer').hasClass('closed')){ // if it is 'closed' when clicked
-		$('#drawer-button a').html('&lsaquo;'); // switch to the 'open' char
-		$('.info-drawer').animate({ // open it on up!
-			left: '0%'
-			}, 200, function() {	
-				$('.info-drawer').toggleClass('closed'); // then switch off the 'closed' class
-		});
-	} else { // if it isn't closed
-		$('#drawer-button a').html('&rsaquo;'); // switch to the 'closed' char
-		
-		if(viewportWidth > 1000) {
-			$('.info-drawer').animate({ // shut it down!
-				left: '-40%'
-				}, 200, function() {	
-					$('.info-drawer').toggleClass('closed'); // then switch on the 'closed' class
-			});
-		} else if(viewportWidth > 600) {
-			$('.info-drawer').animate({ // shut it down!
-				left: '-65%'
-				}, 200, function() {	
-					$('.info-drawer').toggleClass('closed'); // then switch on the 'closed' class
-			});
-		} else {
-			$('.info-drawer').animate({ // shut it down!
-				left: '-77%'
-				}, 200, function() {	
-					$('.info-drawer').toggleClass('closed'); // then switch on the 'closed' class
-			});
-		}
-	}*/
 }
 
 $('.drawer-button').on('click', function(e){
@@ -107,6 +64,11 @@ $('.drawer-button').on('click', function(e){
 	drawerMove();
 });
 
+
+/* --------------------------------------------
+hide or show drawer depending on which element
+is current the users' focus
+----------------------------------------------- */
 $('#leaflet-map').focus(function(e){
 	e.preventDefault();
 	
@@ -126,10 +88,7 @@ $('.info-drawer').focus(function(e){
 	}
 });
 
-/*$('#leaflet-map').blur(function(e){
-	e.preventDefault();
-	drawerMove();
-});*/
+
 
 /* --------------------------------------------
 hamburger nav nonsense

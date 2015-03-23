@@ -1,8 +1,10 @@
+// basemap tiles (mapbox sat)
 var mapTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/danswick.lff6ij2d/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA', {
       attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>",
       maxZoom: 17,
     });
 
+// Vector styles for each lanscape type
 var ecosystemStyles = {
 	woodland: { "color": "#a6611a",	"fillOpacity": 0, "weight": 10 },
 	prairie: { "color": "#dfc27d", "opacity": 0.5 },
@@ -11,6 +13,7 @@ var ecosystemStyles = {
 	econet: { "color": "darkgreen",	"opacity": 0.5 }
 };
 
+// Landscape example centers (for panning)
 var ecosystemCenters = {
 	"woodland": "41.709, -87.892",
 	"prairie": "41.380, -88.100",
@@ -19,6 +22,7 @@ var ecosystemCenters = {
 	"econet": "42.202, -88.453"
 };
 
+// Landscape example zoom levels 
 var ecosystemZooms = {
 	"woodland": 12,
 	"prairie": 12,
@@ -27,6 +31,7 @@ var ecosystemZooms = {
 	"econet": 8
 };
 
+// Tilesets for each ecosystem 
 var ecosystemTiles = {
 	"woodland": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
 	"prairie": 'http://givcore-danswick.rhcloud.com/GIV_core_layers/{z}/{x}/{y}.png',
@@ -35,6 +40,7 @@ var ecosystemTiles = {
 	"econet": 'http://tilehut-danswick.rhcloud.com/GIV_subset/{z}/{x}/{y}.png'
 };
 
+// Initialize the map
 var map = L.map('leaflet-map', {
 	center: [42.2, -88.5],
 	zoom: 8,
@@ -42,9 +48,11 @@ var map = L.map('leaflet-map', {
 	zoomControl: false
 });
 
+// Add the basemap 
 mapTiles.addTo(map);
 
 
+// Method for panning, zooming ,adding tile layer programmatically.
 function moveToLandscape(lat, lng, zoom, tiles) {
 	map.panTo(new L.LatLng(lat, lng), {animate: true, duration: 1});
 	map.once('moveend', function() { // set a one-time event listener (omg so cool)
@@ -60,32 +68,3 @@ function moveToLandscape(lat, lng, zoom, tiles) {
 
 	tilesToAdd.addTo(map);
 }
-
-/*$.getJSON("CW_region.geojson", function(regionData){
-	var geojson = L.geoJson(regionData, {
-		onEachFeature: function (feature, layer) {
-			layer.bindPopup(feature.properties.Name);
-		}
-	});
-	
-	var map = L.map('leaflet-map', {
-		center: [41.902, -89.453],
-		zoom: 8
-	});
-
-	mapTiles.addTo(map);
-	geojson.setStyle(regionStyle);
-	geojson.addTo(map);
-});*/
-
-
-// add geojson and style it
-/*$('.secondary-nav a').on('click', function(){
-	$('.leaflet-zoom-animated g').remove(); // ugh, this is terrible, but i can't think of a better way to remove the existing layer before adding the new one
-	var regionStyle = ecosystemStyles[$(this).data('tab')];
-	$.getJSON("CW_region.geojson", function(regionData){
-		var geojson = L.geoJson(regionData);
-		geojson.setStyle(regionStyle);
-		geojson.addTo(map);
-	});
-});*/

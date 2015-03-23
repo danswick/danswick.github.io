@@ -127,7 +127,7 @@ textarea {
    ========================================================================== */
 
 /* -------------------------------------------
-        H E A D E R 
+        H E A D E R   A N D   N A V S
    ------------------------------------------- */
 body {
     width: 100%;
@@ -448,13 +448,11 @@ nav li {
     box-shadow: inset 0 -1.3em 0 #ccc;
 }
 
+
+
 /* -------------------------------------------
     E C O S Y S T E M     C L A S S E S 
    ------------------------------------------- */
-.introduction {
-    /*background-image: url("../img/Prairie_grass_crop.jpg");*/
-}
-
 .woodland, .woodland a {
     color: #FFF0E4;
     background-color: #a6611a;
@@ -496,55 +494,26 @@ footer a {
 }
 
 
+
 /* -------------------------------------------
     B U T T O N    E F F E C T S    
    ------------------------------------------- */
-.btn.woodland {
-    background: none;
-    border: 3px solid #a6611a;
-    color: #a6611a;
-}
-.btn.woodland:after {
-    background: #a6611a;
-}
+.btn.woodland { background: none; border: 3px solid #a6611a; color: #a6611a; }
+.btn.woodland:after { background: #a6611a; }
 
 
-.btn.prairie {
-    background: none;
-    border: 3px solid #dfc27d;
-    color: #dfc27d;
-}
-.btn.prairie:after {
-    background: #dfc27d;
-}
+.btn.prairie { background: none; border: 3px solid #dfc27d; color: #dfc27d; }
+.btn.prairie:after { background: #dfc27d; }
 
-.btn.wetland {
-    background: none;
-    border: 3px solid #80cdc1;
-    color: #80cdc1;
-}
-.btn.wetland:after {
-    background: #80cdc1;
-}
+.btn.wetland { background: none; border: 3px solid #80cdc1; color: #80cdc1; }
+.btn.wetland:after { background: #80cdc1; }
 
-.btn.stream {
-    background: none;
-    border: 3px solid #018571;
-    color: #018571;
-}
-.btn.stream:after {
-    background: #018571;
-}
+.btn.stream { background: none; border: 3px solid #018571; color: #018571; }
+.btn.stream:after { background: #018571; }
 
 
-.btn.econet {
-    background: none;
-    border: 3px solid darkgreen;
-    color: darkgreen;
-}
-.btn.econet:after {
-    background: darkgreen;
-}
+.btn.econet { background: none; border: 3px solid darkgreen; color: darkgreen; }
+.btn.econet:after { background: darkgreen; }
 
 
 .btn {
