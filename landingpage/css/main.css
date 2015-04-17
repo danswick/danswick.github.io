@@ -100,9 +100,9 @@ textarea {
    -------------------------------------------------------------------------- */
 
 
-.route-sketch {
+#route-sketch {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #pondInner {
@@ -117,18 +117,23 @@ textarea {
     fill: white;
 }
 
+.mountain-clicked {
+    fill: pink;
+}
+
 #mountain-route, #tree-route, #pond-route {
-    stroke-dasharray: 35;
+    stroke-dasharray: 25;
     fill: transparent;
     stroke: #000;
     stroke-width: 3;
 }
 
 .mountain-route-animate {
+    fill: transparent;
     stroke-dasharray: 1911;
     stroke-dashoffset: 1911;
-    animation: mountain-dash 5s linear alternate infinite;
-    -webkit-animation: mountain-dash 5s linear alternate infinite;
+    animation: mountain-dash 1s linear forwards;
+    -webkit-animation: mountain-dash 0.5s linear forwards;
 }
 
 #top-marker {
@@ -136,22 +141,26 @@ textarea {
 }
 
 
-@keyframes dash {
-    from: {
-        stroke-offset: 1911;
+@keyframes mountain-dash {
+    from {
+        stroke-dashoffset: 1911;
     }
     to {
-        stroke-offset: 0;
+        stroke-dashoffset: 0;
+        stroke-width: 10;
+        stroke: #000;
     }
 }
 
-@-webkit-keyframes dash {
-    from: {
-        stroke-offset: 1911;
-    }
-    to {
-        stroke-offset: 0;
-    }
+@-webkit-keyframes mountain-dash {
+  from {
+    stroke-dashoffset: 1911;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-width: 10;
+    stroke: #000;
+  }
 }
 
 
