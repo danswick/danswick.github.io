@@ -1,0 +1,42 @@
+body {
+  width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin-top: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+#faqs dd {
+  margin: 0;
+  padding: 1em;
+}
+
+#faqs dt {
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size : 18px;
+  line-height: 48px;
+  background: #e5e5e5;
+  border-bottom: 2px solid #cdcdcd;
+  font-family: Georgia, serif;
+  padding: 0 1em;
+}
+
+#faqs .active {
+  background-color: #ffd800;
+}
+
+#faqs dd {
+  display: none;
+}

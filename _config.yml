@@ -2,7 +2,7 @@
 markdown:         redcarpet
 redcarpet:
   extensions:     ["fenced code blocks", "autolink", "tables", "with_toc_data"]
-pygments:         true
+highlighter:      rouge
 kramdown:
   input:          GFM
 
@@ -19,8 +19,8 @@ author:
   url:            https://twitter.com/danswick
   email:          dan.swick@gmail.com
 pages_list:
-  About: '/about'
-  Archive: '/archive'
+  About: 'about.html'
+  Archive: 'archive.html'
   Feed: '/atom.xml'
   Projects: '/projects'
 

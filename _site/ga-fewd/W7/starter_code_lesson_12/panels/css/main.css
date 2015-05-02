@@ -1,0 +1,65 @@
+/*---------------------------------------------------------
+  G L O B A L
+----------------------------------------------------------- */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*---------------------------------------------------------
+  C O N T A I N E R
+----------------------------------------------------------- */
+#container {
+  width: 600px;
+  margin: 20px auto;
+}
+
+#content {
+  border: 3px solid #dfdfdf;
+  padding: 20px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 400px;
+}
+
+/*---------------------------------------------------------
+  N A V
+----------------------------------------------------------- */
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+nav li {
+  border: 3px solid transparent;
+  border-bottom: none;
+  display: inline-block;
+  background-color: #dfdfdf;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-bottom: -3px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+li.active {
+  border: 3px solid #dfdfdf;
+  border-bottom: none;
+  background-color: #fff;
+}
+
+.active a {
+  cursor: default;
+}
+
+
+/*---------------------------------------------------------
+  P A N E L S
+----------------------------------------------------------- */
+.panel {
+
+}

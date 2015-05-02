@@ -1,0 +1,18 @@
+	1.	Slide the header up when it is clicked on.
+	2.	Remove the purple class 
+	3.	Hide all of the div’s in row4
+	4.	Add a paragraph that says “I have been added” to all boxes with class “add-para”
+	5.	Add a class to all the boxes and style it with CSS
+	6.	Show the footer when the link in box2 is clicked
+	7.	Clicking on any box should toggle the “selected” class
+	8.	Change the styling of the span inside of box3 by adding a class (and style that class in CSS)
+	9.	Change the background color of all the articles
+	10.	Change the font color of all the articles in row 2
+	11.	Select the h4 in box 11 and hide the span inside of box11 using the .siblings() function
+	12.	Clicking on box7 should hide the span within the h2
+	13.	Add a h3 to the beginning of box12
+	14.	SlideUp all the h1s on the page
+	15.	Add a unique class and style it to all the articles in row1
+	16.	When you click on a div toggleFade the p’s within it
+	17.	When you click on the footer fade it out.
+	18.	Clicking reset should fade all boxes, headers and footers in and remove any selected classes

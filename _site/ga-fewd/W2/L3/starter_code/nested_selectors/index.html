@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<h1>Nested Selectors</h1>
+
+<h2>What we want to do:</h2>
+<ol>
+	<li>Make all of the <code>h3</code>s italic.</li>
+	<li>Change the text-color of all the <code>anchor</code> elements that are descendents of a <code>li</code> element green. <strong>Important:</strong> be sure that the <code>anchor</code> that sits outside of the list doesn't also change to green!</li>
+	<li>Now change only the <code>anchor</code> that is the direct child of the <code>li</code> to be red.</li>
+</ol>
+
+<h2>Now you try:</h2>
+<ol>
+	<li>Change the text-color of all the <code>p</code> elements that are siblings of an <code>h3</code> to orange</li>
+	<li>Change the text-color of only the <code>p</code> elements that <em>directly follow</em> an <code>h3</code> yellow</li>
+
+</ol>
+
+
+<hr>
+
+<h2>Section to be styled</h2>
+
+<a href="#">This link should not change color!</a>
+<p>This paragraph should not change color!</p>
+
+<ul>
+	<li>
+		<h3>This should be italic</h3>
+		<p>This paragraph should be yellow</p>
+		<p>This paragraph should be orange</p>
+		<p>This paragraph should be orange</p>
+	</li>
+	<li>
+		<h3>This should be italic</h3>
+		<p>This paragraph should be yellow</p>
+		<p>This paragraph should be orange</p>
+		<a href="#">This link should be red</a>
+		<p>This paragraph should be orange and should have a <a href="#">green link</a> sitting inside</p>
+	</li>
+</ul>
+
+
+</body>
+</html>

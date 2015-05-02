@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	
+<h1>Temperature Converter</h1>
+
+<div id="inputs">
+  <input id="inputTemp" type="range" min="0" max="212" step="1" value="0"/>
+  <span id="inputBox">0</span>
+  <select id="choice">
+    <option value="f2c">F to C</option>
+    <option value="c2f">C to F</option>
+  </select>
+</div>
+
+<button id="submit">CONVERT IT!</button>
+
+<div id="message">
+  <span id="result"></span>
+</div>  
+
+<script src="js/convert.js"></script>
+</body>
+</html>

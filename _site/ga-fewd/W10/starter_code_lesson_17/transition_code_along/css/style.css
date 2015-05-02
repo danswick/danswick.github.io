@@ -1,0 +1,71 @@
+/*------------------------------------------
+  SETUP                   
+/------------------------------------------*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('http://fonts.googleapis.com/css?family=Cookie');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 600;
+  font-family: Cookie, sans-serif;
+}
+
+img {
+  display: block;
+  width: 450px;
+  margin-bottom: 0;
+}
+
+header {
+  background-color: #ccc;
+  border-bottom: 2px solid #bbb;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+/* Overlay */
+.overlay p {
+  text-align: center;
+  font-size: 120px;
+  margin: 0;
+  line-height: 257px;
+  color: white;
+}
+
+.overlay-wrapper {
+  width: 450px;
+  height: 257px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.overlay {
+  width: 450px;
+  height: 257px;
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+
+
+
+

@@ -1,0 +1,136 @@
+<html>
+<head>
+  <title>A D3 chart</title>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="neighborhoods.js"></script>
+  <script src="rodents.js"></script>
+</head>
+<body>
+  <!-- <svg width="100" height="150">
+    <rect x="0" width="15" fill="#d1c9b8"></rect>
+    <rect x="25" width="15" fill="#d1c9b8"></rect>
+    <rect x="50" width="15" fill="#d1c9b8"></rect>
+    <rect x="75" width="15" fill="#d1c9b8"></rect>
+  </svg> WE'RE GOING TO CONSTRUCT THIS USING D3 -->
+
+	<!-- bar chart!  -->
+	<script>
+		var ratData = [ 400, 900, 300, 600 ];
+
+
+		var svg = d3.select( "body" )
+		  	.append( "svg" )
+		  		.attr( "width", 500 )
+		  		.attr( "height", 150 );
+
+		var newData = [ 800, 200, 400, 500, 100 ];
+
+		function drawChart( dataArray ){
+			// create a selection and bind data
+			var selection = svg.selectAll( "rect" )
+								.data( dataArray );
+
+			// create new elements wherever needed
+			selection.enter()
+				.append( "rect" )
+				.attr( "x", function(d,i){
+				return i * 25;
+				})
+				.attr( "width", 15)
+				.attr( "fill", "#d1c9b8" ); 
+
+			// set bar heights based on data
+			selection
+				.attr( "height", function(d){
+					return d/10 * 1.5;
+				})
+				.attr( "y", function(d){
+					return 150 - d/10 * 1.5; // 150 is the height of the SVG container 
+			});
+
+			// remove any unused bars
+			selection.exit()
+				.remove();
+		}
+
+
+		drawChart( ratData );
+
+		// from the tutorial: 
+		// Now try opening up the console and calling drawChart() with different data arrays.
+		// The chart will update with the correct number and size of bars.
+		// drawChart( [200, 300, 400, 500, 600, 700] )
+		// drawChart( [800, 700, 600] )
+		// and so on
+		
+	</script>
+	
+
+	<!-- NOW A MAP! -->
+	<script type="text/javascript">
+
+	var width = 700,
+		height = 580;
+
+	var svg2 = d3.select( "body" )
+		.append( "svg" )
+		.attr( "width", width )
+		.attr( "height", height );
+
+	var g = svg2.append( "g" );
+
+	var albersProjection = d3.geo.albers()
+		.scale( 190000 )
+		.rotate( [71.057, 0] )
+		.center( [0, 42.313] )
+		.translate( [width/2,height/2] );
+
+	var geoPath = d3.geo.path()
+		.projection( albersProjection );
+
+	g.selectAll( "path" )
+		.data( neighborhoods_json.features )
+		.enter()
+		.append( "path" )
+		.attr( "fill", "#ccc" )
+		.attr( "d", geoPath );
+
+	var rodents = svg2.append( "g" );
+
+	rodents.selectAll( "path" )
+		.data( rodents_json.features )
+		.enter()
+		.append( "path" )
+		.attr( "fill", "#900" )
+		.attr( "stroke", "#999" )
+		.attr( "d", geoPath )
+		.on( "click", function(){
+			d3.select(this)
+				.attr("opacity", 1)
+				.transition()
+				.duration( 500 )
+				.attr( "opacity", 0 )
+				.each("end", function(){
+					d3.select(this).remove();
+				})
+		});
+
+	</script>
+</body>
+</html>
+
+<!-- from maptime boston's D3 presentation - http://maptimeboston.github.io/d3-maptime/-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

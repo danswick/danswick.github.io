@@ -1,0 +1,177 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+  color: #000;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+.btn {
+  background-color: #cdcdcd;
+  padding: 6px 12px;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#image-to-vote-on,
+#buttons-wrapper {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  display: block;
+}
+
+#image-to-vote-on {
+  margin-top: 50px;
+}
+
+#buttons-wrapper {
+  margin-top:20px;
+}
+
+#image-to-vote-on + div {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 12px;
+
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1;
+  margin: .5em 0;
+  word-spacing: .2em;
+  text-align: center;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  color: #706F6A;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 18px;
+  margin-right: -1px;
+}
+
+nav a:hover {
+  color: #000;
+
+}
+
+nav span {
+  border-right: 1px solid #ddd;
+  padding: 0 24px 0 25px;
+}
+
+nav li:last-of-type span{
+  border-right: none;
+}
+
+.instructions {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: .8em;
+}
+
+.hidden {
+  display: none;
+}

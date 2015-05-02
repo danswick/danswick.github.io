@@ -1,0 +1,32 @@
+/*----------------------------------------------
+    S T A R T E R   S T Y L E S
+------------------------------------------------*/
+ol li {
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-family: Georgia, serif;
+}
+
+ul {
+	padding-left: 0;
+}
+
+#one li {
+	background-color: yellow;
+	list-style: none;
+	border: 1px solid red;
+	padding: 10px;
+	display: inline-block;
+}
+
+#two a {
+	display: block;
+}
+
+#three img {
+	display: none;
+}
+
+/*---------------------------------------------------------------------
+    P L A C E   Y O U R   C S S   B E L O W   T H I S   C O M M E N T
+-----------------------------------------------------------------------*/
