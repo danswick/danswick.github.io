@@ -4,7 +4,7 @@
  <title>Dan Swick</title>
  <link href="http://danswick.com/atom.xml" rel="self"/>
  <link href="http://danswick.com/"/>
- <updated>2015-05-03T12:53:01-05:00</updated>
+ <updated>2015-05-03T14:17:09-05:00</updated>
  <id>http://danswick.com</id>
  <author>
    <name>Dan Swick</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Headphone Music - Motorik</title>
-   <link href="http://danswick.com//2014/motorik"/>
+   <link href="http://danswick.com//posts/motorik"/>
    <updated>2014-07-01T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/motorik</id>
+   <id>http://danswick.com/posts/motorik</id>
    <content type="html">&lt;p&gt;I work in an open office, so headphones and a few great playlists are absolutely necessary to get through the day. I&amp;#39;ll sometimes rely on robot-selected playlists from Pandora or similar, but always end up wishing I&amp;#39;d spent that time getting more familiar with an artist or album - an activity that, as time goes on, is becoming more and more difficult to do. My old fallbacks for music discovery, like college radio (have to rep my alma mater, &lt;a href=&quot;www.kjhk.org&quot;&gt;KJHK&lt;/a&gt;) and MP3 blogs (RIP), either don&amp;#39;t exist are are more difficult to access. How, then, to avoid burning out your favorite tracks? &lt;/p&gt;
 
 &lt;p&gt;These days, my strategy is primarily to stalk people on Spotify, but there&amp;#39;s one pursuit I&amp;#39;ve found particularly rewarding - building a collaborative Spotify playlist of songs featuring the &lt;a href=&quot;http://en.wikipedia.org/wiki/Motorik&quot;&gt;Motorik&lt;/a&gt; beat, a 4/4 drumbeat popularized by Krautrock bands like Can, Neu! and Kraftwerk. The basic beat: &lt;/p&gt;
@@ -98,9 +98,9 @@
  
  <entry>
    <title>Jekyll for WYSIWYG'ers</title>
-   <link href="http://danswick.com//2014/setup"/>
+   <link href="http://danswick.com//posts/setup"/>
    <updated>2014-06-27T00:00:00-05:00</updated>
-   <id>http://danswick.com/2014/setup</id>
+   <id>http://danswick.com/posts/setup</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;Why Jekyll and this whole static sites business?&lt;/h2&gt;
 
 &lt;p&gt;About a year ago, a sweet hosting deal I&amp;#39;d managed to finagle fell through and my modest personal website needed a place to live. I&amp;#39;d been using Wordpress for years and had become fairly familiar with its workflows and quirks. Between my personal writing and work-related writing, I&amp;#39;ve probably set up a dozen Wordpress sites over the years, but never really got past the official installer scripts, WYSIWYG editors and, occasionally, small php edits here and there. &lt;/p&gt;

@@ -3,13 +3,13 @@
   
   
   <url>
-    <loc>http://danswick.com/2014/motorik</loc>
+    <loc>http://danswick.com/posts/motorik</loc>
     <lastmod>2014-07-01T00:00:00-05:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>http://danswick.com/2014/setup</loc>
+    <loc>http://danswick.com/posts/setup</loc>
     <lastmod>2014-06-27T00:00:00-05:00</lastmod>
     <priority>0.8</priority>
   </url>
@@ -17,42 +17,56 @@
   
   <url>
     <loc>http://danswick.com/404.html</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://danswick.com/about.html</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://danswick.com/archive.html</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
+    <loc>http://danswick.com/about/</loc>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://danswick.com/</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://danswick.com/mappingpriorities.html</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://danswick.com/pages/mappingpriorities.html</loc>
-    <lastmod>2015-05-03T12:53:01-05:00</lastmod>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/poole-default-</loc>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/words/</loc>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://danswick.com/work/</loc>
+    <lastmod>2015-05-03T14:17:09-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
