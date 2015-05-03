@@ -391,22 +391,18 @@ header {
    ========================================================================== */
 
 .header-icon-container {
-  width: 80%;
+/*  width: 80%;
   margin: 0 auto;
   height: 11em;
   padding: 0.5em 0 0 0;
   text-align: center;
-  font-family: 'Patua One'
+  font-family: 'Patua One'*/
 }
 
 .header-svg-container {
-  float: left;
-  width: 33%;
 }
 
 .header-svg {
-  width: 100%;
-  height: 8em;
 }
 
 header h2 {

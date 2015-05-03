@@ -6,40 +6,23 @@
   <body>
 
     <div class="container content">
-      <header>
-        <div class="header-icon-container">
-          <div class="header-svg-container mountains-icon">
-            <a href="#">
-              <object data="img/mountain.svg" type="image/svg+xml" class="header-svg mountain">
-              </object>
-              <h2>work</h2>
-            </a>
-          </div>
-          <div class="header-svg-container tree-icon">
-            <object data="img/tree-color.svg" type="image/svg+xml" class="header-svg tree">
-            </object>
-            <h2><a href="#">words</a></h2>
-          </div>
-          <div class="header-svg-container pond-icon">
-            <object data="img/pond.svg" type="image/svg+xml" class="header-svg pond">
-            </object>
-            <h2><a href="#">about</a></h2>
-          </div>
-        </div>
-      </header>
 
       <div class="masthead">
+        <div class="header-svg-container tree-icon">
+            <object data="img/tree-color.svg" type="image/svg+xml" class="header-svg tree">
+            </object>
+        </div>
         <h3 class="masthead-title">
-		<a href="/" title="Home">{{ site.title }}</a>
+		      <a href="/" title="Home">{{ site.title }}</a>
 
-		{% for page in site.pages_list %}
-  			&nbsp;&nbsp;&nbsp;
-  			<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-		{% endfor %}
-		</h3>
+      		{% for page in site.pages_list %}
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+      		{% endfor %}
+		    </h3>
       </div>
 
-      {{ content }}
+        {{ content }}
 
       <div class="footer">
         <p>
