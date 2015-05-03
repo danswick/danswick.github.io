@@ -127,7 +127,7 @@ textarea {
    ========================================================================== */
 
 /* -------------------------------------------
-        H E A D E R 
+        H E A D E R   A N D   N A V S
    ------------------------------------------- */
 body {
     width: 100%;
@@ -191,12 +191,13 @@ nav li {
 
 .primary-nav a {
     padding: 0.5em 1em;
-    font-family: ;
-    font-weight: ;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
 }
 
 .primary-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 0.3em;
 
 }
@@ -208,6 +209,7 @@ nav li {
     box-shadow: 0px 10px 10px -8px rgba(10, 10, 10, 0.5);
     font-weight: 700;
     font-size: 1em;
+    height: 2.7em;
 }
 
 .secondary-nav div {
@@ -219,11 +221,11 @@ nav li {
     font-size: 1.1em;
     position: relative;
     z-index: 100;
-    border-bottom: 2px solid rgba(20, 20, 20, 0.3);
+    border-bottom: 5px solid rgba(20, 20, 20, 0.3);
 }
 
-.secondary-nav .active {
-    border-bottom: 2px solid rgba(20, 20, 20, 0);
+.active a {
+    top: 3px;
 }
 
 .secondary-nav a {
@@ -234,7 +236,12 @@ nav li {
 }
 
 .secondary-nav a:hover {
-    background-color: rgba(20, 20, 20, 0.3);
+    top: 3px;
+}
+
+.secondary-nav a:active {
+    top: 2px;
+    background-color: rgba(255,255,255,0.2);
 }
 
 .secondary-nav li:last-child {
@@ -269,6 +276,11 @@ nav li {
     bottom: 0;
 }
 
+.fixed-map:focus {
+    outline: none;
+}
+
+
 
 
 
@@ -280,7 +292,7 @@ nav li {
 /* -------------------------------------------
     C O N T E N T   
    ------------------------------------------- */
-#content-container {
+#page-container {
     min-height: 100%;
 }
 
@@ -300,9 +312,34 @@ nav li {
     position: absolute;
 }
 
+.content-container {
+    padding: 0 1em;
+    margin: 0 2em;
+}
+
+.section-a, .section-b {
+    padding: 2em 0;
+}
+
+.section-b {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
 .info-drawer {
     overflow: scroll;
     overflow-x: hidden;
+    height: -o-calc(100% - 2.7em);
+    height: -webkit-calc(100% - 2.7em);
+    height: -moz-calc(100% - 2.7em);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    left: 0%;
+}
+
+.info-drawer:focus {
+    outline: none;
 }
 
 .full-width {
@@ -310,8 +347,40 @@ nav li {
     min-height: 100%;
 }
 
+.chunk-content {
+    padding: 0 5%;
+}
+
 .content {
-    padding: 5%;
+    padding: 0 0 2em 0;
+}
+
+.drawer-content {
+    padding: 0.75em;
+}
+
+.drawer-content img {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.drawer-content .emphasis {
+    font-style: italic;
+}
+
+.list-of-landscapes {
+    padding: 0;
+    margin: 2.5em auto;
+}
+
+.list-of-landscapes li {
+    list-style-type: none;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0.5em 0;
 }
 
 .introduction {
@@ -319,27 +388,33 @@ nav li {
     color: #333;
 }
 
-#drawer-button {
-    position: absolute;
+.drawer-button {
+    position: fixed;
     top: 50%;
-    left: 97%;
+    left: 44.9%;
     font-size: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
-#drawer-button a {
+.button-closed {
+    left: 5%;
+}
+
+.drawer-button a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     width: 30px;
 }
 
 .top-banner {
     margin: 0 auto;
     position: relative;
-    height: 12em;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -349,10 +424,28 @@ nav li {
 
 .top-banner h2 {
     position: absolute;
-    top: 5%;
-    left: 1em;
+    top: 30%;
     color: #fff;
-    font-size: 2em;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(10,10,10,0.5);
+    width: 100%;
+    text-align: center;
+}
+
+.content-container a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid #ccc;
+    box-shadow: inset 0 -5px 0 #ccc;
+    transition: all 0.1s linear;
+}
+
+.closed {
+    left: -40%;
+}
+
+.content-container a:hover {
+    box-shadow: inset 0 -1.3em 0 #ccc;
 }
 
 
@@ -360,10 +453,6 @@ nav li {
 /* -------------------------------------------
     E C O S Y S T E M     C L A S S E S 
    ------------------------------------------- */
-.introduction {
-    /*background-image: url("../img/Prairie_grass_crop.jpg");*/
-}
-
 .woodland, .woodland a {
     color: #FFF0E4;
     background-color: #a6611a;
@@ -399,7 +488,105 @@ footer {
     display: block;
 }
 
+footer a {
+    text-decoration: none;
+    color: #ddd;
+}
 
+
+
+/* -------------------------------------------
+    B U T T O N    E F F E C T S    
+   ------------------------------------------- */
+.btn.woodland { background: none; border: 3px solid #a6611a; color: #a6611a; }
+.btn.woodland:after { background: #a6611a; }
+
+
+.btn.prairie { background: none; border: 3px solid #dfc27d; color: #dfc27d; }
+.btn.prairie:after { background: #dfc27d; }
+
+.btn.wetland { background: none; border: 3px solid #80cdc1; color: #80cdc1; }
+.btn.wetland:after { background: #80cdc1; }
+
+.btn.stream { background: none; border: 3px solid #018571; color: #018571; }
+.btn.stream:after { background: #018571; }
+
+
+.btn.econet { background: none; border: 3px solid darkgreen; color: darkgreen; }
+.btn.econet:after { background: darkgreen; }
+
+
+.btn {
+    border: none;
+    font-family: inherit;
+    font-weight: 700; 
+    font-size: inherit;
+    cursor: pointer;
+    padding: 1em;
+    display: inline-block;
+    margin: 10px 10px 20px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.btn:after {
+    content: '';
+    width: 150%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    font-weight: 700;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    color: #fff;
+}
+
+.btn:hover:after {
+    height: 260%;
+    opacity: 1;
+}
+
+.btn:active:after {
+    height: 400%;
+    opacity: 1;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.btn a:hover {
+    box-shadow: none;
+    transition: none;
+    -webkit-transition: none;
+}
 
 
 
@@ -582,6 +769,10 @@ footer {
    ---------------- */
 
 @media screen and (max-width: 1000px){
+    .top-banner h2 {
+        top: 20%;
+    }
+
     header h1 {
         font-size: 1.5em;
         margin-top: 0em;
@@ -606,21 +797,39 @@ footer {
         width: 70%;
     }
 
+    .closed {
+        left: -65%;
+    }
+
     .info-drawer section {
         padding-right: 10%;
     }
 
-    #drawer-button {
-        left: 96%;
+    .drawer-button {
+        left: 70%;
+    }
+
+    .button-closed {
+        left: 5%;
     }
 
 }
 
 /* ---------------- 
-   M A X   6 0 0 
+   M A X   6 2 0 
    ---------------- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
+    .top-banner h2 {
+        top: 10%;
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    .top-banner {
+        height: 300px
+    }
+
     header h1 {
         font-size: 1em;
         margin-top: 0em;
@@ -641,12 +850,28 @@ footer {
         width: 85%;
     }
 
+    .closed {
+        left: -77%;
+    }
+
     h2 {
+        font-size: 1.2em;
+    }
+
+    h3 { 
+        font-size: 1.1em
+    }
+
+    p, li {
         font-size: 1em;
     }
 
-    p {
-        font-size: 0.8em;
+    .drawer-button {
+        left: 85%;
+    }
+
+    .button-closed {
+        left: 7%;
     }
 }
 
@@ -659,6 +884,18 @@ footer {
         height: -o-calc(100% - 4em);
         height: -webkit-calc(100% - 4em);
         height: -moz-calc(100% - 4em);
+    }
+
+    .content-container {
+        padding: 0;
+    }
+
+    .top-banner {
+        height: 200px;
+    }
+
+    .closed {
+        left: -77%;
     }
 
     #nav-toggle {
@@ -693,6 +930,7 @@ footer {
         padding: 10px 35px 16px 0px; 
         position: absolute;
         left: 90%;
+        top: 3%;
     }
 
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
@@ -748,7 +986,7 @@ footer {
     }
 
     .primary-nav li {
-        margin: 0.5em auto;
+        margin: 1em auto;
         float: none;
         display: block;
         text-align: right;
@@ -760,11 +998,15 @@ footer {
         display: block;
         padding: 0 0.75em;
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 16px;
     }
 
-    #drawer-button {
-        left: 93%;
+    .drawer-button {
+        left: 85%;
+    }
+
+    .button-closed {
+        left: 8%;
     }
 }
 
