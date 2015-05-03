@@ -3,6 +3,7 @@
   <title>A D3 chart</title>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="neighborhoods.js"></script>
+  <script src="rodents.js"></script>
 
 </head>
 <body>
@@ -94,6 +95,26 @@
 		.append( "path" )
 		.attr( "fill", "#ccc" )
 		.attr( "d", geoPath );
+
+	var rodents = svg2.append( "g" );
+
+	rodents.selectAll( "path" )
+		.data( rodents_json.features )
+		.enter()
+		.append( "path" )
+		.attr( "fill", "#900" )
+		.attr( "stroke", "#999" )
+		.attr( "d", geoPath )
+		.on( "click", function(){
+			d3.select(this)
+				.attr("opacity", 1)
+				.transition()
+				.duration( 500 )
+				.attr( "opacity", 0 )
+				.each("end", function(){
+					d3.select(this).remove();
+				})
+		});
 
 	</script>
 </body>

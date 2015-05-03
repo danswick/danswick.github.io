@@ -2,27 +2,28 @@
 markdown:         redcarpet
 redcarpet:
   extensions:     ["fenced code blocks", "autolink", "tables", "with_toc_data"]
-pygments:         true
+highlighter:      rouge
 kramdown:
   input:          GFM
 
 # Permalinks
-permalink:        /:year/:title
+permalink:        /posts/:title
 
 # Setup
 title:            Dan Swick
 tagline:          danswick.com
 url:              danswick.com
+baseurl:          /
 paginate:         2
 author:
   name:           Dan Swick
   url:            https://twitter.com/danswick
   email:          dan.swick@gmail.com
 pages_list:
-  About: '/about'
-  Archive: '/archive'
-  Feed: '/atom.xml'
-  Projects: '/projects'
+  About: 'about/index.html'
+  Words: 'words/index.html'
+  Projects: 'work/index.html'
+  Feed: 'atom.xml'
 
 # Custom vars
 version:          1.0.0
