@@ -1,4 +1,0 @@
-Delta GIS
-=======
-
-Delta GIS
