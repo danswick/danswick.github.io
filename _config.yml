@@ -1,7 +1,5 @@
 # Dependencies
-markdown:         redcarpet
-redcarpet:
-  extensions:     ["fenced code blocks", "autolink", "tables", "with_toc_data"]
+markdown:         kramdown
 highlighter:      rouge
 kramdown:
   input:          GFM
