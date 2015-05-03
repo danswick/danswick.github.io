@@ -9,7 +9,7 @@ I'm Dan. I live in Chicago, ride bikes, make things from fabric and put things o
 
 This space is part experiment, documentation, memory aid, and sounding board. Development is ongoing and you can follow along or [submit an issue on GitHub](https://github.com/danswick/danswick.github.io/issues?state=open). 
 
-##Tech Specs 
+## Tech Specs 
 
 Because whether it's computers, bicycles, craft beer or home appliances, everybody loves specs. 
 
@@ -19,7 +19,7 @@ Because whether it's computers, bicycles, craft beer or home appliances, everybo
 - See my post [here](http://danswick.com/2014/setup/) for more details 
 
 
-##Want to talk?
+## Want to talk?
 
 <!--- Insert visual here -- danswick@danswick.com -- twitter/github, email, website visual thing. requires email forwarding -->
 You can get a hold of me via:
