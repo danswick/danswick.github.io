@@ -29,10 +29,8 @@ Sometimes the best way to see where you're going is to look back at where you've
 
 - OSM 101 - Steve Vance presented at Thoughtworks
     + **Materials**: We did a quick [intro](http://danswick.com/maptime_july/) and Steve worked off of the classic version of [OSM 101](http://maptime.io/osm-101/)
-    + 
 - [Learn Leaflet for Maptober](http://maptime.io/chicago/event/2014/10/15/maptober-leaflet/) - I presented at Thoughtworks
     + **Materials**: I adapted classic [Anatomy of a Webmap](http://maptime.io/anatomy-of-a-web-map/) slides into [this presentation](http://maptime.io/chicago/learn-leaflet/). We also made a rat map and I put the code and data up on the Maptime Chi page.
-    + 
 - In November, I talked to a friend's Computer Science class about Geodata
     + **Materials**: I adapted Lyzi's Let's Talk About Geodata presentation into [these slides](http://danswick.com/presentations/loyolageodata/).
 - Also in November, I gave a talk I called 'Demystifying GIS' to the staff at the Delta Institute, where I work.
