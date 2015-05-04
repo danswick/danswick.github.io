@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Mapping Natural Resource Priorities
+resource: true
+categories: [Projects]
 ---
 
 The title is a bit of a mouthful, but the concept is fairly straightforward: gather a bunch of experts and ask them to talk about the natural resources in their community. If you structure the process correctly, the results can tell you which natural resources provide the greatest [ecosystem services](http://en.wikipedia.org/wiki/Ecosystem_services), which are threatened by planned development and even give a reflection of a community's identity. In my work at the Delta Institute, I have done a lot of work around environmental valuation, especially as it pertains to our environments' ability to provide [services to humans](http://www.unep.org/maweb/en/index.aspx), but I have honed in on a couple of specific areas, one of which is putting a community's natural resource prioritize in a geographic context. 

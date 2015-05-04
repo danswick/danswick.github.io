@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      rouge
+highlighter:      pygments
 kramdown:
   input:          GFM
 
@@ -22,6 +22,7 @@ pages_list:
   Words: 'words/index.html'
   Projects: 'work/index.html'
   Feed: 'atom.xml'
+category-list: [Projects] # can expand to include more categories as they are added
 
 # Custom vars
 version:          1.0.0

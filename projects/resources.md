@@ -1,8 +1,3 @@
----
-layout: page
-title: Work
----
-
 {% for cat in site.category-list %}
 ### {{ cat }}
 <ul>

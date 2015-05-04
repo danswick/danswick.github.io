@@ -351,7 +351,7 @@ header {
 .work-text {
   font-size: 5em;
   font-family: 'Patua One';
-  fill: transparent;
+  fill: #777;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -361,7 +361,7 @@ header {
 .words-text {
   font-size: 5em;
   font-family: 'Patua One';
-  fill: transparent;
+  fill: #777;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -371,7 +371,7 @@ header {
 .about-text {
   font-size: 5em;
   font-family: 'Patua One';
-  fill: transparent;
+  fill: #777;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;

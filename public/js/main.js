@@ -10,7 +10,7 @@ function mountainClick() {
 	outerFill.classList.toggle('fill-black');
 	innerFill.classList.toggle('mountain-background-clicked');	
 	var text = document.querySelector('.work-text');
-	text.classList.toggle('text-animate');
+	/*text.classList.toggle('text-animate');*/
 	mountainRoute.classList.toggle('mountain-route-animate');
 }
 mountainTarget.addEventListener('click', function() {
@@ -25,7 +25,7 @@ function treeClick() {
 	outerFill.classList.toggle('fill-black');
 	innerFill.classList.toggle('tree-inner-clicked');
 	var text = document.querySelector('.words-text');
-	text.classList.toggle('text-animate');
+	/*text.classList.toggle('text-animate');*/
 	treeRoute.classList.toggle('tree-route-animate');
 }
 treeTarget.addEventListener('click', function() {
@@ -44,7 +44,7 @@ function pondClick() {
 	outerFill3.classList.toggle('fill-black');
 	innerFill.classList.toggle('pond-inner-clicked');
 	var text = document.querySelector('.about-text');
-	text.classList.toggle('text-animate');
+	/*text.classList.toggle('text-animate');*/
 	pondRoute.classList.toggle('pond-route-animate');
 }
 pondTarget.addEventListener('click', function() {
