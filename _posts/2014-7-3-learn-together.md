@@ -33,7 +33,7 @@ I've been a longtime advocate of open source software, but I'm not sure I've alw
 
 What I came away with after State of the Map, besides a ton of notes and new Twitter friends, is a better understanding of what this whole open source thing is all about. Yeah, it's about things like licenses, pull requests and free (as in both beer and speech) software. But I don't think that's all, or even most of the story. I think people contribute because of the community. Because they want to help build something better and because doing so together builds a sense of community and belonging. I'm drawn to the ideals of the burgeoning open data community because of the impact it promises. I believe open data can deliver on its promises, but ultimately, I participate not for the data's sake, but for my community.
 
-The best projects, whether they set out to [democratize the globe](www.openstreetmap.org), [turn vacant lots in community open space](http://neighbor-space.org/) or [push the boundaries of social interaction online](http://www.zefrank.com/theshow/), understand and respond to their communities. Sometimes it's a conscious effort and other times it's just the result of a particular kind of attitude or personality.       
+The best projects, whether they set out to [democratize the globe](http://www.openstreetmap.org), [turn vacant lots in community open space](http://neighbor-space.org/) or [push the boundaries of social interaction online](http://www.zefrank.com/theshow/), understand and respond to their communities. Sometimes it's a conscious effort and other times it's just the result of a particular kind of attitude or personality.       
 
 ## Bringing it all together
 
