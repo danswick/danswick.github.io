@@ -27,22 +27,22 @@ On the outreach front, I set up a MaptimeChi Twitter account ([@maptimeCHI](http
 
 Sometimes the best way to see where you're going is to look back at where you've been. So here is a list of all the Maptime and Maptime-adjacent talks I've given or contributed to since getting started in 2014: 
 
-- OSM 101 - Steve Vance presented at Thoughtworks
+1. OSM 101 - Steve Vance presented at Thoughtworks
     + **Materials**: We did a quick [intro](http://danswick.com/maptime_july/) and Steve worked off of the classic version of [OSM 101](http://maptime.io/osm-101/)
-- [Learn Leaflet for Maptober](http://maptime.io/chicago/event/2014/10/15/maptober-leaflet/) - I presented at Thoughtworks
+2. [Learn Leaflet for Maptober](http://maptime.io/chicago/event/2014/10/15/maptober-leaflet/) - I presented at Thoughtworks
     + **Materials**: I adapted classic [Anatomy of a Webmap](http://maptime.io/anatomy-of-a-web-map/) slides into [this presentation](http://maptime.io/chicago/learn-leaflet/). We also made a rat map and I put the code and data up on the Maptime Chi page.
-- In November, I talked to a friend's Computer Science class about Geodata
+3. In November, I talked to a friend's Computer Science class about Geodata
     + **Materials**: I adapted Lyzi's Let's Talk About Geodata presentation into [these slides](http://danswick.com/presentations/loyolageodata/).
-- Also in November, I gave a talk I called 'Demystifying GIS' to the staff at the Delta Institute, where I work.
+4. Also in November, I gave a talk I called 'Demystifying GIS' to the staff at the Delta Institute, where I work.
     + **Materials**: I mashed up a bunch of things from the above Geodata presentation as well as Lyzi's [Wild World of Geodesy](http://lyzidiamond.com/geodesy) presentation. There's some other random stuff thrown in, but [here are the slides](http://danswick.com/presentations/DeltaGIS/). 
-- OSM Part II. In December, Steve and I got the band back together for another OSM workshop, this time with an emphasis on using advanced editing tools. There were no slides or takeaway materials, but I did write a [blog post](http://maptime.io/chicago/event/2014/12/14/OSMHacknight/)!
-- [Anatomy of a Webmap](http://maptime.io/chicago/event/2015/02/26/webMap/). In February, I adapted the Anatomy of a Webmap and MaptimeSea's [Intro to Webpages & Webmaps](http://maptimesea.github.io/2014/11/05/web-map-intro.html)presentations. Smart Chicago also livestreamed the event, which was awesome!
-- [Make a Map with QGIS](http://maptime.io/chicago/event/2015/04/22/qgis101/). Most recently, I gave a presentation on QGIS. It was coincident with the AAG2015 conference, so we got a great, diverse croud. It was a ton of fun. 
+5. OSM Part II. In December, Steve and I got the band back together for another OSM workshop, this time with an emphasis on using advanced editing tools. There were no slides or takeaway materials, but I did write a [blog post](http://maptime.io/chicago/event/2014/12/14/OSMHacknight/)!
+6. [Anatomy of a Webmap](http://maptime.io/chicago/event/2015/02/26/webMap/). In February, I adapted the Anatomy of a Webmap and MaptimeSea's [Intro to Webpages & Webmaps](http://maptimesea.github.io/2014/11/05/web-map-intro.html)presentations. Smart Chicago also livestreamed the event, which was awesome!
+7. [Make a Map with QGIS](http://maptime.io/chicago/event/2015/04/22/qgis101/). Most recently, I gave a presentation on QGIS. It was coincident with the AAG2015 conference, so we got a great, diverse croud. It was a ton of fun. 
     + **Materials**: [Slides](http://maptime.io/chicago/qgis-101/#0) adapted from Maptime Boston's [QGIS presentation](http://maptimeboston.github.io/qgis-101/#0) and [data package](https://raw.githubusercontent.com/maptime/chicago/gh-pages/qgis-101/data/maptimeChiQGIS101.zip).  
 
 ## Coming up
 
-Beyond the monthly (hopefully this year!) drumbeat of meetups, there are lots of things bubbling right now, none of which are really finalized enough to post, but all of which would be amazing if they come to fruition. The next two Maptime's are already on the books, although they don't have topics yet. 
+Beyond the monthly (hopefully this year!) drumbeat of meetups, there are lots of things bubbling right now, none of which are really finalized enough to post, but all of which would be amazing if they come to fruition. The next two Maptimes are already on the books, although they don't have topics yet. 
 
 - May 28th
 - June 24th
