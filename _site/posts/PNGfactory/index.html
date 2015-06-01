@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Making a PNG Factory &middot; Dan Swick
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+
+      <div class="masthead">
+        <div class="header-svg-container tree-icon">
+            <object data="/img/tree-color.svg" type="image/svg+xml" class="header-svg tree">
+            </object>
+        </div>
+        <h3 class="masthead-title">
+		      <a href="/" title="Home">Dan Swick</a>
+
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/about/index.html">About</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/words/index.html">Words</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/work/index.html">Projects</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/atom.xml">Feed</a></small>
+      		
+		    </h3>
+      </div>
+
+        <div class="post">
+  <h1 class="post-title">Making a PNG Factory</h1>
+<span class="post-date">01 Jun 2015</span>
+  <p>For the past 9 months, I’ve had the opportunity to work on a fun, challenging <a href="http://deltalumin.com">project</a> centered around helping people understand their relationship to electricity in their homes. It sits in a kind of strange edge area near <a href="http://www.bidgely.com/">services</a> desiged to give you live, high-resolution data on your electricity consumption and the kinds of advice-based <a href="http://www.opower.com/">services</a> a lot of utilities have started offering their customers in recent years. As a small non-profit, we aren’t concerned with besting these more mature services, but rather trying to learn more about how specific population segments react to a range of different bits of information presented to them. </p>
+
+<p>Our project introduces a lot of small and subtle tweaks to the way electricity information has traditionally been presented to consumers, but it all starts with that all-too-common foundation we’ve become so familiar with: the dashbaord. Lots of charts, graphs, and numbers, all replicated in a few different places, from a live website, to regular emails, to paper letters. Our participants get to choose which channel they prefer and we make sure the info gets to them in a readable fashion. </p>
+
+<p>We have a relatively small pool of participants (less than 100) and they only receive direct communication twice per month, but with 4-6 images apiece, that comes out to 600 images per month on the lowest end of the spectrum. Not fun to create manually, but since we’ve already got the live dashboard running, why not just build them automatically? </p>
+
+<p><img src="/img/home-energy.png" alt="monthly-energy" /></p>
+
+<h2 id="step-1-make-a-whole-lot-of-charts">Step 1: Make a whole lot of charts</h2>
+
+<p>We have a basic user-facing dashboard that builds out a bunch of custom D3 charts based on the user’s ID. I had already built out all of the chart functions to accept the user’s ID number as a paramter, so it was just a matter of iterating through <em>all</em> of the users, building charts for each one, then running some kind of script to convert them from an SVG to an image at a size that was appropriate for email and printed letters. At first I thought I should build and download one chart at a time, but it turned out to be a lot simpler and faster to do them all at once (at least that’s what I found based on my limited abilities). </p>
+
+<p>First, I wrote a little function to build prototype containers for each of my chart types: </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">buildPrototypeContainers</span><span class="p">(</span><span class="nx">thingToAppend</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">function</span> <span class="nx">defineContainers</span><span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span>  
+                <span class="s1">&#39;&lt;div id=&quot;adminSectionHeader&#39;</span><span class="o">+</span> <span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span> <span class="o">+</span> <span class="s1">&#39;&lt;h1&gt;&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">usr</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/h1&gt;&lt;/div&gt;&#39;</span><span class="o">+</span>
+                <span class="s1">&#39;&lt;div id=&quot;calendarChart&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; class=&quot;calendar-chart&quot;&gt;&lt;/div&gt;&#39;</span><span class="o">+</span>
+                <span class="s1">&#39;&lt;div class=&quot;proto-week&quot; id=&quot;weekChart&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&lt;/div&gt;&#39;</span><span class="o">+</span> 
+                <span class="s1">&#39;&lt;div class=&quot;proto-month&quot; id=&quot;monthChart&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&lt;/div&gt;&#39;</span><span class="o">+</span> 
+                <span class="s1">&#39;&lt;div id=&quot;applianceChart&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">usr</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="c1">// create div destination containers w/ unique ID&#39;s </span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#vizContainer&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span> <span class="nx">defineContainers</span><span class="p">(</span><span class="nx">thingToAppend</span><span class="p">)</span> <span class="p">);</span>
+        <span class="p">}</span></code></pre></div>
+
+<p>Next, I wrote a function to take all of my users’ data (returned as an array of objects) and run it through my chart-building functions: </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">containersIterate</span><span class="p">(</span><span class="nx">returnedData</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">dashboardData</span> <span class="o">=</span> <span class="nx">returnedData</span><span class="p">;</span> 
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">returnedData</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">try</span> <span class="p">{</span>
+                        <span class="nx">buildPrototypeContainers</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                        <span class="nx">buildWeekChart2</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                        <span class="nx">buildMonthChart2</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                        <span class="nx">makeAnApplianceChart</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                        <span class="nx">makeACalendarChart</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#errorMessageBlock&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;span class=&#39;user-error&#39;&gt;&lt;strong&gt;The following users have encountered errors&lt;/strong&gt;: &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;/span&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    
+                <span class="p">}</span>
+        <span class="p">}</span></code></pre></div>
+
+<p>This function includes some error checking so that 1) it doesn’t get hung up on the inevitable broken bit of information in our user data and 2) it alerts us when data doesn’t look right by popping the offending user ID into the <code>#errorMessageBlock</code> div at the very top of the page. </p>
+
+<h2 id="step-2-run-your-charts-through-the-png-factory">Step 2: Run your charts through the PNG factory</h2>
+
+<p>So we’ve got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this <em>super</em> handy script, <a href="https://github.com/exupero/saveSvgAsPng">saveSvgAsPng</a> from GitHub user <a href="https://github.com/exupero">exupero</a>. I really highly recommend reading the author’s very helpful <a href="http://spin.atomicobject.com/2014/01/21/convert-svg-to-png/">post on the subject</a>. </p>
+
+<p>The saveSvgAsPng script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting. Excellent! To make it work for my project, I just created a little <code>for</code> loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each iteration.</p>
+
+<p>This results in a hillarious flurry of download animations, but it gets the job done! </p>
+
+<p><img src="/img/download-fury.gif" alt="download-fury" /></p>
+
+<h2 id="gotchas-and-features">Gotchas and features</h2>
+
+<p>I ran into a few gotchas along the way, some of which have already been addressed in saveSvgAsPng, some of which are easy to work around with a few tweaks. </p>
+
+<h4 id="scaling-inline-images">Scaling inline images</h4>
+
+<p>One of our charts uses inline SVG icons, which posed a bit of a problem because saveSvgAsPng recreates the image in its own canvas with its own coordinate system. However, I found that by tweaking the paramters in <code>ctx.drawImage()</code> (read more <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">here</a>), I could easily overcome this issue by passing in explicit height and width for the icons I was using. In the future, I’d like to do this programmatically, but since our icon sizes aren’t going to change, I’m okay hard-coding their width and height. </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">img</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+        <span class="nx">img</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+        <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+        <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+        <span class="c1">// ctx.drawImage(image, dx, dy, dWidth, dHeight);</span>
+        <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">330</span><span class="p">,</span> <span class="mi">280</span><span class="p">);</span>
+
+        <span class="c1">// etc etc...</span></code></pre></div>
+
+<h4 id="scaling-the-output-png">Scaling the output PNG</h4>
+
+<p>saveSvgAsPng has a neat built-in scaling option that you can pass when you call the function. Rather than hard-code it, I decided to give the user the option to choose how to scale the images they download (see the little input box in the gif above). This makes sense for our project because some images may be exported for emails and others for print letters. I wanted to give the person designing the document some flexibility in order to avoid weird pixellation. 2x scaling seemed to work pretty well for our use. </p>
+
+<p><img src="/img/icon-sample-image.png" alt="icon-image-sample" style="padding: 1em; width: 80%;" /></p>
+
+<h4 id="using-external-fonts">Using external fonts</h4>
+
+<p>saveSvgAsPng does a nice job pulling in styles from your CSS, but runs into some trouble with external fonts. At the time of this post, <a href="https://github.com/exupero/saveSvgAsPng/issues/24">this was a known issue</a> and the recommended workaround is to encode <code>@font-face</code> as Base64. I found <a href="http://sosweetcreative.com/2613/font-face-and-base64-data-uri">this article</a> particularly helpful and followed its advice successfully. </p>
+
+<p>That’s it! My PNG factory is up and running after a bit of trial and error and our project continues to hum along without resorting to manually building 700 individual charts every month. </p>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/posts/maptime-so-far">
+            Maptime So Far
+            <small>03 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/posts/learn-together">
+            Learn Together
+            <small>03 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/posts/motorik">
+            Headphone Music - Motorik
+            <small>01 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      <div class="footer">
+        <p>
+          &copy; 2015. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Jekyll for WYSIWYG'ers &middot; Dan Swick
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+
+      <div class="masthead">
+        <div class="header-svg-container tree-icon">
+            <object data="/img/tree-color.svg" type="image/svg+xml" class="header-svg tree">
+            </object>
+        </div>
+        <h3 class="masthead-title">
+		      <a href="/" title="Home">Dan Swick</a>
+
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/about/index.html">About</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/words/index.html">Words</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/work/index.html">Projects</a></small>
+      		
+        			&nbsp;&nbsp;&nbsp;
+        			<small><a href="/atom.xml">Feed</a></small>
+      		
+		    </h3>
+      </div>
+
+        <div class="post">
+  <h1 class="post-title">Jekyll for WYSIWYG'ers</h1>
+<span class="post-date">27 Jun 2014</span>
+  <h2 id="why-jekyll-and-this-whole-static-sites-business">Why Jekyll and this whole static sites business?</h2>
+
+<p>About a year ago, a sweet hosting deal I’d managed to finagle fell through and my modest personal website needed a place to live. I’d been using Wordpress for years and had become fairly familiar with its workflows and quirks. Between my personal writing and work-related writing, I’ve probably set up a dozen Wordpress sites over the years, but never really got past the official installer scripts, WYSIWYG editors and, occasionally, small php edits here and there. </p>
+
+<p>I think Wordpress is great. My employer just switched over and our communications folk love it. There’s a lot of easy-to-access documentation and no matter where you’re working, there’s probably someone familiar enough to help you out of a jam. That being said, I never really had fun working with it. I like to tinker, take things apart and understand what’s going on when they break. Wordpress is just too complicated for my newbie skills and I didn’t feel I was able to get a firm enough grasp to really understand what was going on under the hood. Enter Jekyll. </p>
+
+<p>The concept of static pages appeals to my tinkerer sensibility. Without all the php and complex database structures, I stand a fighting chance of comprehending what’s going on each time I commit a new post and if something breaks it’s not likely to affect the whole site, leaving me totally helpless to fix it. And it doesn’t hurt that pretty much all of the geo tech folk I admire are using it. </p>
+
+<p>I really like writing Markdown, whether it’s for a blog post, conference notes or a presentation outline. Folks all over the web have extolled its virtues, but I’m particularly fond of this post by Ben Balter on why it’s about <a href="http://ben.balter.com/2014/03/31/word-versus-markdown-more-than-mere-semantics/">more than just semantics</a>. </p>
+
+<p>So…yay static pages. Yay markdown. Yay open source. Jekyll seemed great but I was still without hosting and sort of hesitant to plunk down some cash on what would ultimately be an experiment. Luckily, GitHub’s free GitHub Pages already run Jekyll and offer free hosting. To sweeten the deal, it’s fairly trivial to retain your existing URL. </p>
+
+<p>I just want to point something out that sort of escaped me when I was looking into making the switch. You’ll see a lot about how GitHub pages are “powered by Jekyll,” but unless you’re already familiar with the way Jekyll works, it might not immediately be obvious what this means and you might miss one of the biggest benefits of buying into the Jekyll/GH Pages environment. “Powered by Jekyll” means that, rather than running your new Markdown posts through Jekyll locally <em>then</em> committing then resulting files, you can simply commit your posts and GH Pages will churn them through Jekyll for you. I initially assumed that in order to post to my blog, I’d have to be working on a computer with Jekyll installed so you can imagine my delight when I realized I could create, edit and commit posts from anywhere. Pretty neat stuff. </p>
+
+<p>There are many thousands of words all over the web explaining how to set up Jekyll, so I’ll refrain from spelling out the whole process (see the resources section at the end for some helpful links) and instead just outline some of the barriers I encountered and how I overcame them. </p>
+
+<h2 id="getting-jekyll-running-locally-on-os-x">Getting Jekyll running locally on OS X</h2>
+
+<p>Before you dive into the Jekyll hot tub, be sure you understand that you’ll need to do some work in the terminal and if you’re new to this type of thing, it’s probably going to get messy. But <em>that’s okay!</em> You (probably) won’t break anything beyond repair and you’ll learn a lot in the process. The <a href="http://jekyllrb.com/docs/installation/">official Jekyll docs</a> are essential, but there are some other great guides out there as well.</p>
+
+<blockquote>
+  <p>Windows users are kind of out of luck in this department. It’s possible to get up and running, but requires some special steps that I won’t get into here. Once your site is built you can still post from a Windows computer, but you won’t be able to do all the fancy local-side Jekyll stuff. </p>
+</blockquote>
+
+<p>I ran into all kinds of newbie problems getting Ruby working, but they pretty much all stemmed from my improper use of too many package installers and, when I got frustrated, sudo’ing myself into oblivion and ruining all of my file permissions. Don’t be like me. Follow the documentation and don’t abuse sudo.</p>
+
+<p>Stuff you should install on your mac: </p>
+
+<ul>
+  <li>The latest XCode command line tools  </li>
+  <li>RubyGems (comes with Ruby 1.9 and greater)</li>
+  <li>Ruby Version Manager (RVM) </li>
+  <li>Bundler </li>
+  <li>Homebrew</li>
+  <li>Jekyll!</li>
+</ul>
+
+<h3 id="mavericks-is-a-pain">Mavericks is a pain</h3>
+
+<p>I foolishly updated OS X right in the middle of trying to wrap my head around Jekyll and encountered all kinds of issues that are addressed in <a href="http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/">this article</a> about configuring Mavericks. It covers some basic stuff like un-hiding your library folder, fixing your <code>PATH</code> (read the comments to get a broader view on PATH issues) and setting up <a href="http://brew.sh/">Homebrew</a>.  </p>
+
+<h3 id="system-ruby">System Ruby</h3>
+
+<p>I had a lot of problems with Ruby, which all seemed to trace back to the pre-installed version of Ruby that comes with Mavericks. I’m no Ruby expert, but it’s much easier to work through Ruby Version Manager rather than deal with the <a href="http://robots.thoughtbot.com/psa-do-not-use-system-ruby">many issues</a> that come from working with pre-installed Ruby. Do yourself a favor and set up <a href="http://bundler.io/">Bundler</a> and <a href="http://rvm.io/">RVM</a> before diving into Jekyll. </p>
+
+<h2 id="configuring-a-custom-domain-registered-through-godaddy">Configuring a custom domain registered through GoDaddy</h2>
+
+<p>This step has actually gotten a bit more transparent in the months since I set my site up. <a href="https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider">This official GitHub help doc</a> should actually provide all of the information you’ll need, but if you’re unfamiliar with GoDaddy’s DNS settings panel, <a href="https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a">this guide</a> has a lot of helpful screenshots, though the author only sets up one <code>A</code> record. You’ll need the two listed in the previously mentioned official help doc. </p>
+
+<blockquote>
+  <p><strong>TIP:</strong> You might run into some documentation that mentions setting up a <code>gh-pages</code> repo. This refers specifically to Project Pages. If you’re setting up a User Page, you should ignore references to <code>gh-pages</code>. </p>
+</blockquote>
+
+<h2 id="understanding-templates-and-theming">Understanding templates and theming</h2>
+
+<p>Reading through the Jekyll documentation, I felt like I had a fairly strong understanding of the mechanics behind Jekyll’s template system, but had a hard time making it work in practice. I really wanted to hand-code everything, but ended up settling on a simple pre-built template. One of my goals is to build my chops a bit and so far I think tweaking a simple existing template is the right choice. Jekyll is transparent enough that I can get a good sense for how everything works, save myself a lot of headache and easily make some deeper changes to the templates. </p>
+
+<p>I am currently using <a href="https://github.com/poole/poole">Poole</a>, which includes everything you need to get started poking around Jekyll. The author, <a href="https://github.com/mdo">Mark Otto</a>, has done a great job laying out documentation and building clear examples. <a href="http://joshualande.com/jekyll-github-pages-poole/">Joshua Lande</a> has posted a really nice guide to working with Poole as well. </p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://help.github.com/articles/sitemaps-for-github-pages">“SEO” with site maps</a>
+    <ul>
+      <li>I also didn’t quite understand how to add <code>jekyll-sitemap</code> to my <code>_config.yml</code> file. It should look like this:</li>
+    </ul>
+
+    <p><code>
+  gems: ['jekyll_sitemap']
+ </code></p>
+  </li>
+  <li>
+    <p>Date parsing problems. I had to remove <code>date_to_string</code> from <code>{{ post.date | date_to_string }}</code> in my <code>post.html</code> template because it was passing a <code>nil</code> value. See <a href="https://github.com/jekyll/jekyll/issues/2370">this</a> issue for more details. </p>
+
+    <blockquote>
+      <p><strong>Bonus Tip!</strong> After fixing my date parsing problem and adding the above resource note, this post mysteriously broke again! The issue was that Jekyll interpreted the code blocks, which included my original broken code, as <em>Liquid code</em> rather than text. I found <a href="http://truongtx.me/2013/01/09/display-liquid-code-in-jekyll/">this post</a> super helpful. In short, you’ll want to use the raw tag like so: </p>
+    </blockquote>
+
+    <blockquote>
+      <pre><code>{% raw %}
+some liquid stuff
+{% endraw %} 
+</code></pre>
+    </blockquote>
+  </li>
+  <li><a href="http://joshualande.com/jekyll-github-pages-poole/">Creating an “Archive” page</a>. See “Customizations” section. </li>
+  <li>RSS feeds - a <a href="https://github.com/snaptortoise/jekyll-rss-feeds">couple of options</a> using templates to generate feed xml. </li>
+  <li><a href="http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/">OS X Configuration</a></li>
+  <li><a href="https://help.github.com/articles/using-jekyll-with-pages#keeping-jekyll-up-to-date">Keeping Jekyll Up to Date</a></li>
+</ul>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/posts/PNGfactory">
+            Making a PNG Factory
+            <small>01 Jun 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/posts/maptime-so-far">
+            Maptime So Far
+            <small>03 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/posts/learn-together">
+            Learn Together
+            <small>03 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      <div class="footer">
+        <p>
+          &copy; 2015. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
