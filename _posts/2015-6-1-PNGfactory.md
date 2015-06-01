@@ -57,7 +57,9 @@ This function includes some error checking so that 1) it doesn't get hung up on 
 
 ## Step 2: Run your charts through the PNG factory
 
-So we've got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this *super* handy script, [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng) from GitHub user [exupero](https://github.com/exupero). This script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting. Excellent! To make it work for my project, I just created a little `for` loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each iteration.
+So we've got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this *super* handy script, [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng) from GitHub user [exupero](https://github.com/exupero). I really highly recommend reading the author's very helpful [post on the subject](http://spin.atomicobject.com/2014/01/21/convert-svg-to-png/). 
+
+The saveSvgAsPng script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting. Excellent! To make it work for my project, I just created a little `for` loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each iteration.
 
 This results in a hillarious flurry of download animations, but it gets the job done! 
 
