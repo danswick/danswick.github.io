@@ -3,7 +3,7 @@ layout: post
 title: Headphone Music - Motorik 
 ---
 
-I work in an open office, so headphones and a few great playlists are absolutely necessary to get through the day. I'll sometimes rely on robot-selected playlists from Pandora or similar, but always end up wishing I'd spent that time getting more familiar with an artist or album - an activity that, as time goes on, is becoming more and more difficult to do. My old fallbacks for music discovery, like college radio (have to rep my alma mater, [KJHK](www.kjhk.org)) and MP3 blogs (RIP), either don't exist are are more difficult to access. How, then, to avoid burning out your favorite tracks? 
+I work in an open office, so headphones and a few great playlists are absolutely necessary to get through the day. I'll sometimes rely on robot-selected playlists from Pandora or similar, but always end up wishing I'd spent that time getting more familiar with an artist or album - an activity that, as time goes on, is becoming more and more difficult to do. My old fallbacks for music discovery, like college radio (have to rep my alma mater, [KJHK](http://www.kjhk.org)) and MP3 blogs (RIP), either don't exist are are more difficult to access. How, then, to avoid burning out your favorite tracks? 
 
 These days, my strategy is primarily to stalk people on Spotify, but there's one pursuit I've found particularly rewarding - building a collaborative Spotify playlist of songs featuring the [Motorik](http://en.wikipedia.org/wiki/Motorik) beat, a 4/4 drumbeat popularized by Krautrock bands like Can, Neu! and Kraftwerk. The basic beat: 
 

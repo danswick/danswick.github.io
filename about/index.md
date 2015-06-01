@@ -15,12 +15,11 @@ Because whether it's computers, bicycles, craft beer or home appliances, everybo
 
 - Built with [Jekyll](http://jekyllrb.com), hosted on [GitHub Pages](https://github.com/danswick/danswick.github.io)
 - Theme is based on [Poole](http://github.com/poole/poole) with lots of modifications
-- See my post [here](http://danswick.com/2014/setup/) for more details 
+- See my post [here](http://danswick.com/posts/setup/) for more details 
 
 
 ## Want to talk?
 
-<!--- Insert visual here -- danswick@danswick.com -- twitter/github, email, website visual thing. requires email forwarding -->
 You can get a hold of me via:
 
 - [Twitter](https://twitter.com/DanSwick)
