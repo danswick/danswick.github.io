@@ -13,9 +13,8 @@ This space is part experiment, documentation, memory aid, and sounding board. De
 
 Because whether it's computers, bicycles, craft beer or home appliances, everybody loves specs. 
 
-- Built with [Jekyll](http://jekyllrb.com), because static pages are great
-- Theme is [Poole](http://github.com/poole/poole) with a few minor style modifications 
-- Hosting is by Github Pages
+- Built with [Jekyll](http://jekyllrb.com), hosted on [GitHub Pages](https://github.com/danswick/danswick.github.io)
+- Theme is based on [Poole](http://github.com/poole/poole) with lots of modifications
 - See my post [here](http://danswick.com/2014/setup/) for more details 
 
 
@@ -28,4 +27,10 @@ You can get a hold of me via:
 - [GitHub](https://github.com/danswick/)
 - [Email](mailto:dan.swick+personal_site@gmail.com)
 
-If you're looking for info on Maptime Chicago, try contacting me through one of the above channels or the [super official MaptimeCHI](http://twitter.com/MaptimeCHI) Twitter account.
+If you're looking for info on Maptime Chicago, try contacting me through one of the above channels or via one of Maptime Chicago's more official channels:
+
+- [@MaptimeCHI on Twitter](http://twitter.com/MaptimeCHI)
+- On the web at [maptime.io/chicago](http://maptime.io/chicago/), where you can also sign up for the mailing list
+- Email [maptimechi@gmail.com](mailto:maptimechi@gmail.com)
+
+Thanks!
