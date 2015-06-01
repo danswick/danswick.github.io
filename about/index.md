@@ -5,7 +5,7 @@ title: About
 
 ![the ol' me](/assets/selfie.jpg)
 
-I'm Dan. I live in Chicago, ride bikes, make things from fabric and put things on maps. I work for the [Delta Institute](http://www.delta-institute.org) in Chicago.  
+I'm Dan. I live in Chicago, ride bikes, make things from fabric, put things on maps, and write code. I work for the [Delta Institute](http://www.delta-institute.org) in Chicago.  
 
 This space is part experiment, documentation, memory aid, and sounding board. Development is ongoing and you can follow along or [submit an issue on GitHub](https://github.com/danswick/danswick.github.io/issues?state=open). 
 
