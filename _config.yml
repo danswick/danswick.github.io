@@ -33,7 +33,7 @@ description: a personal weblog odyssey
 url: http://danswick.com
 
 # Plugins
-gems:             ['jekyll-sitemap']
+
 
 
 exclude: [vendor]
