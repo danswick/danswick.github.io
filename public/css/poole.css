@@ -227,8 +227,9 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 0 auto;
   border-radius: 5px;
+  box-shadow: 0px 2px 15px -1px rgba(0,0,0,0.2);
 }
 
 /* Tables */
