@@ -29,7 +29,7 @@ You can get a hold of me via:
 
 If you're looking for info on Maptime Chicago, try contacting me through one of the above channels or via one of Maptime Chicago's more official channels:
 
-- [@MaptimeCHI on Twitter](http://twitter.com/MaptimeCHI)
+- [@MaptimeCHI](http://twitter.com/MaptimeCHI) on Twitter
 - On the web at [maptime.io/chicago](http://maptime.io/chicago/), where you can also sign up for the mailing list
 - Email [maptimechi@gmail.com](mailto:maptimechi@gmail.com)
 
