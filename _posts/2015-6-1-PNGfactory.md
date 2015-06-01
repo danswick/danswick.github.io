@@ -11,7 +11,7 @@ We have a relatively small pool of participants (less than 100) and they only re
 
 ![monthly-energy]({{ site.baseurl }}img/home-energy.png)
 
-## Making a whole lot of charts
+## Step 1: Make a whole lot of charts
 
 We have a basic user-facing dashboard that builds out a bunch of custom D3 charts based on the user's ID. I had already built out all of the chart functions to accept the user's ID number as a paramter, so it was just a matter of iterating through *all* of the users, building charts for each one, then running some kind of script to convert them from an SVG to an image at a size that was appropriate for email and printed letters. At first I thought I should build and download one chart at a time, but it turned out to be a lot simpler and faster to do them all at once (at least that's what I found based on my limited abilities). 
 
@@ -55,7 +55,7 @@ function containersIterate(returnedData) {
 
 This function includes some error checking so that 1) it doesn't get hung up on the inevitable broken bit of information in our user data and 2) it alerts us when data doesn't look right by popping the offending user ID into the `#errorMessageBlock` div at the very top of the page. 
 
-## Running charts through the PNG factory
+## Step 2: Run your charts through the PNG factory
 
 So we've got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this *super* handy script, [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng) from GitHub user [exupero](https://github.com/exupero). This script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting. Excellent! To make it work for my project, I just created a little `for` loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each iteration.
 
