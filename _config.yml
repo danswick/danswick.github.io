@@ -34,3 +34,6 @@ url: http://danswick.com
 
 # Plugins
 gems:             ['jekyll-sitemap']
+
+
+exclude: [vendor]
