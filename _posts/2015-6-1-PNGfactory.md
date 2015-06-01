@@ -13,7 +13,7 @@ We have a relatively small pool of participants (less than 100) and they only re
 
 ## Making a whole lot of charts
 
-We have a basic user-facing dashboard that builds out a bunch of custom D3 charts based on the user's ID. I had already built out all of the chart functions to accept the user's ID number as a paramter, so it was just a matter of iterating through *all* of the users, building charts for each one, then running some kind of script to convert them from an SVG to an image at a size that was appropriate for email and printed letters. At first I thought I should build and download one chart at a time, but it turned out to be a lot simpler and faster to do them all at once (at least from my limited abilities). 
+We have a basic user-facing dashboard that builds out a bunch of custom D3 charts based on the user's ID. I had already built out all of the chart functions to accept the user's ID number as a paramter, so it was just a matter of iterating through *all* of the users, building charts for each one, then running some kind of script to convert them from an SVG to an image at a size that was appropriate for email and printed letters. At first I thought I should build and download one chart at a time, but it turned out to be a lot simpler and faster to do them all at once (at least that's what I found based on my limited abilities). 
 
 First, I wrote a little function to build prototype containers for each of my chart types: 
 
@@ -57,7 +57,7 @@ This function includes some error checking so that 1) it doesn't get hung up on 
 
 ## Running charts through the PNG factory
 
-So we've got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this *super* handy script, [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng) from GitHub user [exupero](https://github.com/exupero). This script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting (with a few precautions along the way). To make it work for my project, I just created a little `for` loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each step. 
+So we've got all of our SVG charts in one place, how do we turn them into images? Luckily, I found this *super* handy script, [saveSvgAsPng](https://github.com/exupero/saveSvgAsPng) from GitHub user [exupero](https://github.com/exupero). This script takes an element, output filename, and a few options as arguments and spits out nice PNGs, including all of your CSS formatting. Excellent! To make it work for my project, I just created a little `for` loop to iterate over all of the SVG charts I created in previous step, running the saveSvgAsPng functions at each iteration.
 
 This results in a hillarious flurry of download animations, but it gets the job done! 
 
@@ -69,7 +69,7 @@ I ran into a few gotchas along the way, some of which have already been addresse
 
 #### Scaling inline images
 
-One of our charts uses inline SVG icons, which posed a bit of a problem because saveSvgAsPng recreates the image in its own canvas with its own coordinate system. However, I found that, by tweaking the paramters in `ctx.drawImage()` (read more [here](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)), I could easily overcome this issue by passing in explicit height and width for the icons I was using. 
+One of our charts uses inline SVG icons, which posed a bit of a problem because saveSvgAsPng recreates the image in its own canvas with its own coordinate system. However, I found that by tweaking the paramters in `ctx.drawImage()` (read more [here](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)), I could easily overcome this issue by passing in explicit height and width for the icons I was using. In the future, I'd like to do this programmatically, but since our icon sizes aren't going to change, I'm okay hard-coding their width and height. 
 
 {% highlight javascript %}
 img.onload = function() {
@@ -91,7 +91,7 @@ saveSvgAsPng has a neat built-in scaling option that you can pass when you call 
 
 #### Using external fonts
 
-saveSvgAsPng does a nice job pulling in styles from your CSS, but runs into some trouble with external fonts. At the time of this post, [this was a known issue](https://github.com/exupero/saveSvgAsPng/issues/24) and the recommended workaround is to encode `@font-face` as Base64. I found [this article](http://sosweetcreative.com/2613/font-face-and-base64-data-uri) particularly helpful. 
+saveSvgAsPng does a nice job pulling in styles from your CSS, but runs into some trouble with external fonts. At the time of this post, [this was a known issue](https://github.com/exupero/saveSvgAsPng/issues/24) and the recommended workaround is to encode `@font-face` as Base64. I found [this article](http://sosweetcreative.com/2613/font-face-and-base64-data-uri) particularly helpful and followed its advice successfully. 
 
 That's it! My PNG factory is up and running after a bit of trial and error and our project continues to hum along without resorting to manually building 700 individual charts every month. 
 
