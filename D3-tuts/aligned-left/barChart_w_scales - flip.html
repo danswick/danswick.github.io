@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <script type="text/javascript" src="../d3/d3.js"></script>
+    </head>
+    <body>
+        <p>Click on this text to update the chart with new data values as many times as you like!</p>
+
+        <script type="text/javascript">
+
+            var w = 600,
+                h = 250;
+
+            function barTransition() { 
+                d3.transition()
+                  .delay(function(d, i) { 
+                    return i * 50;
+                  })
+                  .duration(1000)
+                  .ease("cubic-in-out");
+            }
+
+            var dataset = [ 4, 8, 15, 16, 23, 42 ];
+
+
+            var xScale = d3.scale.linear()
+                            .domain([0, d3.max(dataset)])
+                            .range([0, w - 30]);
+
+            var yScale = d3.scale.ordinal()
+                            .domain(d3.range(dataset.length))
+                            .rangeRoundBands([0, h], 0.05);
+
+            var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+        
+            svg.selectAll("rect")
+                .data(dataset)
+                .enter()
+                .append("rect")
+                .attr("y", function(d, i) {
+                    return yScale(i);
+                })
+                .attr("width", function(d) {
+                    return xScale(d);
+                })
+                .attr("height", yScale.rangeBand())
+                .attr("x", 0)
+                .attr("fill", function(d) {
+                    return "rgb(0, 0, " + (d * 10) + ")";
+                });
+
+            svg.selectAll("text")
+                .data(dataset)
+                .enter()
+                .append("text")
+                .text(function(d) {
+                    return d;
+                })
+                .attr("y", function(d, i) {
+                            return yScale(i) + yScale.rangeBand() / 2;
+                        })
+                .attr("x", function(d) {
+                    return xScale(d) - 14;
+                })
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "11px")
+                .attr("fill", "white")
+                .attr("text-anchor", "middle");
+
+            svg.selectAll("image")
+                .data(dataset)
+                .enter()
+                .append("image")
+                .attr("xlink:href", 'https://github.com/favicon.ico')
+                .attr("x", function(d) {
+                    return xScale(d) + 14;
+                })
+                .attr("y", function(d, i) {
+                    return yScale(i) + yScale.rangeBand() / 3;
+                })
+                .attr("width", 16)
+                .attr("height", 16);
+
+            d3.select("p")
+                .on("click", function() {
+                    // Do something on click
+                    var numValues = dataset.length;
+
+                    dataset = [];
+                    
+                    for (var i = 0; i < numValues; i++) {
+                        var newNumber = Math.floor(Math.random() * 100);
+                        dataset.push(newNumber);
+                        xScale.domain([0, d3.max(dataset)]);
+                    }
+
+                    svg.selectAll("rect")
+                        .data(dataset)
+                        .transition()
+                        .delay(function(d, i) {
+                            return i / dataset.length * 1000;
+                        })
+                        .duration(500)
+                        .ease("cubic-in-out")
+                        .attr("x", 0)
+                        .attr("width", function(d) {
+                            return xScale(d);
+                        })
+                        .attr("fill", function(d) {
+                            return "rgb(0,0, " + (d * 2.25) + ")";
+                        });
+
+                    svg.selectAll("text")
+                        .data(dataset)
+                        .transition()
+                        .delay(function(d, i) {
+                            return i / dataset.length * 1000;
+                        })
+                        .duration(500)
+                        .ease("cubic-in-out")
+                        .text(function(d) {
+                            return d;
+                        })
+                        .attr("x", function(d, i) {
+                            return xScale(d) - 14;
+                        })
+                        .attr("y", function(d, i) {
+                            return yScale(i) + yScale.rangeBand() / 2;
+                        });
+                });
+
+        </script>
+    </body>
+</html>     
