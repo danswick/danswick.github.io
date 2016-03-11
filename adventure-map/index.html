@@ -41,7 +41,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmv
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', //stylesheet location
-    minZoom: 10,
+    minZoom: zoomSetting,
     maxZoom: zoomSetting,
     maxBounds: [[bboxE, bboxN], [bboxW, bboxS]],
     center: [-122.55, 37.84], // starting position
