@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title></title>
+    <title>Mapventure!</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.css' rel='stylesheet' />
@@ -12,24 +12,43 @@
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
         #choice { position: absolute; top: 1em; left: 1em; padding: 0.5em; background-color: #fff; }
+        #target { 
+            width: 15px;
+            height: 15px;
+            position: fixed;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.5);
+            background-color: transparent;
+            top: 50%;
+            left: 50%;
+        }
     </style>
 </head>
 <body>
 
 <div id='map'></div>
+<div id='target'></div>
 <!-- <div id="choice">PICK</div> -->
 <script>
+var zoomSetting = 16.2;
+var bboxS = 37.7948,
+    bboxN = 37.84764,
+    bboxE = -122.467,
+    bboxW = -122.561;
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', //stylesheet location
-    minZoom: 17.5,
-    maxZoom: 17.5,
+    minZoom: zoomSetting,
+    maxZoom: zoomSetting,
+    maxBounds: [[bboxE, bboxN], [bboxW, bboxS]],
     center: [-122.55, 37.84], // starting position
-    zoom: 17.5 // starting zoom
+    zoom: zoomSetting // starting zoom
 });
 
-var bbox = [-122.4625, 37.89695, -122.59085, 37.813];
+var bbox = [bboxE, bboxN, bboxW, bboxS];
 var cellWidth = 0.1;
 var units = 'miles';
 var grid = turf.hexGrid(bbox, cellWidth, units);
@@ -58,7 +77,7 @@ map.on('style.load', function () {
             'line-color': '#333',
             'line-opacity': 0.4,
             'line-width': 60,
-            'line-blur': 20,
+            'line-blur': 60,
         },
         'filter': ['==', 'visited', 'no']
     });
@@ -72,12 +91,12 @@ map.on('style.load', function () {
         'paint': {
             'line-color': '#333',
             'line-opacity': 0.8,
-            'line-width': 20,
-            'line-blur': 10,
+            'line-width': 30,
+            'line-blur': 30,
         },
         'filter': ['==', 'visited', 'no']
     });
-    map.addLayer({
+    var hexGridLayer = map.addLayer({
         'id': 'hexgrid',
         'interactive': true,
         'type': 'fill',
