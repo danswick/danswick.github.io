@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #choice { position: absolute; top: 1em; left: 1em; padding: 0.5em; background-color: #fff; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<!-- <div id="choice">PICK</div> -->
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', //stylesheet location
+    minZoom: 17.5,
+    maxZoom: 17.5,
+    center: [-122.55, 37.84], // starting position
+    zoom: 17.5 // starting zoom
+});
+
+var bbox = [-122.4625, 37.89695, -122.59085, 37.813];
+var cellWidth = 0.1;
+var units = 'miles';
+var grid = turf.hexGrid(bbox, cellWidth, units);
+
+
+for(i = 0; i < grid.features.length; i++) {
+    grid.features[i].properties.idNum = i;
+    grid.features[i].properties.visited = 'no';
+}
+
+var source = new mapboxgl.GeoJSONSource({
+    data: grid
+});
+
+map.on('style.load', function () {
+    map.addSource('hexgrid', source);
+
+    map.addLayer({
+        'id': 'hexgrid-line-2',
+        'type': 'line',
+        'source': 'hexgrid',
+        'layout': {
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#333',
+            'line-opacity': 0.4,
+            'line-width': 60,
+            'line-blur': 20,
+        },
+        'filter': ['==', 'visited', 'no']
+    });
+    map.addLayer({
+        'id': 'hexgrid-line',
+        'type': 'line',
+        'source': 'hexgrid',
+        'layout': {
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#333',
+            'line-opacity': 0.8,
+            'line-width': 20,
+            'line-blur': 10,
+        },
+        'filter': ['==', 'visited', 'no']
+    });
+    map.addLayer({
+        'id': 'hexgrid',
+        'interactive': true,
+        'type': 'fill',
+        'source': 'hexgrid',
+        'layout': {},
+        'paint': {
+            'fill-color': '#222',
+            'fill-opacity': 1
+        },
+        'filter': ['==', 'visited', 'no']
+    });
+    map.addLayer({
+        'id': 'hexgrid-visited',
+        'type': 'fill',
+        'source': 'hexgrid',
+        'layout': {},
+        'paint': {
+            'fill-color': '#fff',
+            'fill-outline-color': '#777',
+            'fill-opacity': 0
+        },
+        'filter': ['==', 'visited', 'yes']
+    });
+});
+
+map.on('move', function(e) {
+    map.featuresAt(map.project(map.getCenter()), {layer: 'hexgrid', radius: 1, includeGeometry: true}, function (err, features) {
+        if (err) throw err;
+        // run visitMe function
+        visitMe(features[0].properties.idNum);
+    });
+});
+
+map.on('moveend', function(e){
+    source.setData(grid);
+});
+
+function visitMe(featureId) {
+    // change feature's 'visited' property to yes
+    grid.features[featureId].properties.visited = 'yes';
+}
+
+function nextPosition(endLocation) {
+    map.panTo(endLocation, {duration: 5000});
+}
+
+
+// potential future choose-your-own-adventure stuff? 
+/*var gameLocations = [
+    {
+        "name": "Home",
+        "coordinates": [-122.261, 37.837]
+    },
+    {
+        "name": "The mountain",
+        "coordinates": [-121.915, 37.882]
+    },
+    {
+        "name": "The marshland",
+        "coordinates": [-122.089, 37.5566]
+    }
+];
+
+var picky = document.getElementById('choice');
+picky.onclick = function(e) {
+    var target = $(e.target).parent();
+    var coords = $(target).data(coords);
+    var myCoords = JSON.parse("[" + coords.coords + "]");
+    nextPosition(myCoords);
+}
+for (i=0; i < gameLocations.length; i++) {
+    $('#choice').append("<div class='choice-item' data-coords='" + gameLocations[i].coordinates + "'><span class='choice-name'>" + gameLocations[i].name) + "</span>"
+}*/
+
+
+</script>
+
+</body>
+</html>
