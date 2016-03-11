@@ -32,16 +32,16 @@
 <!-- <div id="choice">PICK</div> -->
 <script>
 var zoomSetting = 16.2;
-var bboxS = 37.7948,
+var bboxS = 37.8185,
     bboxN = 37.84764,
     bboxE = -122.467,
-    bboxW = -122.561;
+    bboxW = -122.5488;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', //stylesheet location
-    minZoom: zoomSetting,
+    minZoom: 10,
     maxZoom: zoomSetting,
     maxBounds: [[bboxE, bboxN], [bboxW, bboxS]],
     center: [-122.55, 37.84], // starting position
@@ -49,7 +49,7 @@ var map = new mapboxgl.Map({
 });
 
 var bbox = [bboxE, bboxN, bboxW, bboxS];
-var cellWidth = 0.1;
+var cellWidth = 0.15;
 var units = 'miles';
 var grid = turf.hexGrid(bbox, cellWidth, units);
 
@@ -75,8 +75,8 @@ map.on('style.load', function () {
         },
         'paint': {
             'line-color': '#333',
-            'line-opacity': 0.4,
-            'line-width': 60,
+            'line-opacity': 0.8,
+            'line-width': 50,
             'line-blur': 60,
         },
         'filter': ['==', 'visited', 'no']
