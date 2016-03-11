@@ -31,6 +31,8 @@
 <div id='target'></div>
 <!-- <div id="choice">PICK</div> -->
 <script>
+
+// Map setup
 var zoomSetting = 16.2;
 var bboxS = 37.8185,
     bboxN = 37.84764,
@@ -39,33 +41,43 @@ var bboxS = 37.8185,
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA';
 var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', //stylesheet location
+    container: 'map', 
+    style: 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk', 
     minZoom: zoomSetting,
     maxZoom: zoomSetting,
     maxBounds: [[bboxE, bboxN], [bboxW, bboxS]],
-    center: [-122.55, 37.84], // starting position
-    zoom: zoomSetting // starting zoom
+    center: [-122.55, 37.84], 
+    zoom: zoomSetting 
 });
 
+
+// Hex setup 
 var bbox = [bboxE, bboxN, bboxW, bboxS];
 var cellWidth = 0.15;
 var units = 'miles';
 var grid = turf.hexGrid(bbox, cellWidth, units);
 
-
+// Add unique IDs and a property to store info 
+// on whether we've visitied each hex
 for(i = 0; i < grid.features.length; i++) {
     grid.features[i].properties.idNum = i;
     grid.features[i].properties.visited = 'no';
 }
 
+// Great a new GeoJSON source from our hex geojson
 var source = new mapboxgl.GeoJSONSource({
     data: grid
 });
 
 map.on('style.load', function () {
+    // Add hex source to the map
     map.addSource('hexgrid', source);
 
+    /* Set up a few layers: 
+     *   - 2 hex outlines to make them look spooky
+     *   - The un-visited hexes, {visited} = 'no' 
+     *   - Visited hexes, {visited} == 'yes'
+     */
     map.addLayer({
         'id': 'hexgrid-line-2',
         'type': 'line',
@@ -122,30 +134,34 @@ map.on('style.load', function () {
     });
 });
 
+// Whenever the map is moving, check to see if we've 
+// visited the hex under the center coord
 map.on('move', function(e) {
     map.featuresAt(map.project(map.getCenter()), {layer: 'hexgrid', radius: 1, includeGeometry: true}, function (err, features) {
         if (err) throw err;
-        // run visitMe function
         visitMe(features[0].properties.idNum);
     });
 });
 
+// When we're done moving, update the hex source's data
+// note: this is not ideal, but updating source data
+// continually is much worse! 
 map.on('moveend', function(e){
     source.setData(grid);
 });
 
+// Update the hex under the center coord's visited property!
 function visitMe(featureId) {
-    // change feature's 'visited' property to yes
     grid.features[featureId].properties.visited = 'yes';
 }
 
-function nextPosition(endLocation) {
-    map.panTo(endLocation, {duration: 5000});
-}
 
 
-// potential future choose-your-own-adventure stuff? 
-/*var gameLocations = [
+
+/* potential future choose-your-own-adventure stuff for later 
+ * ==========================================================
+
+ var gameLocations = [
     {
         "name": "Home",
         "coordinates": [-122.261, 37.837]
@@ -169,10 +185,13 @@ picky.onclick = function(e) {
 }
 for (i=0; i < gameLocations.length; i++) {
     $('#choice').append("<div class='choice-item' data-coords='" + gameLocations[i].coordinates + "'><span class='choice-name'>" + gameLocations[i].name) + "</span>"
-}*/
+}
 
-
+function nextPosition(endLocation) {
+    map.panTo(endLocation, {duration: 5000});
+}
+* =============================================================
+* /
 </script>
-
 </body>
 </html>
