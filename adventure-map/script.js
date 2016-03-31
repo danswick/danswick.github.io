@@ -216,13 +216,10 @@ function loadTheGrid() {
 }
 
 function satelliteHint() {
-    map.setStyle('mapbox://styles/mapbox/satellite-v8');
+    map.setLayoutProperty('mapbox-mapbox-satellite', 'visibility', 'visible');
     setTimeout(function(){
-        map.setStyle(customStyle);
-        map.on('style.load', function(){
-            loadTheGrid();
-        });
-    }, 2000);
+            map.setLayoutProperty('mapbox-mapbox-satellite', 'visibility', 'none');
+    }, 10000);
 }
 
 
