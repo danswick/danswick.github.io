@@ -174,7 +174,7 @@ function loadTheGrid() {
         map.panTo(map.unproject(e.point));
 
         map.featuresAt(e.point, {
-            radius: 7.5, // Half the marker size (15px).
+            radius: 15, // Half the marker size (15px).
             includeGeometry: true,
             layer: 'waypoints'
         }, function (err, features) {
@@ -217,9 +217,16 @@ function loadTheGrid() {
 
 function satelliteHint() {
     map.setLayoutProperty('mapbox-mapbox-satellite', 'visibility', 'visible');
+    map.setPaintProperty('hexgrid', 'fill-opacity', 0);
     setTimeout(function(){
+            map.setPaintProperty('hexgrid', 'fill-opacity', 1);
             map.setLayoutProperty('mapbox-mapbox-satellite', 'visibility', 'none');
+
     }, 10000);
+}
+
+function pathHint(hint) {
+    map.setFilter('adventure paths', ['all', ['==', 'pathName', hint]])
 }
 
 

@@ -5,7 +5,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "name": "Bunker",
-        "description": "You meet a dog..."
+        "description": "You meet a dog with a twinkle in his eye and a wag in his tail. He mentions a spot nearby with a great view... <button onclick='pathHint(" + '"' + 'satellite' + '"' + ")'>Ask for directions</button>"
       },
       "geometry": {
         "type": "Point",
