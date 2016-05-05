@@ -1,0 +1,7 @@
+- clues lead you toward the city
+- as you get closer to the city & pick up clues, the style gets darker
+- paths only show up when you click on a clue
+- clues have a chance of leading you on a zombie path
+- you pick up tokens along the way, which are really codes to allow clicking on clues
+- following a zombie path increases chances of losing a clue code and also slows you down
+- should a hex visit delete the hex? would that make the map faster?

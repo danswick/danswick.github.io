@@ -1,4 +1,4 @@
-var waypoints = {
+{
   "type": "FeatureCollection",
   "features": [
     {
@@ -86,10 +86,14 @@ var waypoints = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -122.54,
-            37.84
+          -122.54311323165894,
+          37.839072305476435
         ]
       }
     }
   ]
-};
+}
+
+
+
+<button onclick='pathHint(" + '"' + 'satellite' + '"' + ")'>Ask for directions</button>

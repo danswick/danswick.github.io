@@ -156,50 +156,53 @@ function loadTheGrid() {
     });
 
     map.on('mousemove', function(e){
-        map.featuresAt(e.point, {
-            radius: 1,
-            layer: ["hexgrid"]
-        }, function (err, features) {
-            if (!err && features.length) {
-                map.setFilter("hex-hover", ["==", "idNum", features[0].properties.idNum]);
-            } else {
-                map.setFilter("hex-hover", ["<", "idNum", 1]);
-            }
+        var features = map.queryRenderedFeatures(e.point, {
+            layers: ["hexgrid"]
         });
+
+        if (features.length) {
+            map.setFilter("hex-hover", ["==", "idNum", features[0].properties.idNum]);
+        } else {
+            map.setFilter("hex-hover", ["<", "idNum", 1]);
+        }
     });
 
 
-    map.on('click', function(e){
+    map.on('click', function(e) {
 
         map.panTo(map.unproject(e.point));
 
-        map.featuresAt(e.point, {
-            radius: 15, // Half the marker size (15px).
-            includeGeometry: true,
-            layer: 'waypoints'
-        }, function (err, features) {
-
-            if (err || !features.length) {
-                popup.remove();
-                return;
-            }
-
-            var feature = features[0];
-
-            // Populate the popup and set its coordinates
-            // based on the feature found.
-            popup.setLngLat(feature.geometry.coordinates)
-                .setHTML(feature.properties.description)
-                .addTo(map);
+        var features = map.queryRenderedFeatures(e.point, {
+            layers: ['waypoints']
         });
+
+        if (!features.length) {
+            return;
+        }
+
+        var feature = features[0];
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        var popup = new mapboxgl.Popup()
+            .setLngLat(feature.geometry.coordinates)
+            .setHTML(feature.properties.description)
+            .addTo(map);
     });
     // Whenever the map is moving, check to see if we've 
     // visited the hex under the center coord
     map.on('move', function(e) {
-        map.featuresAt(map.project(map.getCenter()), {layer: 'hexgrid', radius: 1, includeGeometry: true}, function (err, features) {
-            if (err) throw err;
-            visitMe(features[0].properties.idNum);
+        var features = map.queryRenderedFeatures(map.project(map.getCenter()), {
+            layers: ['hexgrid']
         });
+        
+        try {
+            visitMe(features[0].properties.idNum);    
+        }
+        catch(err) {
+            return;
+        }
+        
     });
     // When we're done moving, update the hex source's data
     // note: this is not ideal, but updating source data
