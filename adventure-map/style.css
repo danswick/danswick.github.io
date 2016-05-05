@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
 #choice { position: absolute; top: 1em; left: 1em; padding: 0.5em; background-color: #fff; }
@@ -11,4 +14,12 @@ body { margin:0; padding:0; }
     background-color: transparent;
     top: 50%;
     left: 50%;
+}
+#counter {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 0.5em;
 }

@@ -89,6 +89,19 @@ function loadTheGrid() {
         }
     });
     map.addLayer({
+        "id": "waypoints-zombie",
+        "interactive": true,
+        "type": "circle",
+        "source": "waypoints",
+        "layout": {},
+        "paint": {
+            "circle-radius": 13,
+            "circle-color": "#333",
+            "circle-blur": 0
+        },
+        'filter': ['==', 'itemCode', '10']
+    });
+    map.addLayer({
         'id': 'hexgrid-line-2',
         'type': 'line',
         'source': 'hexgrid',
@@ -181,6 +194,8 @@ function loadTheGrid() {
         }
 
         var feature = features[0];
+        var itemName = feature.properties.name;
+        var itemCode = feature.properties.itemCode;
 
         // Populate the popup and set its coordinates
         // based on the feature found.
@@ -188,6 +203,8 @@ function loadTheGrid() {
             .setLngLat(feature.geometry.coordinates)
             .setHTML(feature.properties.description)
             .addTo(map);
+
+        itemTest(itemCode, itemName);
     });
     // Whenever the map is moving, check to see if we've 
     // visited the hex under the center coord
@@ -210,6 +227,20 @@ function loadTheGrid() {
     map.on('moveend', function(e){
         source.setData(grid);
         map.setFilter("hex-hover", ["<", "idNum", 1]);
+
+        var yesCount;
+        var count = 0;
+
+        $.each(grid.features, function (i, v) {
+            if (v.properties.visited == 'yes') {
+                count++;
+            }
+            yesCount = count;
+        });
+
+        $('#counter').data('count', yesCount);
+        console.log(yesCount);
+        $('#counter span').html(yesCount);
     });
 
     // Update the hex under the center coord's visited property!
@@ -230,6 +261,16 @@ function satelliteHint() {
 
 function pathHint(hint) {
     map.setFilter('adventure paths', ['all', ['==', 'pathName', hint]])
+}
+
+function itemTest(itemCode, itemName) {
+    if (itemCode == '0' || !itemCode) {
+        return;
+    } else if (itemCode == '1') {
+        console.log('mf-ing zombie');
+        map.setFilter("waypoints-zombie", ['all', ["==", "itemCode", itemCode], ["==", "name", itemName]]);
+
+    }
 }
 
 

@@ -5,6 +5,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "normal",
+        "itemCode": 0,
         "name": "Bunker",
         "description": "You meet a dog with a twinkle in his eye and a wag in his tail. He mentions a spot nearby with a great view... <button onclick='pathHint(" + '"' + 'satellite' + '"' + ")'>Ask for directions</button>"
       },
@@ -20,6 +21,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "normal",
+        "itemCode": 0,
         "name": "Storage room",
         "description": "You find an item..."
       },
@@ -35,6 +37,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "normal",
+        "itemCode": 0,
         "name": "Overlook",
         "description": "You can see everything from here...<br><button onclick='satelliteHint()'>Take a look</button>"
       },
@@ -50,6 +53,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "normal",
+        "itemCode": 0,
         "name": "Trail intersection",
         "description": "You cross paths with another traveller..."
       },
@@ -65,6 +69,7 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "normal",
+        "itemCode": 0,
         "name": "Start!",
         "description": "Hmmm... a few different paths to choose from. <button onclick='pathHint(" + '"' + 'start-north' + '"' + ")'>Head north?</button>"
       },
@@ -80,14 +85,15 @@ var waypoints = {
       "type": "Feature",
       "properties": {
         "type": "zombie",
-        "name": "start-north",
-        "description": "Ah crap. Looks like you got zombied."
+        "itemCode": 1,
+        "name": "startNorth",
+        "description": "You got zombied."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -122.54,
-            37.84
+            -122.543550923,
+            37.842795468
         ]
       }
     }
