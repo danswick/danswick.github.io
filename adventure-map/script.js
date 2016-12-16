@@ -5,7 +5,7 @@ var bboxS = 37.8185,
     bboxE = -122.467,
     bboxW = -122.5488;
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoieUZiWmwtVSJ9.0cPQywdbPVmvHiHJ6NwdXA';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoiY2l1dTUzcmgxMDJ0djJ0b2VhY2sxNXBiMyJ9.25Qs4HNEkHubd4_Awbd8Og';
 
 var customStyle = 'mapbox://styles/danswick/cilnegnzr00439gkf7urxz0xk';
 var map = new mapboxgl.Map({
