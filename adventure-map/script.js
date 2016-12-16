@@ -4,6 +4,7 @@ var bboxS = 37.8185,
     bboxN = 37.84764,
     bboxE = -122.467,
     bboxW = -122.5488;
+var initialBounds = new mapboxgl.LngLatBounds([bboxW, bboxS], [bboxE, bboxN]);
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuc3dpY2siLCJhIjoiY2l1dTUzcmgxMDJ0djJ0b2VhY2sxNXBiMyJ9.25Qs4HNEkHubd4_Awbd8Og';
 
@@ -13,7 +14,7 @@ var map = new mapboxgl.Map({
     style: customStyle, 
     minZoom: zoomSetting,
     maxZoom: zoomSetting,
-    maxBounds: [[bboxE, bboxN], [bboxW, bboxS]],
+    maxBounds: initialBounds,
     center: [-122.55, 37.84], 
     zoom: zoomSetting,
     dragPan: false
@@ -45,17 +46,16 @@ var source;
 var waypointSource;
 
 function loadTheGrid() {
-    // Great a new GeoJSON source from our hex geojson
-    source = new mapboxgl.GeoJSONSource({
-        data: grid
-    });
-    waypointSource = new mapboxgl.GeoJSONSource({
-        data: waypoints
-    });
 
     // Add hex source to the map
-    map.addSource('hexgrid', source);
-    map.addSource('waypoints', waypointSource);
+    map.addSource('hexgrid', {
+        "type": "geojson",
+        "data": grid
+    });
+    map.addSource('waypoints', {
+        "type": "geojson",
+        "data": waypoints
+    });
 
     /* Set up a few layers: 
      *   - 2 hex outlines to make them look spooky
@@ -66,7 +66,6 @@ function loadTheGrid() {
     // Add a layer showing the markers.
     map.addLayer({
         "id": "waypoints",
-        "interactive": true,
         "type": "circle",
         "source": "waypoints",
         "layout": {},
@@ -78,7 +77,6 @@ function loadTheGrid() {
     });
     map.addLayer({
         "id": "waypoints-inner",
-        "interactive": true,
         "type": "circle",
         "source": "waypoints",
         "layout": {},
@@ -90,7 +88,6 @@ function loadTheGrid() {
     });
     map.addLayer({
         "id": "waypoints-zombie",
-        "interactive": true,
         "type": "circle",
         "source": "waypoints",
         "layout": {},
@@ -133,7 +130,6 @@ function loadTheGrid() {
     });
     map.addLayer({
         'id': 'hexgrid',
-        'interactive': true,
         'type': 'fill',
         'source': 'hexgrid',
         'layout': {},
@@ -159,7 +155,6 @@ function loadTheGrid() {
         "id": "hex-hover",
         "type": "fill",
         "source": "hexgrid",
-        "interactive": true,
         "layout": {},
         "paint": {
             'fill-color': '#343434',
@@ -225,6 +220,7 @@ function loadTheGrid() {
     // note: this is not ideal, but updating source data
     // continually is much worse! 
     map.on('moveend', function(e){
+        var source = map.getSource('hexgrid');
         source.setData(grid);
         map.setFilter("hex-hover", ["<", "idNum", 1]);
 
