@@ -97,13 +97,36 @@ textarea {
 
 /*colors https://coolors.co/f5ffc6-b4e1ff-ab87ff-fface4-c1ff9b*/
 
+
+#banner { 
+    font-family: "Shrikhand", cursive;
+    font-size: 2em;
+    margin-top: 1em;
+    position: relative;
+    top: 30px
+}
+#friendQuip { 
+    font-family: "Sansita One", cursive;
+    font-size: 1.5em;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    top: -25px;
+    right: 30px;
+}
+#friendQuote {
+    font-family: "Scope One", serif;
+}
+
+
+
 #friendPic {
     background-image: url('../img/hearts.gif');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: inherit;
     background-position: center;
     height: 400px;
-    width: 300px;
+    max-width: 100%;
 }
 
 
