@@ -95,7 +95,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*colors https://coolors.co/f5ffc6-b4e1ff-ab87ff-fface4-c1ff9b*/
 
+#friendPic {
+    background-image: url('../img/hearts.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 400px;
+    width: 300px;
+}
 
 
 
@@ -191,9 +200,22 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
