@@ -105,17 +105,42 @@ textarea {
     position: relative;
     top: 30px
 }
-#friendQuip { 
+#friendQuip, #friendName { 
     font-family: "Sansita One", cursive;
     font-size: 1.5em;
     text-align: right;
     width: 100%;
     position: relative;
     top: -25px;
-    right: 30px;
 }
+#friendQuip p { 
+    margin-bottom: 0; 
+    line-height: 1em;
+}
+
+#subjectName {
+    text-transform: capitalize;
+}
+
+#friendName {
+    margin: 0;
+    text-transform: capitalize;
+}
+
 #friendQuote {
     font-family: "Scope One", serif;
+}
+
+#remember {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+    width: 124%;
+    left: -15px;
+    position: relative;
+    opacity: 0.4;
+    top: 7px;
+    line-height: 0.7em;
 }
 
 
@@ -125,19 +150,79 @@ textarea {
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
-    height: 400px;
-    max-width: 100%;
+    height: 500px;
+    max-width: 625px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.8);
+}
+
+
+.hearts-animation {
+    background-image: url('../img/hearts.svg');
+    background-size: contain;
+    background-repeat: space;
+    position: fixed;
+    height: 2em;
+    left: 0px;
+    width: 110%;
+    top:10px;
+}
+
+.hearts-animation + .hearts-animation {
+    top: 24px;
+    left: -25px;
+    width: 120%;
 }
 
 
 
 
+/*.shapes > * {
+    opacity: 0;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+}
 
+@keyframes shapes-1 { 
+  0% { 
+    opacity: 1; 
+  } 
+  33.33333% { 
+    opacity: 0; 
+  } 
+}  
 
+.shapes > :nth-child(1) { 
+  animation-name: shapes-1; 
+}  
 
+@keyframes shapes-2 { 
+  33.33333% { 
+    opacity: 1; 
+  } 
+  66.66667% { 
+    opacity: 0; 
+  } 
+}  
 
+.shapes > :nth-child(2) { 
+  animation-name: shapes-2; 
+}  
 
+@keyframes shapes-3 { 
+  66.66667% { 
+    opacity: 1; 
+  } 
+  100% { 
+    opacity: 0; 
+  } 
+}  
 
+.shapes > :nth-child(3) {  
+  animation-name: shapes-3; 
+}
+*/
 
 
 
@@ -229,7 +314,17 @@ textarea {
 @media (min-width: 400px) {}
 
 /* Larger than phablet */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    #friendName {
+        text-align: right;
+        right: 60px;
+    }
+
+    #friendQuip, #friendName {
+        top: -100px;
+        right: 30px;
+    }
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {}
