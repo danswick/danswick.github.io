@@ -47,7 +47,7 @@ var colorCombos = [
 	},
 	{
 		background: "#263423",
-		text: "#FFD4C2"
+		text: "#c8e6c1"
 	},
 	{
 		background: "#342323",
@@ -59,7 +59,7 @@ var colorCombos = [
 	},
 	{
 		background: "#273235",
-		text: "#F6E0CB"
+		text: "#b9d0d6"
 	}
 ];
 
