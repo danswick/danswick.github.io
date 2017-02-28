@@ -2,6 +2,8 @@
 http://localhost:9001/fuckyeahfriend/?name=erin&sheet_url=1lJAqpic-_4lOyLtrWDPcNjTt4Ha_FnK8c31XfkCoVxg
 */
 
+var sheetData;
+var intervalVar; // to store the setInterval var so it can be cleared later
 
 function init() {
   var sheetUrl;
@@ -13,7 +15,14 @@ function init() {
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/' + sheetUrl + '/pubhtml',
                    callback: function(data, tabletop) { 
-                       buildPage(data);
+                    	sheetData = data;
+                    	buildPage(data);
+
+                    	var autoPlayButton = $('#autoPlayButton');
+                    	var getNewFriendButton = $('#getNewFriend');
+						autoPlayButton.click(function(){autoPlay()});
+						getNewFriendButton.click(function(){buildPage(sheetData)});
+						autoPlay();
                    },
                    simpleSheet: true } )
 }
@@ -41,7 +50,7 @@ var qs = (function(a) {
 
 
 var colorCombos = [
-	{
+	/*{
 		background: "#342323",
 		text: "#F6E0CB"
 	},
@@ -60,6 +69,23 @@ var colorCombos = [
 	{
 		background: "#273235",
 		text: "#b9d0d6"
+	},*/
+	{ //new
+		background: "#2b2967",
+		text: "#FFE600"
+
+	},
+	{
+		background: "#ab3c3c",
+		text: "#fff"
+	}, 
+	{
+		background: "#ffbcaa",
+		text: "#444"
+	},
+	{
+		background: "#fbd372",
+		text: "#CD6FA2"
 	}
 ];
 
@@ -100,8 +126,11 @@ function buildPage(data) {
 	// set page colors
 	var bodyEl = $('body');
 	// set background color
-	bodyEl.css("background-color", colorCombos[getRandomInt(0, colorCombos.length)].background);
-	bodyEl.css("color", colorCombos[getRandomInt(0, colorCombos.length)].text);
+	var colorCombo = colorCombos[getRandomInt(0, colorCombos.length)];
+	bodyEl.css("background-color", colorCombo.background);
+	bodyEl.css("color", colorCombo.text);
+
+	$('#friendQuip p').css('background-color', colorCombo.background);
 }
 
 
@@ -116,4 +145,15 @@ function imgExists(url, callback) {
 	img.onload = function() { callback(true); };
 	img.onerror = function() { callback(false); };
 	img.src = url; 
+}
+
+function autoPlay() {
+	var $playButton = $('#autoPlayButton');
+	if ($playButton.hasClass('.autoplay-on')) {
+		$playButton.toggleClass('.autoplay-on');
+		window.clearInterval(intervalVar);
+	} else {
+		window.setInterval(function(){buildPage(sheetData)}, 35000);
+		$playButton.toggleClass('autoplay-on');
+	}
 }
