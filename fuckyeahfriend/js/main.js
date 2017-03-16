@@ -153,7 +153,7 @@ function autoPlay() {
 		$playButton.toggleClass('.autoplay-on');
 		window.clearInterval(intervalVar);
 	} else {
-		window.setInterval(function(){buildPage(sheetData)}, 10000);
+		window.setInterval(function(){buildPage(sheetData)}, 15000);
 		$playButton.toggleClass('autoplay-on');
 	}
 }
